@@ -1,0 +1,2 @@
+# Preserve the reviewed source snapshot bytes, including mixed line endings.
+* -text

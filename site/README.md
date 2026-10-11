@@ -1,6 +1,6 @@
 # cxf 个人作品网站
 
-以用户提供的 Kage 完整源码为视觉参考，保留京都寺院、红月、3D 场景与滚动氛围，改为中文实习求职作品集。展示群聊待办助手和拾光收集箱两个 AI 辅助实践作品，代码主要由 Codex 完成。目前仅在本地验证，公开服务尚待完成。
+以用户提供的 Kage 完整源码为视觉参考，保留京都寺院、红月、3D 场景与滚动氛围，改为中文实习求职作品集。展示群聊待办助手和拾光收集箱两个 AI 辅助实践作品，代码主要由 Codex 完成。公开源码位于[cxf506837/cxf-ai-practice](https://github.com/cxf506837/cxf-ai-practice)；公开Demo、新实时录像与60次真实模型实验尚未完成。
 
 ## 本地预览
 
@@ -8,7 +8,7 @@
 
 案例入口为 `/works/chat-task-assistant.html` 与 `/works/ribbon-inbox.html`，新增 `/works/context-experiment.html` 记录实验准备与未知结果；返回链接分别落到 `/#gate` 和 `/#pathways`，跳过首页入场。视频为本地 WebM，可通过原生播放器控制；演示使用合成通知和历史模型结果回放，录像不实时调用模型。
 
-运行 `node build.mjs` 将站点生成到 `dist/`，其中 `index.html` 是首页、素材与案例页保持原相对位置。免费静态托管发布此目录。`public/landing-pages/public-links.json` 的真实 HTTPS 地址核实后才启用试用、源码和实时录像；空值显示待完成。
+运行 `node build.mjs` 将站点生成到 `dist/`，其中 `index.html` 是首页、素材与案例页保持原相对位置。免费静态托管发布此目录。`public/landing-pages/public-links.json` 的sourceUrl已接入核实后的公开GitHub源码地址；tryUrl和liveVideoUrl保持空值，显示待完成。
 
 ## 文件
 

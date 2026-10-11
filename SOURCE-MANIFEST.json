@@ -9,7 +9,7 @@
     },
     {
       "path": "app/.gitattributes",
-      "sha256": "0911a3715aedad818383fcfdbae7241d1d24361fee42e639fe3bbe4c9cdc8cf9"
+      "sha256": "d5d82ed6d66f14215790c051c96ce26d719626de7d98de831275eb867cddce68"
     },
     {
       "path": "app/.gitignore",
@@ -209,7 +209,7 @@
     },
     {
       "path": "app/docs/RECRUITMENT-STATUS.md",
-      "sha256": "ba8b1f3b8102738a3f4c0a83177c2ab74d5bb49a7c57ec4b48e0847b1f2dc3e6"
+      "sha256": "b0f81491ce46c97d7df19222ac1d65761588fb14afc2ab4bcbeeb2f80e788e2d"
     },
     {
       "path": "app/server/budget.ts",
@@ -293,7 +293,7 @@
     },
     {
       "path": "site/README.md",
-      "sha256": "cbf6f5364627c71b336a444c3f5a345d96780887fd38ba71abfb376a1cc534fb"
+      "sha256": "ddc4eeb8834afb8738bf528e2d143e2fc6df7544aaabc46d0e24e9384d59c1ae"
     },
     {
       "path": "site/build.mjs",
@@ -349,7 +349,7 @@
     },
     {
       "path": "site/public/landing-pages/public-links.json",
-      "sha256": "6fc9ff6a64d88d6c19be9aa68c2949b264b91d8eb9ae54ab6a3b2a3c6a19be88"
+      "sha256": "255245280d8f962eac907882400ec96b16b0e489a1ae5ebb39363ee0669421b2"
     },
     {
       "path": "site/public/landing-pages/secret-pathways-assets/fonts.css",
@@ -437,7 +437,7 @@
     },
     {
       "path": "README.md",
-      "sha256": "0f78317835ce0716a46f5fa5f62e767a4d9e6212b91f7773cf5a33e37292c8ef"
+      "sha256": "fa5ae62b47b4cac1459638ecda41b42fbe9a8e0a2dd687081f1b4cd48449606c"
     },
     {
       "path": "docs/DEPLOYMENT.md",
@@ -449,7 +449,7 @@
     },
     {
       "path": "docs/RECRUITMENT-STATUS.md",
-      "sha256": "ba8b1f3b8102738a3f4c0a83177c2ab74d5bb49a7c57ec4b48e0847b1f2dc3e6"
+      "sha256": "b0f81491ce46c97d7df19222ac1d65761588fb14afc2ab4bcbeeb2f80e788e2d"
     },
     {
       "path": "site/public/landing-pages/portfolio-assets/chat-task-poster.png",
@@ -458,6 +458,10 @@
     {
       "path": "site/public/landing-pages/portfolio-assets/ribbon-mobile.png",
       "sha256": "fd9709ff82b199737103ff3f7c8ab3322b64258852f764f7b5c6b1634bdd224a"
+    },
+    {
+      "path": ".gitattributes",
+      "sha256": "9fa754d17030ef44f9a5be447711f3a384e2ced8cda7496b5debd67646d8d3ba"
     }
   ],
   "excluded": [
@@ -467,5 +471,7 @@
     "raw resume",
     "private user replies",
     "unmeasured results"
-  ]
+  ],
+  "updatedAt": "2026-10-11T17:41:40.639Z",
+  "previousManifestSha256": "3146342fd34401e55ab2d22c7f849a3bbb0b278336ca0f9e1ae59873282eda63"
 }

@@ -1,2 +1,3 @@
-* text=auto eol=lf
+# Preserve frozen experiment hashes and the reviewed source snapshot bytes.
+* -text
 *.webm binary

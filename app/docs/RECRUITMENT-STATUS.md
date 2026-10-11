@@ -38,3 +38,11 @@
 恢复核查：生产extract/store/validation、旧S3脚本及历史STATUS hash与起始记录一致。实验增量修复保留有界合成失败响应、用量、请求/返回模型与阶段；实际模型请求和确认预留分别计数，预算全拒绝记零请求。Astra当前仅给conditional source-ready，部署/导出材料最终高级审查与真实账户验收另计。冻结文件SHA-256：ae54b7c947fed44824e22ad98b6065adcc5917366daab445e4484e3c5c4cb739。
 
 已确认预留数不等于实际Redis增量：reserve超时可能已经写入，未知预留要查账本。零模型请求也不能据此断言整个账户零费用；报告金额仅覆盖已确认部分，完整计划保守预留上界为1200分。原工作区依赖junction不可访问，保留原目录；干净导出验证使用同锁文件hoisted安装，独立记录验证结果。
+
+
+## 独立源码公开与字节保真（2026-10-12）
+
+- 公开仓库：[cxf506837/cxf-ai-practice](https://github.com/cxf506837/cxf-ai-practice)，默认分支codex/recruitment-display；站点sourceUrl已接入。以上原工作区起始无远程及未发布记录属于当时状态。
+- 此轮仅修正独立快照的Git换行属性与发布说明；root及app规则关闭换行转换，保留原始字节。原114文件中未变更的源码、cases/config/gold、user-labels及frozen.json保持原SHA-256；SOURCE-MANIFEST更新本轮合法变更并新增根属性文件，共115文件。
+- 不重新freeze，不更换冻结hash或金标以掩盖clone转换；既有提交中被转换的三个文件须按原快照字节重新写入Git blob，再验证新clone。
+- 公开Demo、真实Redis验收、60次真实模型实验、新实时录像和第二台手机另一网络验证仍未完成；源码公开不代表业务验收完成。
