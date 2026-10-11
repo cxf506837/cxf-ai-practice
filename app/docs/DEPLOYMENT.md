@@ -16,6 +16,8 @@
 
 Demo环境：APP_MODE=demo；PORT由平台使用10000；PUBLIC_ORIGIN为实际服务HTTPS origin（没有路径或尾斜线）；DEMO_ACCESS_CODE是12–128字符安全访问码；DEEPSEEK_API_KEY及Upstash字段只在服务端；PUBLIC_DEMO_END_AT须与账本一致。先建服务得到真实地址，再填PUBLIC_ORIGIN并部署。初次缺固定origin会启动失败，属于关闭状态，不能临时信任任意Host/代理头。
 
+Demo预算阶段仅由服务端部署环境DEMO_BUDGET_STAGE设置，缺省public；合法值为acceptance、recording、public，其他值在启动时拒绝，APP_MODE=local忽略该选项。云验收先设acceptance并重新部署，按既定2次分配验收；录制前改recording并重新部署，按既定3次分配录制；完成后切回public并重新部署、核验生效，再分享访问码。阶段切换不初始化或重置账本，不接受客户端body/header指定阶段，也不新增维护API。公众阶段原有每日10次、每会话3次和七天到期限制保持。
+
 静态站rootDir=site，buildCommand=node build.mjs，发布dist。构建把kage.html同时放为index.html，保留案例页和素材相对路径。得到真实URL后，修改site/public/landing-pages/public-links.json的tryUrl/sourceUrl；真实实时视频完成后再填liveVideoUrl。未填写保持明确不可用标签，不放示例域名。
 
 [Render免费实例说明](https://render.com/docs/free)：闲置15分钟会休眠，唤醒可能约一分钟；免费实例本地文件不持久。因此Demo只用每会话:memory:，重启会清空任务；Upstash账本独立持久，不随服务重启重置。体验前提示等待，下载JSON可保留合成结果。本地SQLite版仍用于用户电脑。

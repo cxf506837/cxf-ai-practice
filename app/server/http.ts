@@ -27,8 +27,9 @@ async function readBody(req: IncomingMessage): Promise<unknown> {
   }
   try { return JSON.parse(Buffer.concat(chunks).toString('utf8')); } catch { throw new AppError('请求不是有效JSON。'); }
 }
-export function createApp(options: { store?: Store; key: string; dist: string; extractor?: typeof extract; demo?: { origin: string; accessCode: string; sessions: DemoSessions; ledger?: BudgetLedger } }) {
+export function createApp(options: { store?: Store; key: string; dist: string; extractor?: typeof extract; demo?: { origin: string; accessCode: string; sessions: DemoSessions; ledger?: BudgetLedger; budgetStage?: 'public' | 'acceptance' | 'recording' } }) {
   const { key, demo } = options;
+  const budgetStage = demo?.budgetStage ?? 'public';
   if (!demo && !options.store) throw new Error('local需要本地Store。');
   if (demo && options.store) throw new Error('demo禁止连接本地Store。');
   if (demo && (new URL(demo.origin).protocol !== 'https:' || new URL(demo.origin).origin !== demo.origin)) throw new Error('demo需要固定HTTPS origin。');
@@ -89,7 +90,7 @@ export function createApp(options: { store?: Store; key: string; dist: string; e
                 let result;
                 if (demo && !options.extractor) {
                   if (!demo.ledger) throw new AppError('持久预算未配置，付费演示已关闭。', 503);
-                  result = await paidCall(demo.ledger, 'public', session!.id, call);
+                  result = await paidCall(demo.ledger, budgetStage, session!.id, call);
                 } else result = await call();
                 return store.saveImport(input, result.candidates, result.usage);
               } finally { if (demo) demoBusy = false; }

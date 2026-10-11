@@ -5,7 +5,7 @@
   "files": [
     {
       "path": "app/.env.example",
-      "sha256": "bb731c7fe620e4546554629a533a7f0ae4ec61fbcb69dba8745e6486fc2fdc01"
+      "sha256": "ee73dbccd77bfe8e91d82822853a3add70a3719f934faafb77bf8718c3b3ce2e"
     },
     {
       "path": "app/.gitattributes",
@@ -121,11 +121,11 @@
     },
     {
       "path": "app/server/http.ts",
-      "sha256": "0afd022603106a13760e6421851da769e5bcbf7a524815581a5353f3ccba4cf8"
+      "sha256": "47e4d6e6c8aa6291bf62041f1e54591858d0aa88618d845cf7077498b86d2ac8"
     },
     {
       "path": "app/server/index.ts",
-      "sha256": "709e1b2aa58811c04178f03f33676b9c398bfa6bc2d72c5e54c2d576fd99230b"
+      "sha256": "74e4bb3b001db1b6c16155ce1367786422458ea43b63a68bc1b4054791c81f03"
     },
     {
       "path": "app/server/store.ts",
@@ -201,7 +201,7 @@
     },
     {
       "path": "app/docs/DEPLOYMENT.md",
-      "sha256": "c80d6268e459da26d2a2755733129eb5941cd3966a6d6bd66c6d9fcad2eedc67"
+      "sha256": "1e52096e5aadc557169c80567a909df74f855a0c817b0a35209af42c5ce92b77"
     },
     {
       "path": "app/docs/RECRUITMENT-DELIVERY.md",
@@ -221,7 +221,7 @@
     },
     {
       "path": "app/server/mode.ts",
-      "sha256": "4aedc18e1dd83766c4805e6ef7f1fee0818ef77aa916417f8048d27401b7d117"
+      "sha256": "dd2b884c58702b81719ea516a0ca0445abc9307393e94fbfb9c01e9749ed3e98"
     },
     {
       "path": "app/server/provider.ts",
@@ -249,7 +249,7 @@
     },
     {
       "path": "app/tests/demo.test.ts",
-      "sha256": "30b0f5e0deb406454e0679c6f8365d6e5a3bcbea95506a58b913a0a7f923cc5b"
+      "sha256": "9a8740ee24a187297cd06660023b7c200989b25d5516532ffbdce5d7b54c3b9b"
     },
     {
       "path": "app/web/src/DemoGate.tsx",
@@ -441,7 +441,7 @@
     },
     {
       "path": "docs/DEPLOYMENT.md",
-      "sha256": "c80d6268e459da26d2a2755733129eb5941cd3966a6d6bd66c6d9fcad2eedc67"
+      "sha256": "1e52096e5aadc557169c80567a909df74f855a0c817b0a35209af42c5ce92b77"
     },
     {
       "path": "docs/RECRUITMENT-DELIVERY.md",
@@ -472,6 +472,6 @@
     "private user replies",
     "unmeasured results"
   ],
-  "updatedAt": "2026-10-11T17:54:23.584Z",
-  "previousManifestSha256": "a77327debdd898575d6eb583b3569235d7f5a2859cfa592bf4012352354ff066"
+  "updatedAt": "2026-10-11T18:38:41.539Z",
+  "previousManifestSha256": "8069b183c46c1b5109878e164b53e6463828162048ccf5abaa619ec04e63d720"
 }

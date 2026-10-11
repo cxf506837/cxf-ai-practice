@@ -19,7 +19,7 @@ if (config.mode === 'local') {
   sessions = new DemoSessions();
   try { ledger = BudgetLedger.fromEnv(); } catch { console.warn('持久预算未配置或无效：页面可运行，付费分析关闭。'); }
 }
-const demo = config.mode === 'demo' ? { origin: config.origin, accessCode: config.accessCode, sessions: sessions!, ledger } : undefined;
+const demo = config.mode === 'demo' ? { origin: config.origin, accessCode: config.accessCode, sessions: sessions!, ledger, budgetStage: config.budgetStage } : undefined;
 const server = createApp({ store, key: process.env.DEEPSEEK_API_KEY ?? '', dist: root + 'dist', demo });
 const cleanup = setInterval(() => sessions?.sweep(), 60_000); cleanup.unref();
 const closeStores = () => { clearInterval(cleanup); store?.close(); sessions?.close(); };
