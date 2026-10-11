@@ -1,0 +1,17 @@
+.env
+.env.*
+!.env.example
+node_modules/
+dist/
+coverage/
+.next/
+data/
+private/
+tmp/
+*.log
+*.db
+*.db-*
+*.sqlite
+*.sqlite-*
+playwright-report/
+test-results/

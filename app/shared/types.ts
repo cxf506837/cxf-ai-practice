@@ -1,0 +1,10 @@
+export type TaskFields = { title: string; audience: string; deadlineText: string; deadlineDate: string | null; materials: string[]; uncertainties: string[] };
+export type Candidate = TaskFields & { id: string; evidence: string[] };
+export type Source = { id: string; name: string; createdAt: string };
+export type AnalysisInput = { sourceId: string; text: string; referenceDate: string | null; role: string | null };
+export type Usage = { promptTokens: number; completionTokens: number; totalTokens: number; elapsedMs: number };
+export type ImportRecord = AnalysisInput & { id: string; candidates: Candidate[]; usage: Usage; createdAt: string; extractionConfig?: string; delivery?: 'live' | 'cached' };
+export type TaskStatus = 'pending' | 'done';
+export type Correction = { importId: string; candidateId: string; evidence: string[]; appliedAt: string };
+export type Task = TaskFields & { id: string; importId: string; candidateId: string; sourceId: string; evidence: string[]; createdAt: string; status: TaskStatus; revision: number; corrections: Correction[] };
+export type State = { sources: Source[]; imports: ImportRecord[]; tasks: Task[]; mode?: 'local' | 'demo'; model: { name: string; configured: boolean } };

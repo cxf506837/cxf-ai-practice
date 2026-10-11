@@ -1,0 +1,14 @@
+{
+  "version": "context-freeze-v1",
+  "files": {
+    "experiments/context/cases.json": "eb95e3e2ddc51c3277fee6d11f44e61ffaea3674c988925ebfcc62742bfa9269",
+    "experiments/context/config.json": "57f4f3bac4d0540789281b2a1bd548f1a143a13415be3a3d9877e5295a8a211c",
+    "experiments/context/user-labels.json": "b13bc66e4063056db5c05844301c2d8f947f649cd9443400ae7360c9e29aeecc",
+    "experiments/context/core.ts": "785de06e9f5d4a3b5621f1bc5af73a224d4381f900da8d8836b510e248adcca9",
+    "experiments/context/runner.ts": "0f9d34d92d3ebbe191e58440d79fe1808f00075e871c38712b27a66058242080",
+    "server/provider.ts": "fd9dc783696630ba53b628984849f81a6bc09c315c9806a5f5c02c621d200f23",
+    "server/budget.ts": "4dade335a195805cf7615027a543d7879b4dcc76eb2047db322cd149c36392f7"
+  },
+  "promptHash": "3cf853708b98c5ee48815d80d9eebdb5ba8f072dd717bcc023969166f80ae94d",
+  "planHash": "0759771437f28a762e13aa596ca26d153703d5f024de2b57fee78676fa067482"
+}

@@ -1,0 +1,11 @@
+{
+  "name": "kage-personal-homepage",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node build.mjs",
+    "start": "node serve.mjs",
+    "dev": "node serve.mjs"
+  }
+}

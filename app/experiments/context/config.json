@@ -1,0 +1,16 @@
+{
+  "version": "context-ab-v1",
+  "model": "deepseek-flash",
+  "temperature": 0,
+  "max_tokens": 4096,
+  "thinking": { "type": "disabled" },
+  "response_format": { "type": "json_object" },
+  "stream": false,
+  "rounds": 3,
+  "maxCalls": 60,
+  "order": "round1 AB, round2 BA, round3 AB; cases in file order",
+  "stage": "experiment",
+  "requestBytes": 16384,
+  "timeoutMs": 45000,
+  "rate": { "currency": "CNY", "inputPerMillion": 2, "outputPerMillion": 8, "verifiedAt": "2026-10-11", "source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/", "note": "Use peak cache-miss price for conservative estimate; not invoice." }
+}

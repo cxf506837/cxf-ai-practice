@@ -1,0 +1,106 @@
+{
+  "hypothesis": "与只看当前消息相比，用户显式选中的1–2条同来源历史可能补全省略信息，也可能引入过时关联；需要分别检查完整性与错误确定化。",
+  "hypothesisConfirmedByUser": true,
+  "goldConfirmedByUser": true,
+  "labels": [
+    {
+      "caseId": "H01",
+      "history": [
+        {
+          "messageId": "H01-old",
+          "text": "【合成】二年级家长：秋游报名需填写报名表并附缴费凭证，交给班主任。"
+        }
+      ],
+      "current": {
+        "messageId": "H01-current",
+        "text": "【合成】上面说的两份报名材料，请二年级家长2026年10月13日17:00前交。"
+      },
+      "yourGold": {
+        "goldA": {
+          "actionTerms": [
+            "交",
+            "报名"
+          ],
+          "audience": "二年级家长",
+          "deadlineDate": "2026-10-13",
+          "materialTerms": [
+            "报名材料"
+          ]
+        },
+        "goldB": {
+          "actionTerms": [
+            "交",
+            "报名"
+          ],
+          "audience": "二年级家长",
+          "deadlineDate": "2026-10-13",
+          "materialTerms": [
+            "报名表",
+            "缴费凭证"
+          ]
+        },
+        "provenance": [
+          {
+            "messageId": "H01-old",
+            "text": "【合成】二年级家长：秋游报名需填写报名表并附缴费凭证，交给班主任。"
+          },
+          {
+            "messageId": "H01-current",
+            "text": "【合成】上面说的两份报名材料，请二年级家长2026年10月13日17:00前交。"
+          }
+        ]
+      },
+      "instructions": "请填写动作、对象、截止日期、两份材料；为每个确定字段写messageId和精确quote。只看当前消息时哪些字段应留疑点？不要提交真实聊天。"
+    },
+    {
+      "caseId": "S01",
+      "history": [
+        {
+          "messageId": "S01-old",
+          "text": "【合成·旧通知】二年级家长：纸质报名表2026年10月12日前交班主任。"
+        }
+      ],
+      "current": {
+        "messageId": "S01-current",
+        "text": "【合成·更正】二年级秋游报名改为2026年10月14日前在线填写电子报名表；不再收纸质表。"
+      },
+      "yourGold": {
+        "goldA": {
+          "actionTerms": [
+            "填",
+            "报名"
+          ],
+          "audience": "",
+          "deadlineDate": "2026-10-14",
+          "materialTerms": [
+            "电子",
+            "报名表"
+          ]
+        },
+        "goldB": {
+          "actionTerms": [
+            "填",
+            "报名"
+          ],
+          "audience": "二年级家长",
+          "deadlineDate": "2026-10-14",
+          "materialTerms": [
+            "电子",
+            "报名表"
+          ]
+        },
+        "provenance": [
+          {
+            "messageId": "S01-old",
+            "text": "【合成·旧通知】二年级家长：纸质报名表2026年10月12日前交班主任。"
+          },
+          {
+            "messageId": "S01-current",
+            "text": "【合成·更正】二年级秋游报名改为2026年10月14日前在线填写电子报名表；不再收纸质表。"
+          }
+        ]
+      },
+      "instructions": "请填写当前生效动作、对象、日期和材料，并写精确出处。旧纸质表和旧日期应怎样处理？只看当前消息能够确定哪些信息？"
+    }
+  ]
+}

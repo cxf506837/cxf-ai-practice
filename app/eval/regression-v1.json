@@ -1,0 +1,90 @@
+{
+  "suiteId": "s3-regression-v1",
+  "cases": [
+    {
+      "id": "D09",
+      "input": {
+        "sourceId": "dev-volunteer",
+        "text": "【合成志愿群】管理员：请把活动材料整理好，下周找时间交到服务台。由谁交还没定，材料具体清单另行通知。",
+        "referenceDate": "2026-10-09",
+        "role": null
+      },
+      "gold": [
+        {
+          "action": "整理并提交活动材料",
+          "audience": "",
+          "deadlineText": "下周找时间",
+          "deadlineDate": null,
+          "materials": [
+            "活动材料"
+          ],
+          "evidence": [
+            "请把活动材料整理好，下周找时间交到服务台。由谁交还没定，材料具体清单另行通知。"
+          ],
+          "uncertainties": [
+            "适用对象未确定",
+            "具体截止时间不明确",
+            "材料具体清单待通知"
+          ],
+          "nature": "ordinary"
+        }
+      ]
+    },
+    {
+      "id": "H09",
+      "input": {
+        "sourceId": "holdout-festival",
+        "text": "【虚构筹备群】组织者：请将本届活动资料装袋交到接待处，过几天交就行。负责人员尚未安排；袋内需要哪些文件稍后再发清单。",
+        "referenceDate": "2027-01-29",
+        "role": null
+      },
+      "gold": [
+        {
+          "action": "将活动资料装袋并交到接待处",
+          "audience": "",
+          "deadlineText": "过几天",
+          "deadlineDate": null,
+          "materials": [
+            "活动资料"
+          ],
+          "evidence": [
+            "请将本届活动资料装袋交到接待处，过几天交就行。负责人员尚未安排；袋内需要哪些文件稍后再发清单。"
+          ],
+          "uncertainties": [
+            "适用对象未确定",
+            "具体截止时间不明确",
+            "材料具体清单待通知"
+          ],
+          "nature": "ordinary"
+        }
+      ]
+    },
+    {
+      "id": "H05",
+      "input": {
+        "sourceId": "holdout-east",
+        "text": "【虚构补充通知】协调员：防灾演练报名表收取时间有误，现更正。东区楼栋联络员请于2027年2月8日晚上8点前上交纸质防灾演练报名表一份，旧截止时间作废。",
+        "referenceDate": null,
+        "role": null
+      },
+      "gold": [
+        {
+          "action": "按更正时间上交防灾演练报名表",
+          "audience": "东区楼栋联络员",
+          "deadlineText": "2027年2月8日晚上8点前",
+          "deadlineDate": "2027-02-08",
+          "materials": [
+            "纸质防灾演练报名表一份"
+          ],
+          "evidence": [
+            "防灾演练报名表收取时间有误，现更正。东区楼栋联络员请于2027年2月8日晚上8点前上交纸质防灾演练报名表一份，旧截止时间作废。"
+          ],
+          "uncertainties": [
+            "更正通知，需要人工核对原任务后修改"
+          ],
+          "nature": "correction"
+        }
+      ]
+    }
+  ]
+}

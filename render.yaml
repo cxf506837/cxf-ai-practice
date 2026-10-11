@@ -1,0 +1,40 @@
+# Export places this file at repository root beside app/ and site/.
+services:
+  - type: web
+    name: cxf-chat-task-demo
+    runtime: docker
+    plan: free
+    dockerfilePath: ./app/Dockerfile
+    dockerContext: ./app
+    autoDeployTrigger: off
+    healthCheckPath: /health
+    maxShutdownDelaySeconds: 60
+    envVars:
+      - key: APP_MODE
+        value: demo
+      - key: PORT
+        value: 10000
+      - key: PUBLIC_ORIGIN
+        sync: false
+      - key: DEMO_ACCESS_CODE
+        sync: false
+      - key: DEEPSEEK_API_KEY
+        sync: false
+      - key: UPSTASH_REDIS_REST_URL
+        sync: false
+      - key: UPSTASH_REDIS_REST_TOKEN
+        sync: false
+      - key: BUDGET_ID
+        sync: false
+      - key: PUBLIC_DEMO_END_AT
+        sync: false
+  - type: web
+    name: cxf-ai-practice
+    runtime: static
+    rootDir: site
+    buildCommand: node build.mjs
+    staticPublishPath: dist
+    autoDeployTrigger: off
+    envVars:
+      - key: NODE_VERSION
+        value: 24.19.0
