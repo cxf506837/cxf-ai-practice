@@ -209,7 +209,7 @@
     },
     {
       "path": "app/docs/RECRUITMENT-STATUS.md",
-      "sha256": "b0f81491ce46c97d7df19222ac1d65761588fb14afc2ab4bcbeeb2f80e788e2d"
+      "sha256": "a6938f204bcdc3571505c0c629d44b2fe84c03ad6eb5e47fec414afe365c3a73"
     },
     {
       "path": "app/server/budget.ts",
@@ -293,7 +293,7 @@
     },
     {
       "path": "site/README.md",
-      "sha256": "ddc4eeb8834afb8738bf528e2d143e2fc6df7544aaabc46d0e24e9384d59c1ae"
+      "sha256": "9c20e45faba93e68319850871d8ef109e4f39d4a445d0bb2e52552b3cfc68e16"
     },
     {
       "path": "site/build.mjs",
@@ -437,7 +437,7 @@
     },
     {
       "path": "README.md",
-      "sha256": "fa5ae62b47b4cac1459638ecda41b42fbe9a8e0a2dd687081f1b4cd48449606c"
+      "sha256": "dc5b6d6060ea2b87dfb985c6c69ac5d3d5fc170e39d0f18c0dcf1600b8586337"
     },
     {
       "path": "docs/DEPLOYMENT.md",
@@ -449,7 +449,7 @@
     },
     {
       "path": "docs/RECRUITMENT-STATUS.md",
-      "sha256": "b0f81491ce46c97d7df19222ac1d65761588fb14afc2ab4bcbeeb2f80e788e2d"
+      "sha256": "a6938f204bcdc3571505c0c629d44b2fe84c03ad6eb5e47fec414afe365c3a73"
     },
     {
       "path": "site/public/landing-pages/portfolio-assets/chat-task-poster.png",
@@ -472,6 +472,6 @@
     "private user replies",
     "unmeasured results"
   ],
-  "updatedAt": "2026-10-11T17:41:40.639Z",
-  "previousManifestSha256": "3146342fd34401e55ab2d22c7f849a3bbb0b278336ca0f9e1ae59873282eda63"
+  "updatedAt": "2026-10-11T17:54:23.584Z",
+  "previousManifestSha256": "a77327debdd898575d6eb583b3569235d7f5a2859cfa592bf4012352354ff066"
 }

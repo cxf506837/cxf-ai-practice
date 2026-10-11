@@ -26,10 +26,10 @@
 | 上下文实验 | 三轮60次及本人核对5输出 | 尚未执行；没有实验结论 |
 | 交付材料 | Docker与Render免费配置 | 文件已备；本机Docker daemon未启动，未构建镜像 |
 | 交付材料 | 白名单源码包与敏感排除 | 显式114文件，新目录防覆盖导出；SHA-256/文本模式与本地引用核验，最终高级材料审查另计 |
-| 交付材料 | 求职身份/三入口/实验页 | 已写；现有场景/CSS/motion保留，公网地址为空 |
+| 交付材料 | 求职身份/三入口/实验页 | 静态站与公开源码入口已上线；后端试用与新实时录像地址为空 |
 | 交付材料 | 测试/类型/构建/OCR和高级复核 | 原39/39、干净包38/38、类型/构建/空key通过；应用OCR preview exit0，网站所在大型父仓preview20秒超时，直接补审；最终高级材料复核待完成 |
 | 实际上线 | 自有GitHub、Render、Upstash登录 | 父聊天与账户持有者处理 |
-| 实际上线 | 真实公网固定HTTPS、模型验收 | 尚未执行 |
+| 实际上线 | 真实公网固定HTTPS、模型验收 | 静态站HTTPS已上线；后端模型验收尚未执行 |
 | 实际上线 | 新实时录像 | 尚未录制，约70秒旧片仍是回放 |
 | 实际上线 | 第二台手机另一网络 | 尚未执行，不以390桌面viewport替代 |
 
@@ -44,5 +44,14 @@
 
 - 公开仓库：[cxf506837/cxf-ai-practice](https://github.com/cxf506837/cxf-ai-practice)，默认分支codex/recruitment-display；站点sourceUrl已接入。以上原工作区起始无远程及未发布记录属于当时状态。
 - 此轮仅修正独立快照的Git换行属性与发布说明；root及app规则关闭换行转换，保留原始字节。原114文件中未变更的源码、cases/config/gold、user-labels及frozen.json保持原SHA-256；SOURCE-MANIFEST更新本轮合法变更并新增根属性文件，共115文件。
-- 不重新freeze，不更换冻结hash或金标以掩盖clone转换；既有提交中被转换的三个文件须按原快照字节重新写入Git blob，再验证新clone。
+- 不重新freeze，不更换冻结hash或金标以掩盖clone转换；三个文件已按原快照字节重新写入Git blob；父聊天独立新GitHub clone核验115项SHA-256全部匹配。
 - 公开Demo、真实Redis验收、60次真实模型实验、新实时录像和第二台手机另一网络验证仍未完成；源码公开不代表业务验收完成。
+
+
+## 静态站上线与源码验证（2026-10-12）
+
+- 静态作品网站已上线：[cxf-portfolio.onrender.com](https://cxf-portfolio.onrender.com/)。Render发布源码commit为0b0e77c6dcde50c10507b7ad54d8845f9fd43b4c，Live构建6.4秒；Root Directory为site、Build Command为node build.mjs、Publish Directory为dist，AutoDeploy关闭。
+- 静态云构建使用平台默认Node24.21.0；后端Docker固定Node24.19.0，尚未部署，不能把静态站上线算作后端Demo上线。
+- 父聊天从公开GitHub独立新clone核验115项源码SHA-256全部匹配；Astra增量11/11审查无发现。冻结样例、配置、金标和frozen.json保持原字节。
+- 干净GitHub clone以原锁文件、Node24.19.0、pnpm11.25.0安装；每个pnpm进程设置pnpm_config_node_linker=hoisted并串行执行，38项应用测试、typecheck和build通过。这些检查不包含真实Redis或模型效果验收。
+- 后端公开Demo、真实Redis验收、60次真实模型实验、新实时录像和第二台手机另一网络验证仍未完成；历史视频保持回放标注。
