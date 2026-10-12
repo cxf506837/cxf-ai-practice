@@ -1,6 +1,6 @@
 # 自有账户的免费部署
 
-当前只有配置文件，尚无真实公网服务或Docker镜像验收。使用白名单导出的新目录app/、site/和根render.yaml；不要将整个工作区或原Git历史上传。
+静态作品站已上线，后端已完成37项真实HTTPS断言及2次模型调用验收，真实Redis已检查；公众七天窗口已一次激活，结束于北京时间10月19日15:30。此说明保留复验与关闭步骤，不应重新初始化或重跑已完成的付费阶段。使用白名单导出的新目录app/、site/和根render.yaml；不要将整个工作区或原Git历史上传。
 
 ## 账户与环境
 
@@ -18,7 +18,7 @@ Demo环境：APP_MODE=demo；PORT由平台使用10000；PUBLIC_ORIGIN为实际�
 
 Demo预算阶段仅由服务端部署环境DEMO_BUDGET_STAGE设置，缺省public；合法值为acceptance、recording、public，其他值在启动时拒绝，APP_MODE=local忽略该选项。云验收先设acceptance并重新部署，按既定2次分配验收；录制前改recording并重新部署，按既定3次分配录制；完成后切回public并重新部署、核验生效，再分享访问码。阶段切换不初始化或重置账本，不接受客户端body/header指定阶段，也不新增维护API。公众阶段原有每日10次、每会话3次和七天到期限制保持。
 
-静态站rootDir=site，buildCommand=node build.mjs，发布dist。构建把kage.html同时放为index.html，保留案例页和素材相对路径。得到真实URL后，修改site/public/landing-pages/public-links.json的tryUrl/sourceUrl；真实实时视频完成后再填liveVideoUrl。未填写保持明确不可用标签，不放示例域名。
+静态站rootDir=site，buildCommand=node build.mjs，发布dist。构建把kage.html同时放为index.html，保留案例页和素材相对路径。得到真实URL后，修改site/public/landing-pages/public-links.json的tryUrl/sourceUrl；真实调用采样视频已核验，liveVideoUrl接入MP4文件。未填写保持明确不可用标签，不放示例域名。
 
 [Render免费实例说明](https://render.com/docs/free)：闲置15分钟会休眠，唤醒可能约一分钟；免费实例本地文件不持久。因此Demo只用每会话:memory:，重启会清空任务；Upstash账本独立持久，不随服务重启重置。体验前提示等待，下载JSON可保留合成结果。本地SQLite版仍用于用户电脑。
 
@@ -30,3 +30,5 @@ Demo预算阶段仅由服务端部署环境DEMO_BUDGET_STAGE设置，缺省publi
 - 七天到期自动拒绝新增公众模型调用，缓存和静态案例仍可读。账户持有者可手动停止Render服务，或移除服务key立即关闭付费；不删除历史证据，不重置账本。源码回滚不能恢复临时会话或返还预留。
 
 资料来自[Render Blueprint官方参考](https://render.com/docs/blueprint-spec)、[Upstash REST官方参考](https://upstash.com/docs/redis/features/restapi)、[DeepSeek官方价格页](https://api-docs.deepseek.com/zh-cn/quick_start/pricing/)。当前Context7工具不可用，使用官方文档；没有假称调用Context7。
+
+本轮真实调用视频：[采样MP4](../site/public/landing-pages/portfolio-assets/cxf-recruitment-demo-20261012.mp4)与[说明](../site/public/landing-pages/portfolio-assets/cxf-recruitment-demo-20261012/video-notes.md)。录制源版本66a39f3；Codex自动化操作，低帧率截图采样剪辑，非连续录屏。三次真实调用、两次预算拦截；界面分析显示1.9/1.7/1.4秒，不是视频等待时长或独立供应商响应计时。当前账本65次、1300分（13元）软件预留：experiment60、acceptance2、recording3、public0；实际费用仅保守token估算，未新增请求。公开窗口结束于2026-10-19T07:30:03.858Z（北京时间10月19日15:30），不重复激活、不重置预算；手机异网业务验收仍待本人完成。

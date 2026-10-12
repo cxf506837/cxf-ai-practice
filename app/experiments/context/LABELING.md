@@ -1,11 +1,9 @@
-# 先由 cxf 标两例
+# cxf的核对与独立复核
 
-打开 user-labels.json。无需写代码：先在文字中回答 H01 与 S01 的动作、适用对象、日期、材料、应保留的疑点；每项引用对应 messageId 与原文片段。另说你是否接受文件中的 hypothesis 作为本轮待验证假设。
+cxf已对照H01、S01的合成通知，核对助手整理的修订gold及hypothesis；其余8例采用预注册参考gold并接受高级只读预审。确认字段与冻结文件保持原字节，这不等于cxf独立完成全部标注。
 
-助手可把你的答案机械转换为结构化 gold，请你核对后才能把两个确认字段设为 true。其余8例采用预注册参考 gold。确认后冻结 gold、提示、配置与评分器 hash，再按固定 A/B 交替顺序执行三轮60次；失败也保留，不补跑、不改变 gold。
+冻结后按固定AB、BA、AB顺序完成三轮60次，失败保留、不补跑、不修改gold。cxf后来查看固定第一轮H01 A/B、S01 A/B和无需历史例N02 B共五份，均暂不修改。只公开[参与摘要](review/user-participation-summary.json)，私人聊天原文不导出。
 
-付费前必须由高级只读审查确认 ready，再设置 CONTEXT_REVIEW_READY=yes；此标记不是用户金标确认的替代。两例修订答案已本人核对，确认字段为true；高级预审和冻结尚未完成，仍不能付费。
+GPT-6 Astra / medium独立逐份审阅全部60份输出，检查动作、对象、数量/形式、否定、更正、日期、疑点和出处。[原复核快照](review/semantic-review.md)保留当时用户核对pending；后来参与状态见[结果说明](RESULTS.md)。暂不修改是使用者判断，不替代语义检查，遗漏并列保留。
 
-完成后亲自核对5份输出（H01 A/B、S01 A/B及一份无需历史例），记录需要修改的字段和依据。结果未知，不能提前写结论。
-
-高级语义复核应覆盖全部60份输出，按10个case的三轮A/B配对检查新增动作、数量/形式、否定、更正、日期原文、疑点及每个确定字段的出处。用户5份核对另计。lexicalPrecheck只做词项提示，会漏额外动作、误判否定；最终忠实性/完整性/错误确定化/错误关联指标保持null与semanticReview=pending，直到真实人工核对完成。
+冻结评分器只有lexicalPrecheck词项提示与null语义字段，没有唯一预注册的最终语义布尔决策算法。独立审阅口径标为reviewer-operationalization-not-preregistered-final-score，原run/report不回填、不宣称正式准确率。S01 A的audience存在执行人/范围解释差异，完整限制见RESULTS.md。

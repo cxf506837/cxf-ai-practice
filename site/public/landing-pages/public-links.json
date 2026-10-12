@@ -1,6 +1,6 @@
 {
-  "tryUrl": null,
+  "tryUrl": "https://cxf-chat-task-demo.onrender.com/",
   "sourceUrl": "https://github.com/cxf506837/cxf-ai-practice",
-  "liveVideoUrl": null,
-  "status": "公开源码已核实；公开Demo与新实时录像待完成，历史回放可观看。"
+  "liveVideoUrl": "https://cxf-portfolio.onrender.com/portfolio-assets/cxf-recruitment-demo-20261012.mp4",
+  "status": "真实试用、公开源码与采样视频已接入；public健康/登录/Cookie/配置检查通过，未新增模型请求。七天窗口结束于北京时间10月19日15:30，手机另一网络业务验收仍待本人完成。"
 }

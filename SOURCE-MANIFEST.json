@@ -17,7 +17,7 @@
     },
     {
       "path": "app/README.md",
-      "sha256": "11e67ab9899fb909d73370aeb7e6ba43629f2e353635bd207362daaef6ac3c71"
+      "sha256": "b7627beb8e5f8b8cadbd69696ad7c91697b34bf5818d1eba36f8b376a9904835"
     },
     {
       "path": "app/docs/DELIVERY.md",
@@ -201,15 +201,15 @@
     },
     {
       "path": "app/docs/DEPLOYMENT.md",
-      "sha256": "1e52096e5aadc557169c80567a909df74f855a0c817b0a35209af42c5ce92b77"
+      "sha256": "1bf70633deaf2192b080f6ecb1b0268bbc1154a715a1d3f3e34c26f06ffc9638"
     },
     {
       "path": "app/docs/RECRUITMENT-DELIVERY.md",
-      "sha256": "9c3ec59b3f1d4f00f1197b322f33a3605dfb953e057847dddc8e3e0c658ad590"
+      "sha256": "52cbcbcccad0febcdc8e2dd6d5c39e3eeddec786a071e4ccbde799a914b2bac0"
     },
     {
       "path": "app/docs/RECRUITMENT-STATUS.md",
-      "sha256": "a6938f204bcdc3571505c0c629d44b2fe84c03ad6eb5e47fec414afe365c3a73"
+      "sha256": "050fb28720baaea6500ad2ba88b6d4189d20d212cb144661ed55478cdfd99272"
     },
     {
       "path": "app/server/budget.ts",
@@ -273,11 +273,11 @@
     },
     {
       "path": "app/experiments/context/README.md",
-      "sha256": "2ced6a9dc57d61ef53adbd58e165572311fc0b98945e01dc9b48c216738b16d4"
+      "sha256": "7400d849d6dc489f1828cce0342dd83b451d0e60ba07db6527da75c93319ce1a"
     },
     {
       "path": "app/experiments/context/LABELING.md",
-      "sha256": "54136432108301f722fac477cdf5de5496ce867dbdf8ee15993c547d08e5896d"
+      "sha256": "eea668546c8d9be6fff846d2f74cdb0b2f574c10854ee2d32e8bda9a3c035068"
     },
     {
       "path": "app/experiments/context/user-labels.json",
@@ -293,7 +293,7 @@
     },
     {
       "path": "site/README.md",
-      "sha256": "9c20e45faba93e68319850871d8ef109e4f39d4a445d0bb2e52552b3cfc68e16"
+      "sha256": "47e7abd054a324d63efadae54aa9927e4757ab779a6420e310f42625d681bcaf"
     },
     {
       "path": "site/build.mjs",
@@ -309,11 +309,11 @@
     },
     {
       "path": "site/public/landing-pages/works/context-experiment.html",
-      "sha256": "1083da0b17b42f0af4c32ca77e0b4e7bb39f9c9205545832432dd7d1134ca5fc"
+      "sha256": "803fde90e8c51478c26392b2f57881d0d8518f6e2de8dc81dfaa98b158caa501"
     },
     {
       "path": "site/public/landing-pages/works/chat-task-assistant.html",
-      "sha256": "c49f6fde2df1d63dd55985e81f7572ea389b58bbf1f3dc020facea67fab06211"
+      "sha256": "94f1f74c32e8975da46ee8b70043ceda59f37ee28620c7515f235d4a8a32e35f"
     },
     {
       "path": "site/public/landing-pages/secret-pathways-assets/three.min.js",
@@ -349,7 +349,7 @@
     },
     {
       "path": "site/public/landing-pages/public-links.json",
-      "sha256": "255245280d8f962eac907882400ec96b16b0e489a1ae5ebb39363ee0669421b2"
+      "sha256": "ae68b03bc95b0ddddc1629218bd2bbe1f7644a1a349f4a0aec7c9ac16fe1f288"
     },
     {
       "path": "site/public/landing-pages/secret-pathways-assets/fonts.css",
@@ -437,19 +437,19 @@
     },
     {
       "path": "README.md",
-      "sha256": "dc5b6d6060ea2b87dfb985c6c69ac5d3d5fc170e39d0f18c0dcf1600b8586337"
+      "sha256": "9d201098641f9b4181852331a242da5a4199b1f1c0d4d95c62d092b0c98443de"
     },
     {
       "path": "docs/DEPLOYMENT.md",
-      "sha256": "1e52096e5aadc557169c80567a909df74f855a0c817b0a35209af42c5ce92b77"
+      "sha256": "4499b9ffcaa934eb24f5da7da1b72b417e7e35c49be3055114f5cbda3087a156"
     },
     {
       "path": "docs/RECRUITMENT-DELIVERY.md",
-      "sha256": "9c3ec59b3f1d4f00f1197b322f33a3605dfb953e057847dddc8e3e0c658ad590"
+      "sha256": "7a9f90f14de38102f891aa969c178f2cf7f6865d91c93c483b706bd607156fb2"
     },
     {
       "path": "docs/RECRUITMENT-STATUS.md",
-      "sha256": "a6938f204bcdc3571505c0c629d44b2fe84c03ad6eb5e47fec414afe365c3a73"
+      "sha256": "93e32036ffeba93f169b375041531a6325ae54fa32103e8a9b490eabbbd78a29"
     },
     {
       "path": "site/public/landing-pages/portfolio-assets/chat-task-poster.png",
@@ -462,6 +462,46 @@
     {
       "path": ".gitattributes",
       "sha256": "9fa754d17030ef44f9a5be447711f3a384e2ced8cda7496b5debd67646d8d3ba"
+    },
+    {
+      "path": "app/experiments/context/results/4f1c648c-6ec5-4f19-a0ff-d3c1408906c1.jsonl",
+      "sha256": "be7204d923f6968523ae551f61eaac540f505a99beece89b8f88356264feec6f"
+    },
+    {
+      "path": "app/experiments/context/results/4f1c648c-6ec5-4f19-a0ff-d3c1408906c1-report.json",
+      "sha256": "f547e1f0b3d1f131c22fcfedcc6e068eac4e84864147bc4aa11bae5ccf47a0eb"
+    },
+    {
+      "path": "app/experiments/context/review/semantic-review.md",
+      "sha256": "2191c21c676a6a73163d8f2a62590f004e740d0704be187a957a21c14d288160"
+    },
+    {
+      "path": "app/experiments/context/review/semantic-review.json",
+      "sha256": "61e080a807aa8b28e1e7d6480cfa3fb5867b28cd2b759acc54cae1b6940459a5"
+    },
+    {
+      "path": "app/experiments/context/RESULTS.md",
+      "sha256": "e54f197bd3f73eca0382f913fea14709af6a2ff6b900896dac2d0ced4ac587df"
+    },
+    {
+      "path": "app/experiments/context/review/user-participation-summary.json",
+      "sha256": "9dfdb3f519e49899153357ff4d2498c86cf915fed7d6eba74e4652854600fbf7"
+    },
+    {
+      "path": "site/public/landing-pages/portfolio-assets/cxf-recruitment-demo-20261012.mp4",
+      "sha256": "08ef284515a349331273c05d3ac2c93aaabdb06be16b13d6485ce81c22a6b316"
+    },
+    {
+      "path": "site/public/landing-pages/portfolio-assets/cxf-recruitment-demo-20261012/video-notes.md",
+      "sha256": "da6f8f3f0e836b13880f3c9cd4bd8471589f447bedf2c0b6f3513f927a1536be"
+    },
+    {
+      "path": "site/public/landing-pages/portfolio-assets/cxf-recruitment-demo-20261012/edit-map.json",
+      "sha256": "6c72df90897ed9023e98c56f252a2feb235d6e36bd92fee0bf5933982c563f92"
+    },
+    {
+      "path": "site/public/landing-pages/portfolio-assets/cxf-recruitment-demo-20261012/qa-report.json",
+      "sha256": "6f0f28dcf28e735cff7ac5ef8f201e9837c85eb8a15c0fa0425389167b3885c0"
     }
   ],
   "excluded": [
@@ -470,8 +510,8 @@
     "data/private/tmp",
     "raw resume",
     "private user replies",
-    "unmeasured results"
+    "tool temporary logs and private participation replies"
   ],
-  "updatedAt": "2026-10-11T18:38:41.539Z",
-  "previousManifestSha256": "8069b183c46c1b5109878e164b53e6463828162048ccf5abaa619ec04e63d720"
+  "updatedAt": "2026-10-12T09:24:52.286Z",
+  "previousManifestSha256": "673e31b09958e32c60609e1306578aaa90bad3694cb1adc23789707025a6c8e8"
 }

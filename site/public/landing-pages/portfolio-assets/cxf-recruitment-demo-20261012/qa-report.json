@@ -1,0 +1,276 @@
+{
+  "video": "../cxf-recruitment-demo-20261012.mp4",
+  "videoSha256": "08ef284515a349331273c05d3ac2c93aaabdb06be16b13d6485ce81c22a6b316",
+  "sizeBytes": 3407018,
+  "durationSeconds": 172.32,
+  "plannedDurationSeconds": 172.32,
+  "fullDecodeExitCode": 0,
+  "codec": "h264",
+  "pixelFormat": "yuv420p",
+  "dimensions": [
+    1280,
+    960
+  ],
+  "fps": 25,
+  "decodedFrames": 4308,
+  "faststartMoovBeforeMdat": true,
+  "mp4TopLevelBoxes": [
+    {
+      "type": "ftyp",
+      "offset": 0,
+      "length": 32
+    },
+    {
+      "type": "moov",
+      "offset": 32,
+      "length": 52502
+    },
+    {
+      "type": "free",
+      "offset": 52534,
+      "length": 8
+    },
+    {
+      "type": "mdat",
+      "offset": 52542,
+      "length": 3354476
+    }
+  ],
+  "callIntervals": [
+    {
+      "presetId": "complete",
+      "originalStartMs": 1791787792601,
+      "originalEndMs": 1791787835373,
+      "originalDurationMs": 42772,
+      "outputStartMs": 14000,
+      "outputEndMs": 56800,
+      "outputDurationMs": 42800,
+      "paddingMs": 28,
+      "firstResultFrame": "frame-008.jpg",
+      "firstResultAppearsAtOutputMs": 56800,
+      "noCutInsideInterval": true,
+      "speedFactor": 1,
+      "samplingLimit": "Last observed pre-request screenshot held until captureEnd; not a loading-state recording."
+    },
+    {
+      "presetId": "correction",
+      "originalStartMs": 1791788206132,
+      "originalEndMs": 1791788248851,
+      "originalDurationMs": 42719,
+      "outputStartMs": 66800,
+      "outputEndMs": 109520,
+      "outputDurationMs": 42720,
+      "paddingMs": 1,
+      "firstResultFrame": "frame-012.jpg",
+      "firstResultAppearsAtOutputMs": 109520,
+      "noCutInsideInterval": true,
+      "speedFactor": 1,
+      "samplingLimit": "Last observed pre-request screenshot held until captureEnd; not a loading-state recording."
+    },
+    {
+      "presetId": "uncertain",
+      "originalStartMs": 1791788863336,
+      "originalEndMs": 1791788906126,
+      "originalDurationMs": 42790,
+      "outputStartMs": 118520,
+      "outputEndMs": 161320,
+      "outputDurationMs": 42800,
+      "paddingMs": 10,
+      "firstResultFrame": "frame-016.jpg",
+      "firstResultAppearsAtOutputMs": 161320,
+      "noCutInsideInterval": true,
+      "speedFactor": 1,
+      "samplingLimit": "Last observed pre-request screenshot held until captureEnd; not a loading-state recording."
+    }
+  ],
+  "extractedFrames": [
+    {
+      "source": "frame-001.jpg",
+      "atSeconds": 1,
+      "path": "qa-frame-001.jpg"
+    },
+    {
+      "source": "frame-002.jpg",
+      "atSeconds": 3,
+      "path": "qa-frame-002.jpg"
+    },
+    {
+      "source": "frame-003.jpg",
+      "atSeconds": 4.5,
+      "path": "qa-frame-003.jpg"
+    },
+    {
+      "source": "frame-004.jpg",
+      "atSeconds": 7,
+      "path": "qa-frame-004.jpg"
+    },
+    {
+      "source": "frame-005.jpg",
+      "atSeconds": 9.5,
+      "path": "qa-frame-005.jpg"
+    },
+    {
+      "source": "frame-006.jpg",
+      "atSeconds": 11,
+      "path": "qa-frame-006.jpg"
+    },
+    {
+      "source": "frame-007.jpg",
+      "atSeconds": 13,
+      "path": "qa-frame-007.jpg"
+    },
+    {
+      "source": "frame-008.jpg",
+      "atSeconds": 57.3,
+      "path": "qa-frame-008.jpg"
+    },
+    {
+      "source": "frame-009.jpg",
+      "atSeconds": 59.8,
+      "path": "qa-frame-009.jpg"
+    },
+    {
+      "source": "frame-010.jpg",
+      "atSeconds": 63.3,
+      "path": "qa-frame-010.jpg"
+    },
+    {
+      "source": "frame-011.jpg",
+      "atSeconds": 65.8,
+      "path": "qa-frame-011.jpg"
+    },
+    {
+      "source": "frame-012.jpg",
+      "atSeconds": 110.02,
+      "path": "qa-frame-012.jpg"
+    },
+    {
+      "source": "frame-013.jpg",
+      "atSeconds": 112.02,
+      "path": "qa-frame-013.jpg"
+    },
+    {
+      "source": "frame-014.jpg",
+      "atSeconds": 115.02,
+      "path": "qa-frame-014.jpg"
+    },
+    {
+      "source": "frame-015.jpg",
+      "atSeconds": 117.52,
+      "path": "qa-frame-015.jpg"
+    },
+    {
+      "source": "frame-016.jpg",
+      "atSeconds": 161.82,
+      "path": "qa-frame-016.jpg"
+    },
+    {
+      "source": "frame-017.jpg",
+      "atSeconds": 164.32,
+      "path": "qa-frame-017.jpg"
+    },
+    {
+      "source": "frame-021.jpg",
+      "atSeconds": 167.82,
+      "path": "qa-frame-021.jpg"
+    },
+    {
+      "source": "frame-022.jpg",
+      "atSeconds": 170.82,
+      "path": "qa-frame-022.jpg"
+    }
+  ],
+  "resultBoundaryChecks": [
+    {
+      "presetId": "complete",
+      "when": "last-frame-before-result",
+      "atSeconds": 56.76,
+      "expectedSource": "frame-007.jpg",
+      "meanAbsolutePixelDifference": 1.539629317108555,
+      "passed": true,
+      "path": "boundary-complete-last-frame-before-result.png"
+    },
+    {
+      "presetId": "complete",
+      "when": "first-frame-at-result",
+      "atSeconds": 56.8,
+      "expectedSource": "frame-008.jpg",
+      "meanAbsolutePixelDifference": 1.8167329129102454,
+      "passed": true,
+      "path": "boundary-complete-first-frame-at-result.png"
+    },
+    {
+      "presetId": "correction",
+      "when": "last-frame-before-result",
+      "atSeconds": 109.48,
+      "expectedSource": "frame-011.jpg",
+      "meanAbsolutePixelDifference": 1.373419342422762,
+      "passed": true,
+      "path": "boundary-correction-last-frame-before-result.png"
+    },
+    {
+      "presetId": "correction",
+      "when": "first-frame-at-result",
+      "atSeconds": 109.52,
+      "expectedSource": "frame-012.jpg",
+      "meanAbsolutePixelDifference": 1.7881374813104174,
+      "passed": true,
+      "path": "boundary-correction-first-frame-at-result.png"
+    },
+    {
+      "presetId": "uncertain",
+      "when": "last-frame-before-result",
+      "atSeconds": 161.28,
+      "expectedSource": "frame-015.jpg",
+      "meanAbsolutePixelDifference": 1.3297312401000725,
+      "passed": true,
+      "path": "boundary-uncertain-last-frame-before-result.png"
+    },
+    {
+      "presetId": "uncertain",
+      "when": "first-frame-at-result",
+      "atSeconds": 161.32,
+      "expectedSource": "frame-016.jpg",
+      "meanAbsolutePixelDifference": 1.7886844754333762,
+      "passed": true,
+      "path": "boundary-uncertain-first-frame-at-result.png"
+    }
+  ],
+  "visualQa": "pending-direct-image-inspection",
+  "phonePlayback": "pending-user-actual-device-confirmation",
+  "review": {
+    "scope": [
+      "encoder.py",
+      "edit-map.json",
+      "video-notes.md",
+      "qa-report.json"
+    ],
+    "directReviewedFiles": 4,
+    "ocrRuleAndPreview": "not completed: non-Git directory",
+    "mediaExcludedFromCodeReview": "PNG/JPEG/MP4 are generated or source media; assessed visually and by full decoder.",
+    "findings": []
+  },
+  "publicCopyNote": "源报告 visualQa 保留生成时 pending 历史状态；修复后完整解码 4308 帧，三次结果出现前后共六帧自动边界校验全部通过。随后 GPT-6 Astra 实际独立查看全部 19 个成片关键帧与六个结果边界帧，通过范围见 publicVisualReview。手机播放仍待实际设备确认。原帧仅本地保留，帧文件名不是公开下载链接。",
+  "publicVisualReview": {
+    "status": "passed-independent-direct-image-inspection",
+    "reviewer": "GPT-6 Astra / medium (/root/last_astra_accept; read-only)",
+    "reviewedAt": "2026-10-12T09:18:40Z",
+    "videoSha256": "08ef284515a349331273c05d3ac2c93aaabdb06be16b13d6485ce81c22a6b316",
+    "keyFramesInspected": 19,
+    "resultBoundaryFramesInspected": 6,
+    "checks": [
+      "最后结果前帧仍为请求前真实截图，首次结果帧在正确时间出现",
+      "静帧、截图工具开销及非连续录屏字幕可读",
+      "两次预算拒绝及之后补充查看标注如实保留",
+      "最终两项任务、空日期及更正历史可读",
+      "未发现可见访问码或凭证"
+    ],
+    "sourceVisualQaPreserved": true,
+    "phonePlayback": "pending-user-actual-device-confirmation",
+    "evidenceFiles": [
+      "last-astra-accept-20261012/review.md",
+      "last-astra-accept-20261012/review.json"
+    ],
+    "evidenceAvailability": "独立审查原证据仅本地保留，不随公开副本发布。"
+  }
+}

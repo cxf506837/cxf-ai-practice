@@ -1,0 +1,55 @@
+{
+  "status": "model-requests-recorded-semantics-pending",
+  "casePairs": 10,
+  "repetitions": 3,
+  "planned": 60,
+  "modelRequestCount": 60,
+  "budgetReservedCount": 60,
+  "succeeded": 60,
+  "failed": 0,
+  "latencyAllAttemptsMedianMs": 720.5,
+  "latencyAllAttemptsP95Ms": 903,
+  "budgetReservedFenUpperBound": 1200,
+  "semanticReview": "pending",
+  "groups": [
+    {
+      "variant": "A",
+      "visibleFaithful": null,
+      "fullContextComplete": null,
+      "wrongCertain": null,
+      "wrongAssociation": null,
+      "denominator": 30
+    },
+    {
+      "variant": "B",
+      "visibleFaithful": null,
+      "fullContextComplete": null,
+      "wrongCertain": null,
+      "wrongAssociation": null,
+      "denominator": 30
+    }
+  ],
+  "lexicalPrecheckGroups": [
+    {
+      "variant": "A",
+      "matchesVisibleGold": 18,
+      "matchesFullGold": 9,
+      "unsupportedFieldFlags": 6,
+      "forbiddenTermFlags": 0,
+      "note": "Word matching only; cannot reliably judge extra actions or negation."
+    },
+    {
+      "variant": "B",
+      "matchesVisibleGold": 17,
+      "matchesFullGold": 17,
+      "unsupportedFieldFlags": 0,
+      "forbiddenTermFlags": 0,
+      "note": "Word matching only; cannot reliably judge extra actions or negation."
+    }
+  ],
+  "conservativeKnownCostYuan": 0.083764,
+  "costNote": "Missing usage and unknown failures excluded from token estimate; reservations do not refund. Not an invoice.",
+  "humanFiveOutputs": "pending",
+  "advancedAllSixtyOutputs": "pending",
+  "conclusion": "全部60份按10个case配对语义复核及5份用户核对未完成；最终语义指标未知，不宣称上下文更好。"
+}

@@ -18,12 +18,18 @@
       <h1>群聊待办助手</h1>
       <p class="case-lead">通知很长，待办需要看清。<br>让 AI 提取候选，由人核对并确认保存。</p>
       <div class="case-summary"><span>Codex 辅助实践</span><span>本地单用户</span><span>原文可追溯</span></div>
-      <div class="contact-actions"><a href="#demo-video">观看视频 · 历史回放</a><span aria-disabled="true" data-public-link="tryUrl" data-ready-label="在线试用 ↗">在线试用 · 待上线</span><span aria-disabled="true" data-public-link="sourceUrl" data-ready-label="查看源码 ↗">查看源码 · 待公开</span></div>
-      <p class="case-caption">新实时录像尚未录制。公开试用与源码地址核实后启用；当前入口状态如实标明。</p>
+      <div class="contact-actions"><a href="#live-demo-video">观看视频 · 真实调用采样</a><span aria-disabled="true" data-public-link="tryUrl" data-ready-label="在线试用 ↗">在线试用 · 待上线</span><span aria-disabled="true" data-public-link="sourceUrl" data-ready-label="查看源码 ↗">查看源码 · 待公开</span></div>
+      <p class="case-caption">公开源码已可查看。新视频为 Codex 自动化操作的低帧率截图采样剪辑，含三次真实调用与两次预算拦截；试用入口已接入，需单独提供的访问码；免费服务首次唤醒可能约需一分钟。截止2026年10月19日15:30（北京时间）。</p>
     </div>
     <figure class="project-media"><div class="media-frame"><img src="../portfolio-assets/chat-task-poster.png" alt="群聊待办助手的实际桌面界面，使用合成通知展示候选与原文" width="1280" height="900"></div><figcaption class="case-caption">合成通知的实际界面。应用不会自动监听群聊，也不会替用户确认或执行任务。</figcaption></figure>
+    <section class="case-section" id="live-demo-video">
+      <h2>真实调用的采样演示</h2>
+      <video controls playsinline preload="metadata" poster="../portfolio-assets/chat-task-poster.png" aria-label="Codex自动化操作的低帧率截图采样剪辑，三次真实调用与两次预算拦截"><source src="../portfolio-assets/cxf-recruitment-demo-20261012.mp4" type="video/mp4">你的浏览器不支持此视频。<a href="../portfolio-assets/cxf-recruitment-demo-20261012.mp4">打开MP4文件</a></video>
+      <p class="case-caption">2026年10月12日，源版本66a39f3，约172秒。Codex 自动化实录 · 低帧率截图采样 · 操作剪辑，非连续录屏。三次真实调用与两次未调用模型的预算拦截均保留；非请求操作间隔有删减。调用区间保持真实静帧，包含截图工具开销，不代表网页持续等待。页面分析显示1.9 / 1.7 / 1.4秒，不等于视频区间时长，也不是独立供应商响应计时。</p>
+      <p class="case-caption"><a href="../portfolio-assets/cxf-recruitment-demo-20261012/video-notes.md">视频说明</a> · <a href="../portfolio-assets/cxf-recruitment-demo-20261012/edit-map.json">剪辑时间映射</a> · <a href="../portfolio-assets/cxf-recruitment-demo-20261012/qa-report.json">媒体检查报告</a>。原始截图仅本地保留；第二次拦截未采到拒绝横幅，结论依据原操作时间轴。手机播放待实际设备确认。</p>
+    </section>
     <section class="case-section" id="demo-video">
-      <h2>看看它如何工作</h2>
+      <h2>历史回放 · 2026年10月10日本地版本</h2>
       <video controls playsinline preload="metadata" poster="../portfolio-assets/chat-task-poster.png" aria-label="群聊待办助手合成界面演示"><source src="../portfolio-assets/chat-task-demo.webm" type="video/webm">你的浏览器不支持此视频。<a href="../portfolio-assets/chat-task-demo.webm">打开演示文件</a></video>
       <p class="case-caption">演示使用历史模型结果回放，约 70 秒。录像中的界面操作是真实操作，资料为合成通知；录像没有实时调用模型，从选择历史记录开始，展示确认、原文追溯、更正与导出。</p>
     </section>
@@ -36,10 +42,10 @@
         <li><strong>管理与更正</strong>完成或重新打开待办；更正时主动关联同来源旧任务，并核对新旧原文。</li>
       </ol>
     </section>
-    <section class="case-section"><h2>我的参与方式</h2><p>我提出通知整理的想法，选择参考设计，与 Codex 讨论需求、核对结果并提出反馈；代码和技术实现主要由 AI 完成。已有本地版本经本人试用确认可使用。本轮我亲自核对两组合成通知的修订答案，接下来会检查5份实际实验输出，再决定如何描述结果。</p></section>
-    <section class="case-section"><h2>一个待验证的问题</h2><p>补上用户选中的历史消息，能否让“上述材料”更清楚？旧通知也可能带来错误日期或关联。本轮准备10组合成通知，比较只看当前消息与额外看1–2条选中历史；完整性与错误确定化分开记录，结果尚未测出。</p><p><a href="context-experiment.html">查看上下文实验与当前证据 →</a></p></section>
+    <section class="case-section"><h2>我的参与方式</h2><p>我提出通知整理的想法，选择参考设计，与 Codex 讨论需求、核对结果并提出反馈；代码和技术实现主要由 AI 完成。已有本地版本经本人试用确认可使用。本轮我亲自核对两组合成通知的修订答案，也已查看固定五份实际实验输出，判断均暂不修改；独立审查发现的遗漏另行保留。</p></section>
+    <section class="case-section"><h2>一个已开始检验的问题</h2><p>补上用户选中的历史消息，能否让“上述材料”更清楚？旧通知也可能带来错误日期或关联。本轮10组合成通知已完成三轮共60次真实调用，比较只看当前消息与额外看1–2条选中历史。历史补全了部分材料和对象，也出现PDF、数量和出处遗漏；独立复核不是预注册正式准确率。</p><p><a href="context-experiment.html">查看上下文实验与当前证据 →</a></p></section>
     <section class="case-section"><h2>项目中的实现选择</h2><div class="case-tech"><span>Web 界面</span><span>Node.js</span><span>SQLite</span><span>DeepSeek Flash</span></div><p>应用将数据保存在本机，通过模型提取候选，再由人工确认。更正采用手动关联，而不是自动根据相似文本替换旧任务，保留初始出处与更正出处。</p><div class="case-note">一个具体取舍：多一步确认，可以在保存前发现不明确日期、遗漏材料和错误关联。它增加操作步骤，也把决定权保留给使用者。</div></section>
-    <section class="case-section"><h2>验证与仍有的限制</h2><p>历史本地版本的合成集曾出现对象和材料遗漏，修订后完成当时的小型固定集验收；这属于2026年10月10日版本记录，不代表本轮实验或现实群聊准确率。</p><p>本轮增加只接受三组合成通知的临时演示，会话内可编辑、确认、更正与导出。公开部署、真实模型录制、上下文实验及手机另一网络验证尚待完成；桌面浏览器检查不能替代第二台手机。模糊信息仍需人核对，JSON目前不支持导入恢复。</p></section>
+    <section class="case-section"><h2>验证与仍有的限制</h2><p>历史本地版本的合成集曾出现对象和材料遗漏，修订后完成当时的小型固定集验收；这属于2026年10月10日版本记录，不代表本轮实验或现实群聊准确率。</p><p>本轮增加只接受三组合成通知的临时演示，会话内可编辑、确认、更正与导出。云HTTPS已通过37项断言及2次真实调用验收，60次实验及独立复核已完成。真实调用采样视频已接入，公众窗口已一次激活，public部署已上线；试用入口已通过public无付费连接检查并接入，手机另一网络验证仍待完成。桌面浏览器检查不能替代第二台手机。模糊信息仍需人核对，JSON目前不支持导入恢复。</p></section>
     <section class="case-section"><h2>联系 cxf</h2><p>正在寻找实习机会，欢迎聊聊 Vibe Coding 与 AI 应用实践。</p><p class="email-address">974250837@qq.com</p><div class="contact-actions"><a href="mailto:974250837@qq.com">发送邮件 ↗</a><button type="button" data-copy-email="974250837@qq.com">复制邮箱</button></div><p class="copy-status" id="copy-status" role="status" aria-live="polite"></p></section>
   </main>
   <footer class="case-footer"><a href="/#gate">← 返回群聊待办助手作品段</a><span>© 2026 cxf · Codex 辅助制作</span></footer>

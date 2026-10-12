@@ -1,0 +1,5596 @@
+{
+  "runId": "4f1c648c-6ec5-4f19-a0ff-d3c1408906c1",
+  "reviewedAt": "2026-10-12",
+  "status": "independent-advanced-review-complete-user-five-pending",
+  "humanFiveOutputs": "pending",
+  "officialSourceSemanticReview": "pending-unchanged",
+  "scope": "10 synthetic paired cases, 3 repeated rounds, 60 outputs; not 60 independent cases",
+  "rubric": {
+    "status": "reviewer-operationalization-not-preregistered-final-score",
+    "visibleFaithful": "所有可见输入上的确定断言、疑点及其出处在语义上受支持；合理省略不单独使本指标失败。出处须覆盖确定字段。未解析指代若显式承认不确定，记忠实但另记字段规范偏差。",
+    "fullContextComplete": "goldB的实质动作、对象、日期、材料要点全部进入任务字段，保留已知数量/形式/签字/规格；数量可在title或materials，不能仅藏在provenance。无新增错误动作。合理A留空仍可不完整。出处完整性单列进visibleFaithful；否则S01B的内容补全会与出处问题混淆。",
+    "wrongCertain": "任务确定字段把无证据或更正失效的具体内容写为事实；不把带明确疑点的指代占位算幻觉，不把纯遗漏算错误确定化。",
+    "wrongAssociation": "把另一活动或已被当前更正取消的历史信息作为现任务生效要求；否定语境和作为出处的原文不算误关联。",
+    "ambiguities": [
+      "预注册代码仅有词项预检和null语义字段，没有唯一的人工布尔决策算法；以下是独立审阅口径，不回填正式成绩。",
+      "fullContextComplete以已冻结goldB信息和提示明确要求为主；H01接收人班主任、H03活动邮箱也单列缺失，但不额外改变goldB之外的统计门槛。",
+      "S02的交/提交电子照片视为发送的语义近似，不因标题未含发字判错；仍建议保留发送原词。",
+      "S03日期待定和null按goldB通过，遗漏这几天的粗粒度时间另记，不当作凭空确定日期。",
+      "H02A保留上述成员且明确解释不明，非幻觉；但提示要求留空，记录字段规范偏差。",
+      "S01A二年级指活动范围，不能确定执行人，且无疑点，按错误确定化处理；若用户接受它仅作为范围标签，则计数会改变，须保留此敏感性。",
+      "否定约束可由当前有效电子材料替代旧纸质要求来体现，不强求新增负向字段。"
+    ]
+  },
+  "integrity": {
+    "frozenSha256": "ae54b7c947fed44824e22ad98b6065adcc5917366daab445e4484e3c5c4cb739",
+    "expectedFrozenSha256": "ae54b7c947fed44824e22ad98b6065adcc5917366daab445e4484e3c5c4cb739",
+    "frozenDependencies": [
+      {
+        "path": "experiments/context/cases.json",
+        "expected": "eb95e3e2ddc51c3277fee6d11f44e61ffaea3674c988925ebfcc62742bfa9269",
+        "actual": "eb95e3e2ddc51c3277fee6d11f44e61ffaea3674c988925ebfcc62742bfa9269",
+        "matches": true
+      },
+      {
+        "path": "experiments/context/config.json",
+        "expected": "57f4f3bac4d0540789281b2a1bd548f1a143a13415be3a3d9877e5295a8a211c",
+        "actual": "57f4f3bac4d0540789281b2a1bd548f1a143a13415be3a3d9877e5295a8a211c",
+        "matches": true
+      },
+      {
+        "path": "experiments/context/user-labels.json",
+        "expected": "b13bc66e4063056db5c05844301c2d8f947f649cd9443400ae7360c9e29aeecc",
+        "actual": "b13bc66e4063056db5c05844301c2d8f947f649cd9443400ae7360c9e29aeecc",
+        "matches": true
+      },
+      {
+        "path": "experiments/context/core.ts",
+        "expected": "785de06e9f5d4a3b5621f1bc5af73a224d4381f900da8d8836b510e248adcca9",
+        "actual": "785de06e9f5d4a3b5621f1bc5af73a224d4381f900da8d8836b510e248adcca9",
+        "matches": true
+      },
+      {
+        "path": "experiments/context/runner.ts",
+        "expected": "0f9d34d92d3ebbe191e58440d79fe1808f00075e871c38712b27a66058242080",
+        "actual": "0f9d34d92d3ebbe191e58440d79fe1808f00075e871c38712b27a66058242080",
+        "matches": true
+      },
+      {
+        "path": "server/provider.ts",
+        "expected": "fd9dc783696630ba53b628984849f81a6bc09c315c9806a5f5c02c621d200f23",
+        "actual": "fd9dc783696630ba53b628984849f81a6bc09c315c9806a5f5c02c621d200f23",
+        "matches": true
+      },
+      {
+        "path": "server/budget.ts",
+        "expected": "4dade335a195805cf7615027a543d7879b4dcc76eb2047db322cd149c36392f7",
+        "actual": "4dade335a195805cf7615027a543d7879b4dcc76eb2047db322cd149c36392f7",
+        "matches": true
+      }
+    ],
+    "headerFrozenMatches": true,
+    "planHashMatches": true,
+    "resultsMatchPlan": true,
+    "count": 60,
+    "uniqueKeys": 60,
+    "responseContentTasksAgreement": true
+  },
+  "totals": [
+    {
+      "variant": "A",
+      "observedRepeatedOutputs": 30,
+      "visibleFaithful": 27,
+      "fullContextComplete": 13,
+      "wrongCertain": 3,
+      "wrongAssociation": 0
+    },
+    {
+      "variant": "B",
+      "observedRepeatedOutputs": 30,
+      "visibleFaithful": 24,
+      "fullContextComplete": 21,
+      "wrongCertain": 0,
+      "wrongAssociation": 0
+    }
+  ],
+  "grouped": [
+    {
+      "group": "needs-history",
+      "variant": "A",
+      "distinctCases": 4,
+      "observedRepeatedOutputs": 12,
+      "visibleFaithful": 12,
+      "fullContextComplete": 0,
+      "wrongCertain": 0,
+      "wrongAssociation": 0
+    },
+    {
+      "group": "needs-history",
+      "variant": "B",
+      "distinctCases": 4,
+      "observedRepeatedOutputs": 12,
+      "visibleFaithful": 9,
+      "fullContextComplete": 5,
+      "wrongCertain": 0,
+      "wrongAssociation": 0
+    },
+    {
+      "group": "no-history-needed",
+      "variant": "A",
+      "distinctCases": 3,
+      "observedRepeatedOutputs": 9,
+      "visibleFaithful": 9,
+      "fullContextComplete": 7,
+      "wrongCertain": 0,
+      "wrongAssociation": 0
+    },
+    {
+      "group": "no-history-needed",
+      "variant": "B",
+      "distinctCases": 3,
+      "observedRepeatedOutputs": 9,
+      "visibleFaithful": 9,
+      "fullContextComplete": 7,
+      "wrongCertain": 0,
+      "wrongAssociation": 0
+    },
+    {
+      "group": "stale-or-conflicting",
+      "variant": "A",
+      "distinctCases": 3,
+      "observedRepeatedOutputs": 9,
+      "visibleFaithful": 6,
+      "fullContextComplete": 6,
+      "wrongCertain": 3,
+      "wrongAssociation": 0
+    },
+    {
+      "group": "stale-or-conflicting",
+      "variant": "B",
+      "distinctCases": 3,
+      "observedRepeatedOutputs": 9,
+      "visibleFaithful": 6,
+      "fullContextComplete": 9,
+      "wrongCertain": 0,
+      "wrongAssociation": 0
+    }
+  ],
+  "paired": [
+    {
+      "caseId": "H01",
+      "group": "needs-history",
+      "rounds": [
+        {
+          "round": 1,
+          "A": {
+            "key": "H01/R1/A",
+            "caseId": "H01",
+            "group": "needs-history",
+            "round": 1,
+            "variant": "A",
+            "sourceLine": 2,
+            "visibleFaithful": true,
+            "fullContextComplete": false,
+            "wrongCertain": false,
+            "wrongAssociation": false,
+            "evidence": {
+              "action": "仅有当前要求的一项动作；无新增独立历史任务。",
+              "audience": "对象与可见通知相符。",
+              "materials": "保留两份报名材料；明确未知材料明细。",
+              "negationCorrection": "无把否定或过期信息转成生效要求。",
+              "time": "保留2026年10月13日17:00前及2026-10-13，没有丢17:00。",
+              "provenance": "引用均为可见messageId和精确子串；覆盖确定字段。",
+              "uncertainties": "明细未知合理，不据此记幻觉。"
+            },
+            "notes": [
+              "相对完整历史缺报名表与缴费凭证；当前可见内容忠实。"
+            ],
+            "provenanceSubstringValid": true,
+            "output": [
+              {
+                "title": "交两份报名材料",
+                "audience": "二年级家长",
+                "deadlineText": "2026年10月13日17:00前",
+                "deadlineDate": "2026-10-13",
+                "materials": [
+                  "两份报名材料"
+                ],
+                "uncertainties": [
+                  "报名材料的具体名称和内容未说明"
+                ],
+                "provenance": [
+                  {
+                    "messageId": "H01-current",
+                    "quote": "两份报名材料，请二年级家长2026年10月13日17:00前交"
+                  }
+                ]
+              }
+            ]
+          },
+          "B": {
+            "key": "H01/R1/B",
+            "caseId": "H01",
+            "group": "needs-history",
+            "round": 1,
+            "variant": "B",
+            "sourceLine": 3,
+            "visibleFaithful": true,
+            "fullContextComplete": true,
+            "wrongCertain": false,
+            "wrongAssociation": false,
+            "evidence": {
+              "action": "仅有当前要求的一项动作；无新增独立历史任务。",
+              "audience": "对象与可见通知相符。",
+              "materials": "材料明确为报名表、缴费凭证；title保留两份。",
+              "negationCorrection": "无把否定或过期信息转成生效要求。",
+              "time": "保留2026年10月13日17:00前及2026-10-13，没有丢17:00。",
+              "provenance": "引用均为可见messageId和精确子串；覆盖确定字段。",
+              "uncertainties": "说明材料明细来自历史是来源说明，不否定已获得的信息。"
+            },
+            "notes": [
+              "历史成功补全两项材料；未额外生成填写/缴费动作。班主任只在部分出处出现，未提取为接收方，gold无接收方字段，作为完整性边界提示。"
+            ],
+            "provenanceSubstringValid": true,
+            "output": [
+              {
+                "title": "交两份报名材料",
+                "audience": "二年级家长",
+                "deadlineText": "2026年10月13日17:00前",
+                "deadlineDate": "2026-10-13",
+                "materials": [
+                  "报名表",
+                  "缴费凭证"
+                ],
+                "uncertainties": [
+                  "两份报名材料的具体明细未在current中明确，依据selectedHistory理解为报名表和缴费凭证"
+                ],
+                "provenance": [
+                  {
+                    "messageId": "H01-current",
+                    "quote": "两份报名材料，请二年级家长2026年10月13日17:00前交"
+                  },
+                  {
+                    "messageId": "H01-old",
+                    "quote": "秋游报名需填写报名表并附缴费凭证"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "round": 2,
+          "A": {
+            "key": "H01/R2/A",
+            "caseId": "H01",
+            "group": "needs-history",
+            "round": 2,
+            "variant": "A",
+            "sourceLine": 23,
+            "visibleFaithful": true,
+            "fullContextComplete": false,
+            "wrongCertain": false,
+            "wrongAssociation": false,
+            "evidence": {
+              "action": "仅有当前要求的一项动作；无新增独立历史任务。",
+              "audience": "对象与可见通知相符。",
+              "materials": "保留两份报名材料；明确未知材料明细。",
+              "negationCorrection": "无把否定或过期信息转成生效要求。",
+              "time": "保留2026年10月13日17:00前及2026-10-13，没有丢17:00。",
+              "provenance": "引用均为可见messageId和精确子串；覆盖确定字段。",
+              "uncertainties": "明细未知合理，不据此记幻觉。"
+            },
+            "notes": [
+              "相对完整历史缺报名表与缴费凭证；当前可见内容忠实。"
+            ],
+            "provenanceSubstringValid": true,
+            "output": [
+              {
+                "title": "交两份报名材料",
+                "audience": "二年级家长",
+                "deadlineText": "2026年10月13日17:00前",
+                "deadlineDate": "2026-10-13",
+                "materials": [
+                  "两份报名材料"
+                ],
+                "uncertainties": [
+                  "报名材料的具体名称和内容未说明"
+                ],
+                "provenance": [
+                  {
+                    "messageId": "H01-current",
+                    "quote": "两份报名材料，请二年级家长2026年10月13日17:00前交"
+                  }
+                ]
+              }
+            ]
+          },
+          "B": {
+            "key": "H01/R2/B",
+            "caseId": "H01",
+            "group": "needs-history",
+            "round": 2,
+            "variant": "B",
+            "sourceLine": 22,
+            "visibleFaithful": true,
+            "fullContextComplete": true,
+            "wrongCertain": false,
+            "wrongAssociation": false,
+            "evidence": {
+              "action": "仅有当前要求的一项动作；无新增独立历史任务。",
+              "audience": "对象与可见通知相符。",
+              "materials": "材料明确为报名表、缴费凭证；title保留两份。",
+              "negationCorrection": "无把否定或过期信息转成生效要求。",
+              "time": "保留2026年10月13日17:00前及2026-10-13，没有丢17:00。",
+              "provenance": "引用均为可见messageId和精确子串；覆盖确定字段。",
+              "uncertainties": "说明材料明细来自历史是来源说明，不否定已获得的信息。"
+            },
+            "notes": [
+              "历史成功补全两项材料；未额外生成填写/缴费动作。班主任只在部分出处出现，未提取为接收方，gold无接收方字段，作为完整性边界提示。"
+            ],
+            "provenanceSubstringValid": true,
+            "output": [
+              {
+                "title": "交两份报名材料",
+                "audience": "二年级家长",
+                "deadlineText": "2026年10月13日17:00前",
+                "deadlineDate": "2026-10-13",
+                "materials": [
+                  "报名表",
+                  "缴费凭证"
+                ],
+                "uncertainties": [
+                  "“两份报名材料”具体指报名表和缴费凭证，依据历史理解；当前消息未逐项列明"
+                ],
+                "provenance": [
+                  {
+                    "messageId": "H01-current",
+                    "quote": "两份报名材料，请二年级家长2026年10月13日17:00前交"
+                  },
+                  {
+                    "messageId": "H01-old",
+                    "quote": "秋游报名需填写报名表并附缴费凭证，交给班主任"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "round": 3,
+          "A": {
+            "key": "H01/R3/A",
+            "caseId": "H01",
+            "group": "needs-history",
+            "round": 3,
+            "variant": "A",
+            "sourceLine": 42,
+            "visibleFaithful": true,
+            "fullContextComplete": false,
+            "wrongCertain": false,
+            "wrongAssociation": false,
+            "evidence": {
+              "action": "仅有当前要求的一项动作；无新增独立历史任务。",
+              "audience": "对象与可见通知相符。",
+              "materials": "保留两份报名材料；明确未知材料明细。",
+              "negationCorrection": "无把否定或过期信息转成生效要求。",
+              "time": "保留2026年10月13日17:00前及2026-10-13，没有丢17:00。",
+              "provenance": "引用均为可见messageId和精确子串；覆盖确定字段。",
+              "uncertainties": "明细未知合理，不据此记幻觉。"
+            },
+            "notes": [
+              "相对完整历史缺报名表与缴费凭证；当前可见内容忠实。"
+            ],
+            "provenanceSubstringValid": true,
+            "output": [
+              {
+                "title": "交两份报名材料",
+                "audience": "二年级家长",
+                "deadlineText": "2026年10月13日17:00前",
+                "deadlineDate": "2026-10-13",
+                "materials": [
+                  "两份报名材料"
+                ],
+                "uncertainties": [
+                  "报名材料的具体名称和内容未说明"
+                ],
+                "provenance": [
+                  {
+                    "messageId": "H01-current",
+                    "quote": "上面说的两份报名材料，请二年级家长2026年10月13日17:00前交。"
+                  }
+                ]
+              }
+            ]
+          },
+          "B": {
+            "key": "H01/R3/B",
+            "caseId": "H01",
+            "group": "needs-history",
+            "round": 3,
+            "variant": "B",
+            "sourceLine": 43,
+            "visibleFaithful": true,
+            "fullContextComplete": true,
+            "wrongCertain": false,
+            "wrongAssociation": false,
+            "evidence": {
+              "action": "仅有当前要求的一项动作；无新增独立历史任务。",
+              "audience": "对象与可见通知相符。",
+              "materials": "材料明确为报名表、缴费凭证；title保留两份。",
+              "negationCorrection": "无把否定或过期信息转成生效要求。",
+              "time": "保留2026年10月13日17:00前及2026-10-13，没有丢17:00。",
+              "provenance": "引用均为可见messageId和精确子串；覆盖确定字段。",
+              "uncertainties": "说明材料明细来自历史是来源说明，不否定已获得的信息。"
+            },
+            "notes": [
+              "历史成功补全两项材料；未额外生成填写/缴费动作。班主任只在部分出处出现，未提取为接收方，gold无接收方字段，作为完整性边界提示。"
+            ],
+            "provenanceSubstringValid": true,
+            "output": [
+              {
+                "title": "交两份报名材料",
+                "audience": "二年级家长",
+                "deadlineText": "2026年10月13日17:00前",
+                "deadlineDate": "2026-10-13",
+                "materials": [
+                  "报名表",
+                  "缴费凭证"
+                ],
+                "uncertainties": [
+                  "“两份报名材料”具体指报名表和缴费凭证，依据历史理解；当前消息未逐项列明"
+                ],
+                "provenance": [
+                  {
+                    "messageId": "H01-current",
+                    "quote": "上面说的两份报名材料，请二年级家长2026年10月13日17:00前交。"
+                  },
+                  {
+                    "messageId": "H01-old",
+                    "quote": "秋游报名需填写报名表并附缴费凭证，交给班主任。"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "caseId": "H02",
+      "group": "needs-history",
+      "rounds": [
+        {
+          "round": 1,
+          "A": {
+            "key": "H02/R1/A",
+            "caseId": "H02",
+            "group": "needs-history",
+            "round": 1,
+            "variant": "A",
+            "sourceLine": 4,
+            "visibleFaithful": true,
+            "fullContextComplete": false,
+            "wrongCertain": false,
+            "wrongAssociation": false,
+            "evidence": {
+              "action": "仅有当前要求的一项动作；无新增独立历史任务。",
+              "audience": "audience=上述成员，uncertainties明确具体指哪些人不明确；不构成虚构具体对象。",
+              "materials": "materials仅该表；一份信息在uncertainties中承认，但名称/形式/签字不可从A确定。",
+              "negationCorrection": "无把否定或过期信息转成生效要求。",
+              "time": "deadlineText为可见原文，完整日期正确归一化；未使用今日补日期。",
+              "provenance": "引用均为可见messageId和精确子串；覆盖确定字段。",
+              "uncertainties": "未发现无依据确定化。"
+            },
+            "notes": [
+              "提示要求未知对象留空，本输出是可见指代占位，存在字段规范偏差；不将其算幻觉。"
+            ],
+            "provenanceSubstringValid": true,
+            "output": [
+              {
+                "title": "交该表",
+                "audience": "上述成员",
+                "deadlineText": "2026年10月18日前",
+                "deadlineDate": "2026-10-18",
+                "materials": [
+                  "该表"
+                ],
+                "uncertainties": [
+                  "“上述成员”具体指哪些人不明确",
+                  "“该表”具体名称或内容不明确",
+                  "“一份即可”指提交份数，但材料形式未说明"
+                ],
+                "provenance": [
+                  {
+                    "messageId": "H02-current",
+                    "quote": "请上述成员于2026年10月18日前交该表，一份即可。"
+                  }
+                ]
+              }
+            ]
+          },
+          "B": {
+            "key": "H02/R1/B",
+            "caseId": "H02",
+            "group": "needs-history",
+            "round": 1,
+            "variant": "B",
+            "sourceLine": 5,
+            "visibleFaithful": true,
+            "fullContextComplete": false,
+            "wrongCertain": false,
+            "wrongAssociation": false,
+            "evidence": {
+              "action": "仅有当前要求的一项动作；无新增独立历史任务。",
+              "audience": "科研小组成员由H02-old支持。",
+              "materials": "导师签字、纸质、立项表均正确，但title/materials均漏一份；一份只在出处。",
+              "negationCorrection": "无把否定或过期信息转成生效要求。",
+              "time": "deadlineText为可见原文，完整日期正确归一化；未使用今日补日期。",
+              "provenance": "引用均为可见messageId和精确子串；覆盖确定字段。",
+              "uncertainties": "未发现无依据确定化。"
+            },
+            "notes": [
+              "上下文补全对象与表格性质，但三轮均遗漏数量，不能判完整。"
+            ],
+            "provenanceSubstringValid": true,
+            "output": [
+              {
+                "title": "提交导师签字的纸质立项表",
+                "audience": "科研小组成员",
+                "deadlineText": "2026年10月18日前",
+                "deadlineDate": "2026-10-18",
+                "materials": [
+                  "导师签字的纸质立项表"
+                ],
+                "uncertainties": [],
+                "provenance": [
+                  {
+                    "messageId": "H02-current",
+                    "quote": "请上述成员于2026年10月18日前交该表，一份即可。"
+                  },
+                  {
+                    "messageId": "H02-old",
+                    "quote": "科研小组成员要提交一份导师签字的纸质立项表。"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "round": 2,
+          "A": {
+            "key": "H02/R2/A",
+            "caseId": "H02",
+            "group": "needs-history",
+            "round": 2,
+            "variant": "A",
+            "sourceLine": 25,
+            "visibleFaithful": true,
+            "fullContextComplete": false,
+            "wrongCertain": false,
+            "wrongAssociation": false,
+            "evidence": {
+              "action": "仅有当前要求的一项动作；无新增独立历史任务。",
+              "audience": "audience=上述成员，uncertainties明确具体指哪些人不明确；不构成虚构具体对象。",
+              "materials": "materials仅该表；一份信息在uncertainties中承认，但名称/形式/签字不可从A确定。",
+              "negationCorrection": "无把否定或过期信息转成生效要求。",
+              "time": "deadlineText为可见原文，完整日期正确归一化；未使用今日补日期。",
+              "provenance": "引用均为可见messageId和精确子串；覆盖确定字段。",
+              "uncertainties": "未发现无依据确定化。"
+            },
+            "notes": [
+              "提示要求未知对象留空，本输出是可见指代占位，存在字段规范偏差；不将其算幻觉。"
+            ],
+            "provenanceSubstringValid": true,
+            "output": [
+              {
+                "title": "交该表",
+                "audience": "上述成员",
+                "deadlineText": "2026年10月18日前",
+                "deadlineDate": "2026-10-18",
+                "materials": [
+                  "该表"
+                ],
+                "uncertainties": [
+                  "“上述成员”具体指哪些人不明确",
+                  "“该表”具体指什么表不明确",
+                  "“一份即可”指该表提交一份，但表的名称和形式不明确"
+                ],
+                "provenance": [
+                  {
+                    "messageId": "H02-current",
+                    "quote": "请上述成员于2026年10月18日前交该表，一份即可。"
+                  }
+                ]
+              }
+            ]
+          },
+          "B": {
+            "key": "H02/R2/B",
+            "caseId": "H02",
+            "group": "needs-history",
+            "round": 2,
+            "variant": "B",
+            "sourceLine": 24,
+            "visibleFaithful": true,
+            "fullContextComplete": false,
+            "wrongCertain": false,
+            "wrongAssociation": false,
+            "evidence": {
+              "action": "仅有当前要求的一项动作；无新增独立历史任务。",
+              "audience": "科研小组成员由H02-old支持。",
+              "materials": "导师签字、纸质、立项表均正确，但title/materials均漏一份；一份只在出处。",
+              "negationCorrection": "无把否定或过期信息转成生效要求。",
+              "time": "deadlineText为可见原文，完整日期正确归一化；未使用今日补日期。",
+              "provenance": "引用均为可见messageId和精确子串；覆盖确定字段。",
+              "uncertainties": "未发现无依据确定化。"
+            },
+            "notes": [
+              "上下文补全对象与表格性质，但三轮均遗漏数量，不能判完整。"
+            ],
+            "provenanceSubstringValid": true,
+            "output": [
+              {
+                "title": "提交导师签字的纸质立项表",
+                "audience": "科研小组成员",
+                "deadlineText": "2026年10月18日前",
+                "deadlineDate": "2026-10-18",
+                "materials": [
+                  "导师签字的纸质立项表"
+                ],
+                "uncertainties": [],
+                "provenance": [
+                  {
+                    "messageId": "H02-current",
+                    "quote": "请上述成员于2026年10月18日前交该表，一份即可。"
+                  },
+                  {
+                    "messageId": "H02-old",
+                    "quote": "科研小组成员要提交一份导师签字的纸质立项表。"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "round": 3,
+          "A": {
+            "key": "H02/R3/A",
+            "caseId": "H02",
+            "group": "needs-history",
+            "round": 3,
+            "variant": "A",
+            "sourceLine": 44,
+            "visibleFaithful": true,
+            "fullContextComplete": false,
+            "wrongCertain": false,
+            "wrongAssociation": false,
+            "evidence": {
+              "action": "仅有当前要求的一项动作；无新增独立历史任务。",
+              "audience": "audience=上述成员，uncertainties明确具体指哪些人不明确；不构成虚构具体对象。",
+              "materials": "materials仅该表；一份信息在uncertainties中承认，但名称/形式/签字不可从A确定。",
+              "negationCorrection": "无把否定或过期信息转成生效要求。",
+              "time": "deadlineText为可见原文，完整日期正确归一化；未使用今日补日期。",
+              "provenance": "引用均为可见messageId和精确子串；覆盖确定字段。",
+              "uncertainties": "未发现无依据确定化。"
+            },
+            "notes": [
+              "提示要求未知对象留空，本输出是可见指代占位，存在字段规范偏差；不将其算幻觉。"
+            ],
+            "provenanceSubstringValid": true,
+            "output": [
+              {
+                "title": "交该表",
+                "audience": "上述成员",
+                "deadlineText": "2026年10月18日前",
+                "deadlineDate": "2026-10-18",
+                "materials": [
+                  "该表"
+                ],
+                "uncertainties": [
+                  "“上述成员”具体指哪些人不明确",
+                  "“该表”具体名称或内容不明确",
+                  "“一份即可”指提交份数，但材料形式未说明"
+                ],
+                "provenance": [
+                  {
+                    "messageId": "H02-current",
+                    "quote": "请上述成员于2026年10月18日前交该表，一份即可。"
+                  }
+                ]
+              }
+            ]
+          },
+          "B": {
+            "key": "H02/R3/B",
+            "caseId": "H02",
+            "group": "needs-history",
+            "round": 3,
+            "variant": "B",
+            "sourceLine": 45,
+            "visibleFaithful": true,
+            "fullContextComplete": false,
+            "wrongCertain": false,
+            "wrongAssociation": false,
+            "evidence": {
+              "action": "仅有当前要求的一项动作；无新增独立历史任务。",
+              "audience": "科研小组成员由H02-old支持。",
+              "materials": "导师签字、纸质、立项表均正确，但title/materials均漏一份；一份只在出处。",
+              "negationCorrection": "无把否定或过期信息转成生效要求。",
+              "time": "deadlineText为可见原文，完整日期正确归一化；未使用今日补日期。",
+              "provenance": "引用均为可见messageId和精确子串；覆盖确定字段。",
+              "uncertainties": "未发现无依据确定化。"
+            },
+            "notes": [
+              "上下文补全对象与表格性质，但三轮均遗漏数量，不能判完整。"
+            ],
+            "provenanceSubstringValid": true,
+            "output": [
+              {
+                "title": "提交导师签字的纸质立项表",
+                "audience": "科研小组成员",
+                "deadlineText": "2026年10月18日前",
+                "deadlineDate": "2026-10-18",
+                "materials": [
+                  "导师签字的纸质立项表"
+                ],
+                "uncertainties": [],
+                "provenance": [
+                  {
+                    "messageId": "H02-current",
+                    "quote": "请上述成员于2026年10月18日前交该表，一份即可。"
+                  },
+                  {
+                    "messageId": "H02-old",
+                    "quote": "科研小组成员要提交一份导师签字的纸质立项表。"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "caseId": "H03",
+      "group": "needs-history",
+      "rounds": [
+        {
+          "round": 1,
+          "A": {
+            "key": "H03/R1/A",
+            "caseId": "H03",
+            "group": "needs-history",
+            "round": 1,
+            "variant": "A",
+            "sourceLine": 6,
+            "visibleFaithful": true,
+            "fullContextComplete": false,
+            "wrongCertain": false,
+            "wrongAssociation": false,
+            "evidence": {
+              "action": "仅有当前要求的一项动作；无新增独立历史任务。",
+              "audience": "对象与可见通知相符。",
+              "materials": "A只知承诺书，格式未知是合理保留。",
+              "negationCorrection": "无把否定或过期信息转成生效要求。",
+              "time": "deadlineText为可见原文，完整日期正确归一化；未使用今日补日期。",
+              "provenance": "当前已输出字段出处充分。",
+              "uncertainties": "格式与渠道未明确的疑点受当前可见输入支持。"
+            },
+            "notes": [
+              "fullContextComplete不通过不意味着A幻觉。"
+            ],
+            "provenanceSubstringValid": true,
+            "output": [
+              {
+                "title": "发送承诺书",
+                "audience": "志愿者",
+                "deadlineText": "2026年10月16日前",
+                "deadlineDate": "2026-10-16",
+                "materials": [
+                  "承诺书"
+                ],
+                "uncertainties": [
+                  "承诺书的具体格式未在current中明确，仅提及“按上述格式”",
+                  "发送方式未明确"
+                ],
+                "provenance": [
+                  {
+                    "messageId": "H03-current",
+                    "quote": "志愿者请在2026年10月16日前，把前面说的承诺书按上述格式发送。"
+                  }
+                ]
+              }
+            ]
+          },
+          "B": {
+            "key": "H03/R1/B",
+            "caseId": "H03",
+            "group": "needs-history",
+            "round": 1,
+            "variant": "B",
+            "sourceLine": 7,
+            "visibleFaithful": false,
+            "fullContextComplete": false,
+            "wrongCertain": false,
+            "wrongAssociation": false,
+            "evidence": {
+              "action": "仅有当前要求的一项动作；无新增独立历史任务。",
+              "audience": "对象与可见通知相符。",
+              "materials": "history明确健康承诺书、电子PDF，但只提承诺书；漏名称限定与格式。",
+              "negationCorrection": "无把否定或过期信息转成生效要求。",
+              "time": "deadlineText为可见原文，完整日期正确归一化；未使用今日补日期。",
+              "provenance": "只引current，未利用H03-old补全。",
+              "uncertainties": "声称格式/发送方式未明确，与H03-old明确电子PDF和活动邮箱矛盾。"
+            },
+            "notes": [
+              "三轮B均未得到该历史应有的补全；这是遗漏及虚假不确定，不是新增具体日期/材料的错误确定化。"
+            ],
+            "provenanceSubstringValid": true,
+            "output": [
+              {
+                "title": "发送承诺书",
+                "audience": "志愿者",
+                "deadlineText": "2026年10月16日前",
+                "deadlineDate": "2026-10-16",
+                "materials": [
+                  "承诺书"
+                ],
+                "uncertainties": [
+                  "承诺书的具体格式未明确",
+                  "发送方式未明确"
+                ],
+                "provenance": [
+                  {
+                    "messageId": "H03-current",
+                    "quote": "志愿者请在2026年10月16日前，把前面说的承诺书按上述格式发送。"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "round": 2,
+          "A": {
+            "key": "H03/R2/A",
+            "caseId": "H03",
+            "group": "needs-history",
+            "round": 2,
+            "variant": "A",
+            "sourceLine": 27,
+            "visibleFaithful": true,
+            "fullContextComplete": false,
+            "wrongCertain": false,
+            "wrongAssociation": false,
+            "evidence": {
+              "action": "仅有当前要求的一项动作；无新增独立历史任务。",
+              "audience": "对象与可见通知相符。",
+              "materials": "A只知承诺书，格式未知是合理保留。",
+              "negationCorrection": "无把否定或过期信息转成生效要求。",
+              "time": "deadlineText为可见原文，完整日期正确归一化；未使用今日补日期。",
+              "provenance": "当前已输出字段出处充分。",
+              "uncertainties": "格式与渠道未明确的疑点受当前可见输入支持。"
+            },
+            "notes": [
+              "fullContextComplete不通过不意味着A幻觉。"
+            ],
+            "provenanceSubstringValid": true,
+            "output": [
+              {
+                "title": "发送承诺书",
+                "audience": "志愿者",
+                "deadlineText": "2026年10月16日前",
+                "deadlineDate": "2026-10-16",
+                "materials": [
+                  "承诺书"
+                ],
+                "uncertainties": [
+                  "承诺书的具体格式未在消息中给出，仅称“按上述格式”",
+                  "发送方式/渠道未明确"
+                ],
+                "provenance": [
+                  {
+                    "messageId": "H03-current",
+                    "quote": "志愿者请在2026年10月16日前，把前面说的承诺书按上述格式发送。"
+                  }
+                ]
+              }
+            ]
+          },
+          "B": {
+            "key": "H03/R2/B",
+            "caseId": "H03",
+            "group": "needs-history",
+            "round": 2,
+            "variant": "B",
+            "sourceLine": 26,
+            "visibleFaithful": false,
+            "fullContextComplete": false,
+            "wrongCertain": false,
+            "wrongAssociation": false,
+            "evidence": {
+              "action": "仅有当前要求的一项动作；无新增独立历史任务。",
+              "audience": "对象与可见通知相符。",
+              "materials": "history明确健康承诺书、电子PDF，但只提承诺书；漏名称限定与格式。",
+              "negationCorrection": "无把否定或过期信息转成生效要求。",
+              "time": "deadlineText为可见原文，完整日期正确归一化；未使用今日补日期。",
+              "provenance": "只引current，未利用H03-old补全。",
+              "uncertainties": "声称格式/发送方式未明确，与H03-old明确电子PDF和活动邮箱矛盾。"
+            },
+            "notes": [
+              "三轮B均未得到该历史应有的补全；这是遗漏及虚假不确定，不是新增具体日期/材料的错误确定化。"
+            ],
+            "provenanceSubstringValid": true,
+            "output": [
+              {
+                "title": "发送承诺书",
+                "audience": "志愿者",
+                "deadlineText": "2026年10月16日前",
+                "deadlineDate": "2026-10-16",
+                "materials": [
+                  "承诺书"
+                ],
+                "uncertainties": [
+                  "承诺书的具体格式未明确",
+                  "发送方式未明确"
+                ],
+                "provenance": [
+                  {
+                    "messageId": "H03-current",
+                    "quote": "志愿者请在2026年10月16日前，把前面说的承诺书按上述格式发送。"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "round": 3,
+          "A": {
+            "key": "H03/R3/A",
+            "caseId": "H03",
+            "group": "needs-history",
+            "round": 3,
+            "variant": "A",
+            "sourceLine": 46,
+            "visibleFaithful": true,
+            "fullContextComplete": false,
+            "wrongCertain": false,
+            "wrongAssociation": false,
+            "evidence": {
+              "action": "仅有当前要求的一项动作；无新增独立历史任务。",
+              "audience": "对象与可见通知相符。",
+              "materials": "A只知承诺书，格式未知是合理保留。",
+              "negationCorrection": "无把否定或过期信息转成生效要求。",
+              "time": "deadlineText为可见原文，完整日期正确归一化；未使用今日补日期。",
+              "provenance": "当前已输出字段出处充分。",
+              "uncertainties": "格式与渠道未明确的疑点受当前可见输入支持。"
+            },
+            "notes": [
+              "fullContextComplete不通过不意味着A幻觉。"
+            ],
+            "provenanceSubstringValid": true,
+            "output": [
+              {
+                "title": "发送承诺书",
+                "audience": "志愿者",
+                "deadlineText": "2026年10月16日前",
+                "deadlineDate": "2026-10-16",
+                "materials": [
+                  "承诺书"
+                ],
+                "uncertainties": [
+                  "承诺书的具体格式未在消息中说明",
+                  "发送方式/渠道未明确"
+                ],
+                "provenance": [
+                  {
+                    "messageId": "H03-current",
+                    "quote": "志愿者请在2026年10月16日前，把前面说的承诺书按上述格式发送。"
+                  }
+                ]
+              }
+            ]
+          },
+          "B": {
+            "key": "H03/R3/B",
+            "caseId": "H03",
+            "group": "needs-history",
+            "round": 3,
+            "variant": "B",
+            "sourceLine": 47,
+            "visibleFaithful": false,
+            "fullContextComplete": false,
+            "wrongCertain": false,
+            "wrongAssociation": false,
+            "evidence": {
+              "action": "仅有当前要求的一项动作；无新增独立历史任务。",
+              "audience": "对象与可见通知相符。",
+              "materials": "history明确健康承诺书、电子PDF，但只提承诺书；漏名称限定与格式。",
+              "negationCorrection": "无把否定或过期信息转成生效要求。",
+              "time": "deadlineText为可见原文，完整日期正确归一化；未使用今日补日期。",
+              "provenance": "只引current，未利用H03-old补全。",
+              "uncertainties": "声称格式/发送方式未明确，与H03-old明确电子PDF和活动邮箱矛盾。"
+            },
+            "notes": [
+              "三轮B均未得到该历史应有的补全；这是遗漏及虚假不确定，不是新增具体日期/材料的错误确定化。"
+            ],
+            "provenanceSubstringValid": true,
+            "output": [
+              {
+                "title": "发送承诺书",
+                "audience": "志愿者",
+                "deadlineText": "2026年10月16日前",
+                "deadlineDate": "2026-10-16",
+                "materials": [
+                  "承诺书"
+                ],
+                "uncertainties": [
+                  "承诺书的具体格式未明确",
+                  "发送方式/接收方未明确"
+                ],
+                "provenance": [
+                  {
+                    "messageId": "H03-current",
+                    "quote": "志愿者请在2026年10月16日前，把前面说的承诺书按上述格式发送。"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "caseId": "H04",
+      "group": "needs-history",
+      "rounds": [
+        {
+          "round": 1,
+          "A": {
+            "key": "H04/R1/A",
+            "caseId": "H04",
+            "group": "needs-history",
+            "round": 1,
+            "variant": "A",
+            "sourceLine": 8,
+            "visibleFaithful": true,
+            "fullContextComplete": false,
+            "wrongCertain": false,
+            "wrongAssociation": false,
+            "evidence": {
+              "action": "仅有当前要求的一项动作；无新增独立历史任务。",
+              "audience": "对象与可见通知相符。",
+              "materials": "规格/数量/提交方式未知，合理留疑点。",
+              "negationCorrection": "无把否定或过期信息转成生效要求。",
+              "time": "deadlineText为可见原文，完整日期正确归一化；未使用今日补日期。",
+              "provenance": "引用均为可见messageId和精确子串；覆盖确定字段。",
+              "uncertainties": "未发现无依据确定化。"
+            },
+            "notes": [
+              "缺历史中规格与形式，完整性不通过。"
+            ],
+            "provenanceSubstringValid": true,
+            "output": [
+              {
+                "title": "交照片",
+                "audience": "参加讲座的同学",
+                "deadlineText": "2026年10月19日前",
+                "deadlineDate": "2026-10-19",
+                "materials": [
+                  "照片"
+                ],
+                "uncertainties": [
+                  "照片的具体规格、数量及提交方式未说明",
+                  "“上述照片”所指内容因无历史记录而无法确定"
+                ],
+                "provenance": [
+                  {
+                    "messageId": "H04-current",
+                    "quote": "参加讲座的同学请2026年10月19日前交上述照片。"
+                  }
+                ]
+              }
+            ]
+          },
+          "B": {
+            "key": "H04/R1/B",
+            "caseId": "H04",
+            "group": "needs-history",
+            "round": 1,
+            "variant": "B",
+            "sourceLine": 9,
+            "visibleFaithful": true,
+            "fullContextComplete": true,
+            "wrongCertain": false,
+            "wrongAssociation": false,
+            "evidence": {
+              "action": "仅有当前要求的一项动作；无新增独立历史任务。",
+              "audience": "对象与可见通知相符。",
+              "materials": "一张/一寸/蓝底/电子JPG齐全。",
+              "negationCorrection": "无把否定或过期信息转成生效要求。",
+              "time": "deadlineText为可见原文，完整日期正确归一化；未使用今日补日期。",
+              "provenance": "引用均为可见messageId和精确子串；覆盖确定字段。",
+              "uncertainties": "未发现无依据确定化。"
+            },
+            "notes": [
+              "提交讲座照片按参与讲座者照片的简写解读；一寸/蓝底说明是证件照，没有断言拍摄讲座现场。"
+            ],
+            "provenanceSubstringValid": true,
+            "output": [
+              {
+                "title": "提交讲座照片",
+                "audience": "参加讲座的同学",
+                "deadlineText": "2026年10月19日前",
+                "deadlineDate": "2026-10-19",
+                "materials": [
+                  "一张一寸照片",
+                  "蓝底",
+                  "电子JPG"
+                ],
+                "uncertainties": [],
+                "provenance": [
+                  {
+                    "messageId": "H04-current",
+                    "quote": "参加讲座的同学请2026年10月19日前交上述照片。"
+                  },
+                  {
+                    "messageId": "H04-old1",
+                    "quote": "参与讲座的同学提交一张一寸照片。"
+                  },
+                  {
+                    "messageId": "H04-old2",
+                    "quote": "照片需蓝底，电子JPG即可。"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "round": 2,
+          "A": {
+            "key": "H04/R2/A",
+            "caseId": "H04",
+            "group": "needs-history",
+            "round": 2,
+            "variant": "A",
+            "sourceLine": 29,
+            "visibleFaithful": true,
+            "fullContextComplete": false,
+            "wrongCertain": false,
+            "wrongAssociation": false,
+            "evidence": {
+              "action": "仅有当前要求的一项动作；无新增独立历史任务。",
+              "audience": "对象与可见通知相符。",
+              "materials": "规格/数量/提交方式未知，合理留疑点。",
+              "negationCorrection": "无把否定或过期信息转成生效要求。",
+              "time": "deadlineText为可见原文，完整日期正确归一化；未使用今日补日期。",
+              "provenance": "引用均为可见messageId和精确子串；覆盖确定字段。",
+              "uncertainties": "未发现无依据确定化。"
+            },
+            "notes": [
+              "缺历史中规格与形式，完整性不通过。"
+            ],
+            "provenanceSubstringValid": true,
+            "output": [
+              {
+                "title": "交照片",
+                "audience": "参加讲座的同学",
+                "deadlineText": "2026年10月19日前",
+                "deadlineDate": "2026-10-19",
+                "materials": [
+                  "照片"
+                ],
+                "uncertainties": [
+                  "照片的具体规格、数量及提交方式未说明",
+                  "“上述照片”所指内容因无历史记录而无法确定"
+                ],
+                "provenance": [
+                  {
+                    "messageId": "H04-current",
+                    "quote": "参加讲座的同学请2026年10月19日前交上述照片。"
+                  }
+                ]
+              }
+            ]
+          },
+          "B": {
+            "key": "H04/R2/B",
+            "caseId": "H04",
+            "group": "needs-history",
+            "round": 2,
+            "variant": "B",
+            "sourceLine": 28,
+            "visibleFaithful": true,
+            "fullContextComplete": true,
+            "wrongCertain": false,
+            "wrongAssociation": false,
+            "evidence": {
+              "action": "仅有当前要求的一项动作；无新增独立历史任务。",
+              "audience": "对象与可见通知相符。",
+              "materials": "一张/一寸/蓝底/电子JPG齐全。",
+              "negationCorrection": "无把否定或过期信息转成生效要求。",
+              "time": "deadlineText为可见原文，完整日期正确归一化；未使用今日补日期。",
+              "provenance": "引用均为可见messageId和精确子串；覆盖确定字段。",
+              "uncertainties": "未发现无依据确定化。"
+            },
+            "notes": [
+              "提交讲座照片按参与讲座者照片的简写解读；一寸/蓝底说明是证件照，没有断言拍摄讲座现场。"
+            ],
+            "provenanceSubstringValid": true,
+            "output": [
+              {
+                "title": "提交讲座照片",
+                "audience": "参加讲座的同学",
+                "deadlineText": "2026年10月19日前",
+                "deadlineDate": "2026-10-19",
+                "materials": [
+                  "一张一寸照片",
+                  "蓝底",
+                  "电子JPG"
+                ],
+                "uncertainties": [],
+                "provenance": [
+                  {
+                    "messageId": "H04-current",
+                    "quote": "参加讲座的同学请2026年10月19日前交上述照片。"
+                  },
+                  {
+                    "messageId": "H04-old1",
+                    "quote": "参与讲座的同学提交一张一寸照片。"
+                  },
+                  {
+                    "messageId": "H04-old2",
+                    "quote": "照片需蓝底，电子JPG即可。"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "round": 3,
+          "A": {
+            "key": "H04/R3/A",
+            "caseId": "H04",
+            "group": "needs-history",
+            "round": 3,
+            "variant": "A",
+            "sourceLine": 48,
+            "visibleFaithful": true,
+            "fullContextComplete": false,
+            "wrongCertain": false,
+            "wrongAssociation": false,
+            "evidence": {
+              "action": "仅有当前要求的一项动作；无新增独立历史任务。",
+              "audience": "对象与可见通知相符。",
+              "materials": "规格/数量/提交方式未知，合理留疑点。",
+              "negationCorrection": "无把否定或过期信息转成生效要求。",
+              "time": "deadlineText为可见原文，完整日期正确归一化；未使用今日补日期。",
+              "provenance": "引用均为可见messageId和精确子串；覆盖确定字段。",
+              "uncertainties": "未发现无依据确定化。"
+            },
+            "notes": [
+              "缺历史中规格与形式，完整性不通过。"
+            ],
+            "provenanceSubstringValid": true,
+            "output": [
+              {
+                "title": "交照片",
+                "audience": "参加讲座的同学",
+                "deadlineText": "2026年10月19日前",
+                "deadlineDate": "2026-10-19",
+                "materials": [
+                  "照片"
+                ],
+                "uncertainties": [
+                  "照片的具体规格、数量、提交方式未说明",
+                  "“上述照片”所指内容因无历史消息而无法确定"
+                ],
+                "provenance": [
+                  {
+                    "messageId": "H04-current",
+                    "quote": "参加讲座的同学请2026年10月19日前交上述照片。"
+                  }
+                ]
+              }
+            ]
+          },
+          "B": {
+            "key": "H04/R3/B",
+            "caseId": "H04",
+            "group": "needs-history",
+            "round": 3,
+            "variant": "B",
+            "sourceLine": 49,
+            "visibleFaithful": true,
+            "fullContextComplete": false,
+            "wrongCertain": false,
+            "wrongAssociation": false,
+            "evidence": {
+              "action": "仅有当前要求的一项动作；无新增独立历史任务。",
+              "audience": "对象与可见通知相符。",
+              "materials": "一寸/蓝底/电子JPG正确；漏一张，仅出处保留数量。",
+              "negationCorrection": "无把否定或过期信息转成生效要求。",
+              "time": "deadlineText为可见原文，完整日期正确归一化；未使用今日补日期。",
+              "provenance": "引用均为可见messageId和精确子串；覆盖确定字段。",
+              "uncertainties": "未发现无依据确定化。"
+            },
+            "notes": [
+              "提交讲座照片按参与讲座者照片的简写解读；一寸/蓝底说明是证件照，没有断言拍摄讲座现场。"
+            ],
+            "provenanceSubstringValid": true,
+            "output": [
+              {
+                "title": "提交讲座照片",
+                "audience": "参加讲座的同学",
+                "deadlineText": "2026年10月19日前",
+                "deadlineDate": "2026-10-19",
+                "materials": [
+                  "一寸照片",
+                  "蓝底",
+                  "电子JPG"
+                ],
+                "uncertainties": [],
+                "provenance": [
+                  {
+                    "messageId": "H04-current",
+                    "quote": "参加讲座的同学请2026年10月19日前交上述照片。"
+                  },
+                  {
+                    "messageId": "H04-old1",
+                    "quote": "参与讲座的同学提交一张一寸照片。"
+                  },
+                  {
+                    "messageId": "H04-old2",
+                    "quote": "照片需蓝底，电子JPG即可。"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "caseId": "N01",
+      "group": "no-history-needed",
+      "rounds": [
+        {
+          "round": 1,
+          "A": {
+            "key": "N01/R1/A",
+            "caseId": "N01",
+            "group": "no-history-needed",
+            "round": 1,
+            "variant": "A",
+            "sourceLine": 10,
+            "visibleFaithful": true,
+            "fullContextComplete": true,
+            "wrongCertain": false,
+            "wrongAssociation": false,
+            "evidence": {
+              "action": "仅有当前要求的一项动作；无新增独立历史任务。",
+              "audience": "对象与可见通知相符。",
+              "materials": "电子签到表正确，原文无数量。",
+              "negationCorrection": "无把否定或过期信息转成生效要求。",
+              "time": "deadlineText为可见原文，完整日期正确归一化；未使用今日补日期。",
+              "provenance": "引用均为可见messageId和精确子串；覆盖确定字段。",
+              "uncertainties": "未发现无依据确定化。"
+            },
+            "notes": [
+              "无关天气历史没有影响输出。"
+            ],
+            "provenanceSubstringValid": true,
+            "output": [
+              {
+                "title": "提交电子签到表",
+                "audience": "所有志愿者",
+                "deadlineText": "2026年10月15日前",
+                "deadlineDate": "2026-10-15",
+                "materials": [
+                  "电子签到表"
+                ],
+                "uncertainties": [],
+                "provenance": [
+                  {
+                    "messageId": "N01-current",
+                    "quote": "请所有志愿者2026年10月15日前提交电子签到表。"
+                  }
+                ]
+              }
+            ]
+          },
+          "B": {
+            "key": "N01/R1/B",
+            "caseId": "N01",
+            "group": "no-history-needed",
+            "round": 1,
+            "variant": "B",
+            "sourceLine": 11,
+            "visibleFaithful": true,
+            "fullContextComplete": true,
+            "wrongCertain": false,
+            "wrongAssociation": false,
+            "evidence": {
+              "action": "仅有当前要求的一项动作；无新增独立历史任务。",
+              "audience": "对象与可见通知相符。",
+              "materials": "电子签到表正确，原文无数量。",
+              "negationCorrection": "无把否定或过期信息转成生效要求。",
+              "time": "deadlineText为可见原文，完整日期正确归一化；未使用今日补日期。",
+              "provenance": "引用均为可见messageId和精确子串；覆盖确定字段。",
+              "uncertainties": "未发现无依据确定化。"
+            },
+            "notes": [
+              "无关天气历史没有影响输出。"
+            ],
+            "provenanceSubstringValid": true,
+            "output": [
+              {
+                "title": "提交电子签到表",
+                "audience": "所有志愿者",
+                "deadlineText": "2026年10月15日前",
+                "deadlineDate": "2026-10-15",
+                "materials": [
+                  "电子签到表"
+                ],
+                "uncertainties": [],
+                "provenance": [
+                  {
+                    "messageId": "N01-current",
+                    "quote": "请所有志愿者2026年10月15日前提交电子签到表。"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "round": 2,
+          "A": {
+            "key": "N01/R2/A",
+            "caseId": "N01",
+            "group": "no-history-needed",
+            "round": 2,
+            "variant": "A",
+            "sourceLine": 31,
+            "visibleFaithful": true,
+            "fullContextComplete": true,
+            "wrongCertain": false,
+            "wrongAssociation": false,
+            "evidence": {
+              "action": "仅有当前要求的一项动作；无新增独立历史任务。",
+              "audience": "对象与可见通知相符。",
+              "materials": "电子签到表正确，原文无数量。",
+              "negationCorrection": "无把否定或过期信息转成生效要求。",
+              "time": "deadlineText为可见原文，完整日期正确归一化；未使用今日补日期。",
+              "provenance": "引用均为可见messageId和精确子串；覆盖确定字段。",
+              "uncertainties": "未发现无依据确定化。"
+            },
+            "notes": [
+              "无关天气历史没有影响输出。"
+            ],
+            "provenanceSubstringValid": true,
+            "output": [
+              {
+                "title": "提交电子签到表",
+                "audience": "所有志愿者",
+                "deadlineText": "2026年10月15日前",
+                "deadlineDate": "2026-10-15",
+                "materials": [
+                  "电子签到表"
+                ],
+                "uncertainties": [],
+                "provenance": [
+                  {
+                    "messageId": "N01-current",
+                    "quote": "请所有志愿者2026年10月15日前提交电子签到表。"
+                  }
+                ]
+              }
+            ]
+          },
+          "B": {
+            "key": "N01/R2/B",
+            "caseId": "N01",
+            "group": "no-history-needed",
+            "round": 2,
+            "variant": "B",
+            "sourceLine": 30,
+            "visibleFaithful": true,
+            "fullContextComplete": true,
+            "wrongCertain": false,
+            "wrongAssociation": false,
+            "evidence": {
+              "action": "仅有当前要求的一项动作；无新增独立历史任务。",
+              "audience": "对象与可见通知相符。",
+              "materials": "电子签到表正确，原文无数量。",
+              "negationCorrection": "无把否定或过期信息转成生效要求。",
+              "time": "deadlineText为可见原文，完整日期正确归一化；未使用今日补日期。",
+              "provenance": "引用均为可见messageId和精确子串；覆盖确定字段。",
+              "uncertainties": "未发现无依据确定化。"
+            },
+            "notes": [
+              "无关天气历史没有影响输出。"
+            ],
+            "provenanceSubstringValid": true,
+            "output": [
+              {
+                "title": "提交电子签到表",
+                "audience": "所有志愿者",
+                "deadlineText": "2026年10月15日前",
+                "deadlineDate": "2026-10-15",
+                "materials": [
+                  "电子签到表"
+                ],
+                "uncertainties": [],
+                "provenance": [
+                  {
+                    "messageId": "N01-current",
+                    "quote": "请所有志愿者2026年10月15日前提交电子签到表。"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "round": 3,
+          "A": {
+            "key": "N01/R3/A",
+            "caseId": "N01",
+            "group": "no-history-needed",
+            "round": 3,
+            "variant": "A",
+            "sourceLine": 50,
+            "visibleFaithful": true,
+            "fullContextComplete": true,
+            "wrongCertain": false,
+            "wrongAssociation": false,
+            "evidence": {
+              "action": "仅有当前要求的一项动作；无新增独立历史任务。",
+              "audience": "对象与可见通知相符。",
+              "materials": "电子签到表正确，原文无数量。",
+              "negationCorrection": "无把否定或过期信息转成生效要求。",
+              "time": "deadlineText为可见原文，完整日期正确归一化；未使用今日补日期。",
+              "provenance": "引用均为可见messageId和精确子串；覆盖确定字段。",
+              "uncertainties": "未发现无依据确定化。"
+            },
+            "notes": [
+              "无关天气历史没有影响输出。"
+            ],
+            "provenanceSubstringValid": true,
+            "output": [
+              {
+                "title": "提交电子签到表",
+                "audience": "所有志愿者",
+                "deadlineText": "2026年10月15日前",
+                "deadlineDate": "2026-10-15",
+                "materials": [
+                  "电子签到表"
+                ],
+                "uncertainties": [],
+                "provenance": [
+                  {
+                    "messageId": "N01-current",
+                    "quote": "请所有志愿者2026年10月15日前提交电子签到表。"
+                  }
+                ]
+              }
+            ]
+          },
+          "B": {
+            "key": "N01/R3/B",
+            "caseId": "N01",
+            "group": "no-history-needed",
+            "round": 3,
+            "variant": "B",
+            "sourceLine": 51,
+            "visibleFaithful": true,
+            "fullContextComplete": true,
+            "wrongCertain": false,
+            "wrongAssociation": false,
+            "evidence": {
+              "action": "仅有当前要求的一项动作；无新增独立历史任务。",
+              "audience": "对象与可见通知相符。",
+              "materials": "电子签到表正确，原文无数量。",
+              "negationCorrection": "无把否定或过期信息转成生效要求。",
+              "time": "deadlineText为可见原文，完整日期正确归一化；未使用今日补日期。",
+              "provenance": "引用均为可见messageId和精确子串；覆盖确定字段。",
+              "uncertainties": "未发现无依据确定化。"
+            },
+            "notes": [
+              "无关天气历史没有影响输出。"
+            ],
+            "provenanceSubstringValid": true,
+            "output": [
+              {
+                "title": "提交电子签到表",
+                "audience": "所有志愿者",
+                "deadlineText": "2026年10月15日前",
+                "deadlineDate": "2026-10-15",
+                "materials": [
+                  "电子签到表"
+                ],
+                "uncertainties": [],
+                "provenance": [
+                  {
+                    "messageId": "N01-current",
+                    "quote": "请所有志愿者2026年10月15日前提交电子签到表。"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "caseId": "N02",
+      "group": "no-history-needed",
+      "rounds": [
+        {
+          "round": 1,
+          "A": {
+            "key": "N02/R1/A",
+            "caseId": "N02",
+            "group": "no-history-needed",
+            "round": 1,
+            "variant": "A",
+            "sourceLine": 12,
+            "visibleFaithful": true,
+            "fullContextComplete": false,
+            "wrongCertain": false,
+            "wrongAssociation": false,
+            "evidence": {
+              "action": "仅有当前要求的一项动作；无新增独立历史任务。",
+              "audience": "对象与可见通知相符。",
+              "materials": "本人签字/纸质/接送授权书正确，但任务字段漏一份；出处的数量不替代提取。",
+              "negationCorrection": "无把否定或过期信息转成生效要求。",
+              "time": "deadlineText为可见原文，完整日期正确归一化；未使用今日补日期。",
+              "provenance": "引用均为可见messageId和精确子串；覆盖确定字段。",
+              "uncertainties": "未发现无依据确定化。"
+            },
+            "notes": [
+              "无需历史；同一case存在数量保留的轮次波动，不应解释为B稳定提升。"
+            ],
+            "provenanceSubstringValid": true,
+            "output": [
+              {
+                "title": "交纸质接送授权书",
+                "audience": "三年级家长",
+                "deadlineText": "2026年10月17日前",
+                "deadlineDate": "2026-10-17",
+                "materials": [
+                  "本人签字的纸质接送授权书"
+                ],
+                "uncertainties": [],
+                "provenance": [
+                  {
+                    "messageId": "N02-current",
+                    "quote": "三年级家长请2026年10月17日前交一份本人签字的纸质接送授权书。"
+                  }
+                ]
+              }
+            ]
+          },
+          "B": {
+            "key": "N02/R1/B",
+            "caseId": "N02",
+            "group": "no-history-needed",
+            "round": 1,
+            "variant": "B",
+            "sourceLine": 13,
+            "visibleFaithful": true,
+            "fullContextComplete": false,
+            "wrongCertain": false,
+            "wrongAssociation": false,
+            "evidence": {
+              "action": "仅有当前要求的一项动作；无新增独立历史任务。",
+              "audience": "对象与可见通知相符。",
+              "materials": "本人签字/纸质/接送授权书正确，但任务字段漏一份；出处的数量不替代提取。",
+              "negationCorrection": "无把否定或过期信息转成生效要求。",
+              "time": "deadlineText为可见原文，完整日期正确归一化；未使用今日补日期。",
+              "provenance": "引用均为可见messageId和精确子串；覆盖确定字段。",
+              "uncertainties": "未发现无依据确定化。"
+            },
+            "notes": [
+              "无需历史；同一case存在数量保留的轮次波动，不应解释为B稳定提升。"
+            ],
+            "provenanceSubstringValid": true,
+            "output": [
+              {
+                "title": "交纸质接送授权书",
+                "audience": "三年级家长",
+                "deadlineText": "2026年10月17日前",
+                "deadlineDate": "2026-10-17",
+                "materials": [
+                  "本人签字的纸质接送授权书"
+                ],
+                "uncertainties": [],
+                "provenance": [
+                  {
+                    "messageId": "N02-current",
+                    "quote": "三年级家长请2026年10月17日前交一份本人签字的纸质接送授权书。"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "round": 2,
+          "A": {
+            "key": "N02/R2/A",
+            "caseId": "N02",
+            "group": "no-history-needed",
+            "round": 2,
+            "variant": "A",
+            "sourceLine": 33,
+            "visibleFaithful": true,
+            "fullContextComplete": true,
+            "wrongCertain": false,
+            "wrongAssociation": false,
+            "evidence": {
+              "action": "仅有当前要求的一项动作；无新增独立历史任务。",
+              "audience": "对象与可见通知相符。",
+              "materials": "title保留一份，materials保留本人签字、纸质接送授权书。",
+              "negationCorrection": "无把否定或过期信息转成生效要求。",
+              "time": "deadlineText为可见原文，完整日期正确归一化；未使用今日补日期。",
+              "provenance": "引用均为可见messageId和精确子串；覆盖确定字段。",
+              "uncertainties": "未发现无依据确定化。"
+            },
+            "notes": [
+              "无需历史；同一case存在数量保留的轮次波动，不应解释为B稳定提升。"
+            ],
+            "provenanceSubstringValid": true,
+            "output": [
+              {
+                "title": "交一份本人签字的纸质接送授权书",
+                "audience": "三年级家长",
+                "deadlineText": "2026年10月17日前",
+                "deadlineDate": "2026-10-17",
+                "materials": [
+                  "本人签字的纸质接送授权书"
+                ],
+                "uncertainties": [],
+                "provenance": [
+                  {
+                    "messageId": "N02-current",
+                    "quote": "三年级家长请2026年10月17日前交一份本人签字的纸质接送授权书。"
+                  }
+                ]
+              }
+            ]
+          },
+          "B": {
+            "key": "N02/R2/B",
+            "caseId": "N02",
+            "group": "no-history-needed",
+            "round": 2,
+            "variant": "B",
+            "sourceLine": 32,
+            "visibleFaithful": true,
+            "fullContextComplete": false,
+            "wrongCertain": false,
+            "wrongAssociation": false,
+            "evidence": {
+              "action": "仅有当前要求的一项动作；无新增独立历史任务。",
+              "audience": "对象与可见通知相符。",
+              "materials": "本人签字/纸质/接送授权书正确，但任务字段漏一份；出处的数量不替代提取。",
+              "negationCorrection": "无把否定或过期信息转成生效要求。",
+              "time": "deadlineText为可见原文，完整日期正确归一化；未使用今日补日期。",
+              "provenance": "引用均为可见messageId和精确子串；覆盖确定字段。",
+              "uncertainties": "未发现无依据确定化。"
+            },
+            "notes": [
+              "无需历史；同一case存在数量保留的轮次波动，不应解释为B稳定提升。"
+            ],
+            "provenanceSubstringValid": true,
+            "output": [
+              {
+                "title": "交纸质接送授权书",
+                "audience": "三年级家长",
+                "deadlineText": "2026年10月17日前",
+                "deadlineDate": "2026-10-17",
+                "materials": [
+                  "本人签字的纸质接送授权书"
+                ],
+                "uncertainties": [],
+                "provenance": [
+                  {
+                    "messageId": "N02-current",
+                    "quote": "三年级家长请2026年10月17日前交一份本人签字的纸质接送授权书。"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "round": 3,
+          "A": {
+            "key": "N02/R3/A",
+            "caseId": "N02",
+            "group": "no-history-needed",
+            "round": 3,
+            "variant": "A",
+            "sourceLine": 52,
+            "visibleFaithful": true,
+            "fullContextComplete": false,
+            "wrongCertain": false,
+            "wrongAssociation": false,
+            "evidence": {
+              "action": "仅有当前要求的一项动作；无新增独立历史任务。",
+              "audience": "对象与可见通知相符。",
+              "materials": "本人签字/纸质/接送授权书正确，但任务字段漏一份；出处的数量不替代提取。",
+              "negationCorrection": "无把否定或过期信息转成生效要求。",
+              "time": "deadlineText为可见原文，完整日期正确归一化；未使用今日补日期。",
+              "provenance": "引用均为可见messageId和精确子串；覆盖确定字段。",
+              "uncertainties": "未发现无依据确定化。"
+            },
+            "notes": [
+              "无需历史；同一case存在数量保留的轮次波动，不应解释为B稳定提升。"
+            ],
+            "provenanceSubstringValid": true,
+            "output": [
+              {
+                "title": "交纸质接送授权书",
+                "audience": "三年级家长",
+                "deadlineText": "2026年10月17日前",
+                "deadlineDate": "2026-10-17",
+                "materials": [
+                  "本人签字的纸质接送授权书"
+                ],
+                "uncertainties": [],
+                "provenance": [
+                  {
+                    "messageId": "N02-current",
+                    "quote": "三年级家长请2026年10月17日前交一份本人签字的纸质接送授权书。"
+                  }
+                ]
+              }
+            ]
+          },
+          "B": {
+            "key": "N02/R3/B",
+            "caseId": "N02",
+            "group": "no-history-needed",
+            "round": 3,
+            "variant": "B",
+            "sourceLine": 53,
+            "visibleFaithful": true,
+            "fullContextComplete": true,
+            "wrongCertain": false,
+            "wrongAssociation": false,
+            "evidence": {
+              "action": "仅有当前要求的一项动作；无新增独立历史任务。",
+              "audience": "对象与可见通知相符。",
+              "materials": "title保留一份，materials保留本人签字、纸质接送授权书。",
+              "negationCorrection": "无把否定或过期信息转成生效要求。",
+              "time": "deadlineText为可见原文，完整日期正确归一化；未使用今日补日期。",
+              "provenance": "引用均为可见messageId和精确子串；覆盖确定字段。",
+              "uncertainties": "未发现无依据确定化。"
+            },
+            "notes": [
+              "无需历史；同一case存在数量保留的轮次波动，不应解释为B稳定提升。"
+            ],
+            "provenanceSubstringValid": true,
+            "output": [
+              {
+                "title": "交一份本人签字的纸质接送授权书",
+                "audience": "三年级家长",
+                "deadlineText": "2026年10月17日前",
+                "deadlineDate": "2026-10-17",
+                "materials": [
+                  "本人签字的纸质接送授权书"
+                ],
+                "uncertainties": [],
+                "provenance": [
+                  {
+                    "messageId": "N02-current",
+                    "quote": "三年级家长请2026年10月17日前交一份本人签字的纸质接送授权书。"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "caseId": "N03",
+      "group": "no-history-needed",
+      "rounds": [
+        {
+          "round": 1,
+          "A": {
+            "key": "N03/R1/A",
+            "caseId": "N03",
+            "group": "no-history-needed",
+            "round": 1,
+            "variant": "A",
+            "sourceLine": 14,
+            "visibleFaithful": true,
+            "fullContextComplete": true,
+            "wrongCertain": false,
+            "wrongAssociation": false,
+            "evidence": {
+              "action": "tasks=[]，闲聊未生成任务。",
+              "audience": "不适用，无任务。",
+              "materials": "不适用，无任务。",
+              "negationCorrection": "无把否定或过期信息转成生效要求。",
+              "time": "不适用，无任务；今晚未误成待办截止时间。",
+              "provenance": "空任务无需出处。",
+              "uncertainties": "未发现无依据确定化。"
+            },
+            "notes": [
+              "A/B三轮均正确返回空任务。"
+            ],
+            "provenanceSubstringValid": true,
+            "output": []
+          },
+          "B": {
+            "key": "N03/R1/B",
+            "caseId": "N03",
+            "group": "no-history-needed",
+            "round": 1,
+            "variant": "B",
+            "sourceLine": 15,
+            "visibleFaithful": true,
+            "fullContextComplete": true,
+            "wrongCertain": false,
+            "wrongAssociation": false,
+            "evidence": {
+              "action": "tasks=[]，闲聊未生成任务。",
+              "audience": "不适用，无任务。",
+              "materials": "不适用，无任务。",
+              "negationCorrection": "无把否定或过期信息转成生效要求。",
+              "time": "不适用，无任务；今晚未误成待办截止时间。",
+              "provenance": "空任务无需出处。",
+              "uncertainties": "未发现无依据确定化。"
+            },
+            "notes": [
+              "A/B三轮均正确返回空任务。"
+            ],
+            "provenanceSubstringValid": true,
+            "output": []
+          }
+        },
+        {
+          "round": 2,
+          "A": {
+            "key": "N03/R2/A",
+            "caseId": "N03",
+            "group": "no-history-needed",
+            "round": 2,
+            "variant": "A",
+            "sourceLine": 35,
+            "visibleFaithful": true,
+            "fullContextComplete": true,
+            "wrongCertain": false,
+            "wrongAssociation": false,
+            "evidence": {
+              "action": "tasks=[]，闲聊未生成任务。",
+              "audience": "不适用，无任务。",
+              "materials": "不适用，无任务。",
+              "negationCorrection": "无把否定或过期信息转成生效要求。",
+              "time": "不适用，无任务；今晚未误成待办截止时间。",
+              "provenance": "空任务无需出处。",
+              "uncertainties": "未发现无依据确定化。"
+            },
+            "notes": [
+              "A/B三轮均正确返回空任务。"
+            ],
+            "provenanceSubstringValid": true,
+            "output": []
+          },
+          "B": {
+            "key": "N03/R2/B",
+            "caseId": "N03",
+            "group": "no-history-needed",
+            "round": 2,
+            "variant": "B",
+            "sourceLine": 34,
+            "visibleFaithful": true,
+            "fullContextComplete": true,
+            "wrongCertain": false,
+            "wrongAssociation": false,
+            "evidence": {
+              "action": "tasks=[]，闲聊未生成任务。",
+              "audience": "不适用，无任务。",
+              "materials": "不适用，无任务。",
+              "negationCorrection": "无把否定或过期信息转成生效要求。",
+              "time": "不适用，无任务；今晚未误成待办截止时间。",
+              "provenance": "空任务无需出处。",
+              "uncertainties": "未发现无依据确定化。"
+            },
+            "notes": [
+              "A/B三轮均正确返回空任务。"
+            ],
+            "provenanceSubstringValid": true,
+            "output": []
+          }
+        },
+        {
+          "round": 3,
+          "A": {
+            "key": "N03/R3/A",
+            "caseId": "N03",
+            "group": "no-history-needed",
+            "round": 3,
+            "variant": "A",
+            "sourceLine": 54,
+            "visibleFaithful": true,
+            "fullContextComplete": true,
+            "wrongCertain": false,
+            "wrongAssociation": false,
+            "evidence": {
+              "action": "tasks=[]，闲聊未生成任务。",
+              "audience": "不适用，无任务。",
+              "materials": "不适用，无任务。",
+              "negationCorrection": "无把否定或过期信息转成生效要求。",
+              "time": "不适用，无任务；今晚未误成待办截止时间。",
+              "provenance": "空任务无需出处。",
+              "uncertainties": "未发现无依据确定化。"
+            },
+            "notes": [
+              "A/B三轮均正确返回空任务。"
+            ],
+            "provenanceSubstringValid": true,
+            "output": []
+          },
+          "B": {
+            "key": "N03/R3/B",
+            "caseId": "N03",
+            "group": "no-history-needed",
+            "round": 3,
+            "variant": "B",
+            "sourceLine": 55,
+            "visibleFaithful": true,
+            "fullContextComplete": true,
+            "wrongCertain": false,
+            "wrongAssociation": false,
+            "evidence": {
+              "action": "tasks=[]，闲聊未生成任务。",
+              "audience": "不适用，无任务。",
+              "materials": "不适用，无任务。",
+              "negationCorrection": "无把否定或过期信息转成生效要求。",
+              "time": "不适用，无任务；今晚未误成待办截止时间。",
+              "provenance": "空任务无需出处。",
+              "uncertainties": "未发现无依据确定化。"
+            },
+            "notes": [
+              "A/B三轮均正确返回空任务。"
+            ],
+            "provenanceSubstringValid": true,
+            "output": []
+          }
+        }
+      ]
+    },
+    {
+      "caseId": "S01",
+      "group": "stale-or-conflicting",
+      "rounds": [
+        {
+          "round": 1,
+          "A": {
+            "key": "S01/R1/A",
+            "caseId": "S01",
+            "group": "stale-or-conflicting",
+            "round": 1,
+            "variant": "A",
+            "sourceLine": 16,
+            "visibleFaithful": false,
+            "fullContextComplete": false,
+            "wrongCertain": true,
+            "wrongAssociation": false,
+            "evidence": {
+              "action": "仅有当前要求的一项动作；无新增独立历史任务。",
+              "audience": "audience=二年级，把活动范围填成确定执行对象；缺家长依据且uncertainties为空。",
+              "materials": "材料名称/形式/数量与可见输入核对。",
+              "negationCorrection": "采用10月14日、在线电子表；未要求旧10月12日或纸质表。",
+              "time": "deadlineText为可见原文，完整日期正确归一化；未使用今日补日期。",
+              "provenance": "current支持活动范围、动作、日期、电子表，但不支持确定执行人。",
+              "uncertainties": "未发现无依据确定化。"
+            },
+            "notes": [
+              "应保留执行人不确定；与已确认goldA空audience不一致。"
+            ],
+            "provenanceSubstringValid": true,
+            "output": [
+              {
+                "title": "二年级秋游报名（在线填写电子报名表）",
+                "audience": "二年级",
+                "deadlineText": "2026年10月14日前",
+                "deadlineDate": "2026-10-14",
+                "materials": [
+                  "电子报名表"
+                ],
+                "uncertainties": [],
+                "provenance": [
+                  {
+                    "messageId": "S01-current",
+                    "quote": "二年级秋游报名改为2026年10月14日前在线填写电子报名表；不再收纸质表。"
+                  }
+                ]
+              }
+            ]
+          },
+          "B": {
+            "key": "S01/R1/B",
+            "caseId": "S01",
+            "group": "stale-or-conflicting",
+            "round": 1,
+            "variant": "B",
+            "sourceLine": 17,
+            "visibleFaithful": false,
+            "fullContextComplete": true,
+            "wrongCertain": false,
+            "wrongAssociation": false,
+            "evidence": {
+              "action": "仅有当前要求的一项动作；无新增独立历史任务。",
+              "audience": "二年级家长受可见HISTORY支持，内容正确。",
+              "materials": "材料名称/形式/数量与可见输入核对。",
+              "negationCorrection": "采用10月14日、在线电子表；未要求旧10月12日或纸质表。",
+              "time": "deadlineText为可见原文，完整日期正确归一化；未使用今日补日期。",
+              "provenance": "仅引S01-current，不含支持家长的S01-old；精确子串检查通过不能证明覆盖所有字段。",
+              "uncertainties": "未发现无依据确定化。"
+            },
+            "notes": [
+              "历史补全对象成功，但未引用对象出处，不能判visibleFaithful通过。"
+            ],
+            "provenanceSubstringValid": true,
+            "output": [
+              {
+                "title": "二年级秋游报名（在线填写电子报名表）",
+                "audience": "二年级家长",
+                "deadlineText": "2026年10月14日前",
+                "deadlineDate": "2026-10-14",
+                "materials": [
+                  "电子报名表"
+                ],
+                "uncertainties": [],
+                "provenance": [
+                  {
+                    "messageId": "S01-current",
+                    "quote": "二年级秋游报名改为2026年10月14日前在线填写电子报名表；不再收纸质表。"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "round": 2,
+          "A": {
+            "key": "S01/R2/A",
+            "caseId": "S01",
+            "group": "stale-or-conflicting",
+            "round": 2,
+            "variant": "A",
+            "sourceLine": 37,
+            "visibleFaithful": false,
+            "fullContextComplete": false,
+            "wrongCertain": true,
+            "wrongAssociation": false,
+            "evidence": {
+              "action": "仅有当前要求的一项动作；无新增独立历史任务。",
+              "audience": "audience=二年级，把活动范围填成确定执行对象；缺家长依据且uncertainties为空。",
+              "materials": "材料名称/形式/数量与可见输入核对。",
+              "negationCorrection": "采用10月14日、在线电子表；未要求旧10月12日或纸质表。",
+              "time": "deadlineText为可见原文，完整日期正确归一化；未使用今日补日期。",
+              "provenance": "current支持活动范围、动作、日期、电子表，但不支持确定执行人。",
+              "uncertainties": "未发现无依据确定化。"
+            },
+            "notes": [
+              "应保留执行人不确定；与已确认goldA空audience不一致。"
+            ],
+            "provenanceSubstringValid": true,
+            "output": [
+              {
+                "title": "二年级秋游报名（在线填写电子报名表）",
+                "audience": "二年级",
+                "deadlineText": "2026年10月14日前",
+                "deadlineDate": "2026-10-14",
+                "materials": [
+                  "电子报名表"
+                ],
+                "uncertainties": [],
+                "provenance": [
+                  {
+                    "messageId": "S01-current",
+                    "quote": "二年级秋游报名改为2026年10月14日前在线填写电子报名表；不再收纸质表。"
+                  }
+                ]
+              }
+            ]
+          },
+          "B": {
+            "key": "S01/R2/B",
+            "caseId": "S01",
+            "group": "stale-or-conflicting",
+            "round": 2,
+            "variant": "B",
+            "sourceLine": 36,
+            "visibleFaithful": false,
+            "fullContextComplete": true,
+            "wrongCertain": false,
+            "wrongAssociation": false,
+            "evidence": {
+              "action": "仅有当前要求的一项动作；无新增独立历史任务。",
+              "audience": "二年级家长受可见HISTORY支持，内容正确。",
+              "materials": "材料名称/形式/数量与可见输入核对。",
+              "negationCorrection": "采用10月14日、在线电子表；未要求旧10月12日或纸质表。",
+              "time": "deadlineText为可见原文，完整日期正确归一化；未使用今日补日期。",
+              "provenance": "仅引S01-current，不含支持家长的S01-old；精确子串检查通过不能证明覆盖所有字段。",
+              "uncertainties": "未发现无依据确定化。"
+            },
+            "notes": [
+              "历史补全对象成功，但未引用对象出处，不能判visibleFaithful通过。"
+            ],
+            "provenanceSubstringValid": true,
+            "output": [
+              {
+                "title": "二年级秋游报名（在线填写电子报名表）",
+                "audience": "二年级家长",
+                "deadlineText": "2026年10月14日前",
+                "deadlineDate": "2026-10-14",
+                "materials": [
+                  "电子报名表"
+                ],
+                "uncertainties": [],
+                "provenance": [
+                  {
+                    "messageId": "S01-current",
+                    "quote": "二年级秋游报名改为2026年10月14日前在线填写电子报名表"
+                  },
+                  {
+                    "messageId": "S01-current",
+                    "quote": "不再收纸质表"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "round": 3,
+          "A": {
+            "key": "S01/R3/A",
+            "caseId": "S01",
+            "group": "stale-or-conflicting",
+            "round": 3,
+            "variant": "A",
+            "sourceLine": 56,
+            "visibleFaithful": false,
+            "fullContextComplete": false,
+            "wrongCertain": true,
+            "wrongAssociation": false,
+            "evidence": {
+              "action": "仅有当前要求的一项动作；无新增独立历史任务。",
+              "audience": "audience=二年级，把活动范围填成确定执行对象；缺家长依据且uncertainties为空。",
+              "materials": "材料名称/形式/数量与可见输入核对。",
+              "negationCorrection": "采用10月14日、在线电子表；未要求旧10月12日或纸质表。",
+              "time": "deadlineText为可见原文，完整日期正确归一化；未使用今日补日期。",
+              "provenance": "current支持活动范围、动作、日期、电子表，但不支持确定执行人。",
+              "uncertainties": "未发现无依据确定化。"
+            },
+            "notes": [
+              "应保留执行人不确定；与已确认goldA空audience不一致。"
+            ],
+            "provenanceSubstringValid": true,
+            "output": [
+              {
+                "title": "二年级秋游报名（在线填写电子报名表）",
+                "audience": "二年级",
+                "deadlineText": "2026年10月14日前",
+                "deadlineDate": "2026-10-14",
+                "materials": [
+                  "电子报名表"
+                ],
+                "uncertainties": [],
+                "provenance": [
+                  {
+                    "messageId": "S01-current",
+                    "quote": "二年级秋游报名改为2026年10月14日前在线填写电子报名表；不再收纸质表。"
+                  }
+                ]
+              }
+            ]
+          },
+          "B": {
+            "key": "S01/R3/B",
+            "caseId": "S01",
+            "group": "stale-or-conflicting",
+            "round": 3,
+            "variant": "B",
+            "sourceLine": 57,
+            "visibleFaithful": false,
+            "fullContextComplete": true,
+            "wrongCertain": false,
+            "wrongAssociation": false,
+            "evidence": {
+              "action": "仅有当前要求的一项动作；无新增独立历史任务。",
+              "audience": "二年级家长受可见HISTORY支持，内容正确。",
+              "materials": "材料名称/形式/数量与可见输入核对。",
+              "negationCorrection": "采用10月14日、在线电子表；未要求旧10月12日或纸质表。",
+              "time": "deadlineText为可见原文，完整日期正确归一化；未使用今日补日期。",
+              "provenance": "仅引S01-current，不含支持家长的S01-old；精确子串检查通过不能证明覆盖所有字段。",
+              "uncertainties": "未发现无依据确定化。"
+            },
+            "notes": [
+              "历史补全对象成功，但未引用对象出处，不能判visibleFaithful通过。"
+            ],
+            "provenanceSubstringValid": true,
+            "output": [
+              {
+                "title": "二年级秋游报名（在线填写电子报名表）",
+                "audience": "二年级家长",
+                "deadlineText": "2026年10月14日前",
+                "deadlineDate": "2026-10-14",
+                "materials": [
+                  "电子报名表"
+                ],
+                "uncertainties": [],
+                "provenance": [
+                  {
+                    "messageId": "S01-current",
+                    "quote": "二年级秋游报名改为2026年10月14日前在线填写电子报名表"
+                  },
+                  {
+                    "messageId": "S01-current",
+                    "quote": "不再收纸质表"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "caseId": "S02",
+      "group": "stale-or-conflicting",
+      "rounds": [
+        {
+          "round": 1,
+          "A": {
+            "key": "S02/R1/A",
+            "caseId": "S02",
+            "group": "stale-or-conflicting",
+            "round": 1,
+            "variant": "A",
+            "sourceLine": 18,
+            "visibleFaithful": true,
+            "fullContextComplete": true,
+            "wrongCertain": false,
+            "wrongAssociation": false,
+            "evidence": {
+              "action": "交/提交电子照片视为发送的近义表述；原quote含发送。",
+              "audience": "对象与可见通知相符。",
+              "materials": "一张电子照片；没有三张或纸质的生效断言。",
+              "negationCorrection": "新日期10月20日、电子一张覆盖旧10月18日纸质三张。",
+              "time": "deadlineText为可见原文，完整日期正确归一化；未使用今日补日期。",
+              "provenance": "引用均为可见messageId和精确子串；覆盖确定字段。",
+              "uncertainties": "未发现无依据确定化。"
+            },
+            "notes": [
+              "按语义判断通过，词项发匹配失败不能直接推导动作错误；建议后续提取保留发送原词。"
+            ],
+            "provenanceSubstringValid": true,
+            "output": [
+              {
+                "title": "摄影社成员照片改交一张电子照片",
+                "audience": "摄影社成员",
+                "deadlineText": "2026年10月20日前",
+                "deadlineDate": "2026-10-20",
+                "materials": [
+                  "一张电子照片"
+                ],
+                "uncertainties": [],
+                "provenance": [
+                  {
+                    "messageId": "S02-current",
+                    "quote": "摄影社成员照片改交一张电子照片，2026年10月20日前发送；不再收纸质版。"
+                  }
+                ]
+              }
+            ]
+          },
+          "B": {
+            "key": "S02/R1/B",
+            "caseId": "S02",
+            "group": "stale-or-conflicting",
+            "round": 1,
+            "variant": "B",
+            "sourceLine": 19,
+            "visibleFaithful": true,
+            "fullContextComplete": true,
+            "wrongCertain": false,
+            "wrongAssociation": false,
+            "evidence": {
+              "action": "交/提交电子照片视为发送的近义表述；原quote含发送。",
+              "audience": "对象与可见通知相符。",
+              "materials": "一张电子照片；没有三张或纸质的生效断言。",
+              "negationCorrection": "新日期10月20日、电子一张覆盖旧10月18日纸质三张。",
+              "time": "deadlineText为可见原文，完整日期正确归一化；未使用今日补日期。",
+              "provenance": "引用均为可见messageId和精确子串；覆盖确定字段。",
+              "uncertainties": "未发现无依据确定化。"
+            },
+            "notes": [
+              "按语义判断通过，词项发匹配失败不能直接推导动作错误；建议后续提取保留发送原词。"
+            ],
+            "provenanceSubstringValid": true,
+            "output": [
+              {
+                "title": "摄影社成员照片改交一张电子照片",
+                "audience": "摄影社成员",
+                "deadlineText": "2026年10月20日前",
+                "deadlineDate": "2026-10-20",
+                "materials": [
+                  "一张电子照片"
+                ],
+                "uncertainties": [],
+                "provenance": [
+                  {
+                    "messageId": "S02-current",
+                    "quote": "摄影社成员照片改交一张电子照片，2026年10月20日前发送；不再收纸质版。"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "round": 2,
+          "A": {
+            "key": "S02/R2/A",
+            "caseId": "S02",
+            "group": "stale-or-conflicting",
+            "round": 2,
+            "variant": "A",
+            "sourceLine": 39,
+            "visibleFaithful": true,
+            "fullContextComplete": true,
+            "wrongCertain": false,
+            "wrongAssociation": false,
+            "evidence": {
+              "action": "交/提交电子照片视为发送的近义表述；原quote含发送。",
+              "audience": "对象与可见通知相符。",
+              "materials": "一张电子照片；没有三张或纸质的生效断言。",
+              "negationCorrection": "新日期10月20日、电子一张覆盖旧10月18日纸质三张。",
+              "time": "deadlineText为可见原文，完整日期正确归一化；未使用今日补日期。",
+              "provenance": "引用均为可见messageId和精确子串；覆盖确定字段。",
+              "uncertainties": "未发现无依据确定化。"
+            },
+            "notes": [
+              "按语义判断通过，词项发匹配失败不能直接推导动作错误；建议后续提取保留发送原词。"
+            ],
+            "provenanceSubstringValid": true,
+            "output": [
+              {
+                "title": "提交摄影社成员电子照片",
+                "audience": "摄影社成员",
+                "deadlineText": "2026年10月20日前",
+                "deadlineDate": "2026-10-20",
+                "materials": [
+                  "一张电子照片"
+                ],
+                "uncertainties": [],
+                "provenance": [
+                  {
+                    "messageId": "S02-current",
+                    "quote": "摄影社成员照片改交一张电子照片，2026年10月20日前发送；不再收纸质版。"
+                  }
+                ]
+              }
+            ]
+          },
+          "B": {
+            "key": "S02/R2/B",
+            "caseId": "S02",
+            "group": "stale-or-conflicting",
+            "round": 2,
+            "variant": "B",
+            "sourceLine": 38,
+            "visibleFaithful": true,
+            "fullContextComplete": true,
+            "wrongCertain": false,
+            "wrongAssociation": false,
+            "evidence": {
+              "action": "交/提交电子照片视为发送的近义表述；原quote含发送。",
+              "audience": "对象与可见通知相符。",
+              "materials": "一张电子照片；没有三张或纸质的生效断言。",
+              "negationCorrection": "新日期10月20日、电子一张覆盖旧10月18日纸质三张。",
+              "time": "deadlineText为可见原文，完整日期正确归一化；未使用今日补日期。",
+              "provenance": "引用均为可见messageId和精确子串；覆盖确定字段。",
+              "uncertainties": "未发现无依据确定化。"
+            },
+            "notes": [
+              "按语义判断通过，词项发匹配失败不能直接推导动作错误；建议后续提取保留发送原词。"
+            ],
+            "provenanceSubstringValid": true,
+            "output": [
+              {
+                "title": "摄影社成员照片改交一张电子照片",
+                "audience": "摄影社成员",
+                "deadlineText": "2026年10月20日前",
+                "deadlineDate": "2026-10-20",
+                "materials": [
+                  "一张电子照片"
+                ],
+                "uncertainties": [],
+                "provenance": [
+                  {
+                    "messageId": "S02-current",
+                    "quote": "摄影社成员照片改交一张电子照片，2026年10月20日前发送；不再收纸质版。"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "round": 3,
+          "A": {
+            "key": "S02/R3/A",
+            "caseId": "S02",
+            "group": "stale-or-conflicting",
+            "round": 3,
+            "variant": "A",
+            "sourceLine": 58,
+            "visibleFaithful": true,
+            "fullContextComplete": true,
+            "wrongCertain": false,
+            "wrongAssociation": false,
+            "evidence": {
+              "action": "交/提交电子照片视为发送的近义表述；原quote含发送。",
+              "audience": "对象与可见通知相符。",
+              "materials": "一张电子照片；没有三张或纸质的生效断言。",
+              "negationCorrection": "新日期10月20日、电子一张覆盖旧10月18日纸质三张。",
+              "time": "deadlineText为可见原文，完整日期正确归一化；未使用今日补日期。",
+              "provenance": "引用均为可见messageId和精确子串；覆盖确定字段。",
+              "uncertainties": "未发现无依据确定化。"
+            },
+            "notes": [
+              "按语义判断通过，词项发匹配失败不能直接推导动作错误；建议后续提取保留发送原词。"
+            ],
+            "provenanceSubstringValid": true,
+            "output": [
+              {
+                "title": "提交摄影社成员电子照片",
+                "audience": "摄影社成员",
+                "deadlineText": "2026年10月20日前",
+                "deadlineDate": "2026-10-20",
+                "materials": [
+                  "一张电子照片"
+                ],
+                "uncertainties": [],
+                "provenance": [
+                  {
+                    "messageId": "S02-current",
+                    "quote": "摄影社成员照片改交一张电子照片，2026年10月20日前发送；不再收纸质版。"
+                  }
+                ]
+              }
+            ]
+          },
+          "B": {
+            "key": "S02/R3/B",
+            "caseId": "S02",
+            "group": "stale-or-conflicting",
+            "round": 3,
+            "variant": "B",
+            "sourceLine": 59,
+            "visibleFaithful": true,
+            "fullContextComplete": true,
+            "wrongCertain": false,
+            "wrongAssociation": false,
+            "evidence": {
+              "action": "交/提交电子照片视为发送的近义表述；原quote含发送。",
+              "audience": "对象与可见通知相符。",
+              "materials": "一张电子照片；没有三张或纸质的生效断言。",
+              "negationCorrection": "新日期10月20日、电子一张覆盖旧10月18日纸质三张。",
+              "time": "deadlineText为可见原文，完整日期正确归一化；未使用今日补日期。",
+              "provenance": "引用均为可见messageId和精确子串；覆盖确定字段。",
+              "uncertainties": "未发现无依据确定化。"
+            },
+            "notes": [
+              "按语义判断通过，词项发匹配失败不能直接推导动作错误；建议后续提取保留发送原词。"
+            ],
+            "provenanceSubstringValid": true,
+            "output": [
+              {
+                "title": "摄影社成员照片改交一张电子照片",
+                "audience": "摄影社成员",
+                "deadlineText": "2026年10月20日前",
+                "deadlineDate": "2026-10-20",
+                "materials": [
+                  "一张电子照片"
+                ],
+                "uncertainties": [],
+                "provenance": [
+                  {
+                    "messageId": "S02-current",
+                    "quote": "摄影社成员照片改交一张电子照片，2026年10月20日前发送；不再收纸质版。"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "caseId": "S03",
+      "group": "stale-or-conflicting",
+      "rounds": [
+        {
+          "round": 1,
+          "A": {
+            "key": "S03/R1/A",
+            "caseId": "S03",
+            "group": "stale-or-conflicting",
+            "round": 1,
+            "variant": "A",
+            "sourceLine": 20,
+            "visibleFaithful": true,
+            "fullContextComplete": true,
+            "wrongCertain": false,
+            "wrongAssociation": false,
+            "evidence": {
+              "action": "仅有当前要求的一项动作；无新增独立历史任务。",
+              "audience": "美术组家长，无舞蹈组混入。",
+              "materials": "作品清单，无舞蹈服尺码表混入。",
+              "negationCorrection": "无把否定或过期信息转成生效要求。",
+              "time": "deadlineDate=null且明确具体截止时间待定；deadlineText未保留这几天，记录粗时间遗漏但按gold日期待定通过。",
+              "provenance": "引用均为可见messageId和精确子串；覆盖确定字段。",
+              "uncertainties": "未发现无依据确定化。"
+            },
+            "notes": [
+              "未将另一活动10月15日套入本次；未凭今日推导日期。"
+            ],
+            "provenanceSubstringValid": true,
+            "output": [
+              {
+                "title": "提交作品清单",
+                "audience": "美术组家长",
+                "deadlineText": "具体截止时间待定",
+                "deadlineDate": null,
+                "materials": [
+                  "作品清单"
+                ],
+                "uncertainties": [
+                  "具体截止时间待定",
+                  "提交方式未知"
+                ],
+                "provenance": [
+                  {
+                    "messageId": "S03-current",
+                    "quote": "请美术组家长这几天提交作品清单，具体截止时间待定"
+                  }
+                ]
+              }
+            ]
+          },
+          "B": {
+            "key": "S03/R1/B",
+            "caseId": "S03",
+            "group": "stale-or-conflicting",
+            "round": 1,
+            "variant": "B",
+            "sourceLine": 21,
+            "visibleFaithful": true,
+            "fullContextComplete": true,
+            "wrongCertain": false,
+            "wrongAssociation": false,
+            "evidence": {
+              "action": "仅有当前要求的一项动作；无新增独立历史任务。",
+              "audience": "美术组家长，无舞蹈组混入。",
+              "materials": "作品清单，无舞蹈服尺码表混入。",
+              "negationCorrection": "无把否定或过期信息转成生效要求。",
+              "time": "deadlineDate=null且明确具体截止时间待定；deadlineText未保留这几天，记录粗时间遗漏但按gold日期待定通过。",
+              "provenance": "引用均为可见messageId和精确子串；覆盖确定字段。",
+              "uncertainties": "未发现无依据确定化。"
+            },
+            "notes": [
+              "未将另一活动10月15日套入本次；未凭今日推导日期。"
+            ],
+            "provenanceSubstringValid": true,
+            "output": [
+              {
+                "title": "提交作品清单",
+                "audience": "美术组家长",
+                "deadlineText": "具体截止时间待定",
+                "deadlineDate": null,
+                "materials": [
+                  "作品清单"
+                ],
+                "uncertainties": [
+                  "具体截止时间待定，未给出明确日期"
+                ],
+                "provenance": [
+                  {
+                    "messageId": "S03-current",
+                    "quote": "请美术组家长这几天提交作品清单"
+                  },
+                  {
+                    "messageId": "S03-current",
+                    "quote": "具体截止时间待定"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "round": 2,
+          "A": {
+            "key": "S03/R2/A",
+            "caseId": "S03",
+            "group": "stale-or-conflicting",
+            "round": 2,
+            "variant": "A",
+            "sourceLine": 41,
+            "visibleFaithful": true,
+            "fullContextComplete": true,
+            "wrongCertain": false,
+            "wrongAssociation": false,
+            "evidence": {
+              "action": "仅有当前要求的一项动作；无新增独立历史任务。",
+              "audience": "美术组家长，无舞蹈组混入。",
+              "materials": "作品清单，无舞蹈服尺码表混入。",
+              "negationCorrection": "无把否定或过期信息转成生效要求。",
+              "time": "deadlineDate=null且明确具体截止时间待定；deadlineText未保留这几天，记录粗时间遗漏但按gold日期待定通过。",
+              "provenance": "引用均为可见messageId和精确子串；覆盖确定字段。",
+              "uncertainties": "未发现无依据确定化。"
+            },
+            "notes": [
+              "未将另一活动10月15日套入本次；未凭今日推导日期。"
+            ],
+            "provenanceSubstringValid": true,
+            "output": [
+              {
+                "title": "提交作品清单",
+                "audience": "美术组家长",
+                "deadlineText": "具体截止时间待定",
+                "deadlineDate": null,
+                "materials": [
+                  "作品清单"
+                ],
+                "uncertainties": [
+                  "具体截止时间待定，未给出明确日期"
+                ],
+                "provenance": [
+                  {
+                    "messageId": "S03-current",
+                    "quote": "请美术组家长这几天提交作品清单，具体截止时间待定"
+                  }
+                ]
+              }
+            ]
+          },
+          "B": {
+            "key": "S03/R2/B",
+            "caseId": "S03",
+            "group": "stale-or-conflicting",
+            "round": 2,
+            "variant": "B",
+            "sourceLine": 40,
+            "visibleFaithful": true,
+            "fullContextComplete": true,
+            "wrongCertain": false,
+            "wrongAssociation": false,
+            "evidence": {
+              "action": "仅有当前要求的一项动作；无新增独立历史任务。",
+              "audience": "美术组家长，无舞蹈组混入。",
+              "materials": "作品清单，无舞蹈服尺码表混入。",
+              "negationCorrection": "无把否定或过期信息转成生效要求。",
+              "time": "deadlineDate=null且明确具体截止时间待定；deadlineText未保留这几天，记录粗时间遗漏但按gold日期待定通过。",
+              "provenance": "引用均为可见messageId和精确子串；覆盖确定字段。",
+              "uncertainties": "未发现无依据确定化。"
+            },
+            "notes": [
+              "未将另一活动10月15日套入本次；未凭今日推导日期。"
+            ],
+            "provenanceSubstringValid": true,
+            "output": [
+              {
+                "title": "提交作品清单",
+                "audience": "美术组家长",
+                "deadlineText": "具体截止时间待定",
+                "deadlineDate": null,
+                "materials": [
+                  "作品清单"
+                ],
+                "uncertainties": [
+                  "具体截止时间待定，未给出明确日期"
+                ],
+                "provenance": [
+                  {
+                    "messageId": "S03-current",
+                    "quote": "请美术组家长这几天提交作品清单，具体截止时间待定"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "round": 3,
+          "A": {
+            "key": "S03/R3/A",
+            "caseId": "S03",
+            "group": "stale-or-conflicting",
+            "round": 3,
+            "variant": "A",
+            "sourceLine": 60,
+            "visibleFaithful": true,
+            "fullContextComplete": true,
+            "wrongCertain": false,
+            "wrongAssociation": false,
+            "evidence": {
+              "action": "仅有当前要求的一项动作；无新增独立历史任务。",
+              "audience": "美术组家长，无舞蹈组混入。",
+              "materials": "作品清单，无舞蹈服尺码表混入。",
+              "negationCorrection": "无把否定或过期信息转成生效要求。",
+              "time": "deadlineDate=null且明确具体截止时间待定；deadlineText未保留这几天，记录粗时间遗漏但按gold日期待定通过。",
+              "provenance": "引用均为可见messageId和精确子串；覆盖确定字段。",
+              "uncertainties": "未发现无依据确定化。"
+            },
+            "notes": [
+              "未将另一活动10月15日套入本次；未凭今日推导日期。"
+            ],
+            "provenanceSubstringValid": true,
+            "output": [
+              {
+                "title": "提交作品清单",
+                "audience": "美术组家长",
+                "deadlineText": "具体截止时间待定",
+                "deadlineDate": null,
+                "materials": [
+                  "作品清单"
+                ],
+                "uncertainties": [
+                  "具体截止时间待定，未给出明确日期"
+                ],
+                "provenance": [
+                  {
+                    "messageId": "S03-current",
+                    "quote": "请美术组家长这几天提交作品清单，具体截止时间待定。"
+                  }
+                ]
+              }
+            ]
+          },
+          "B": {
+            "key": "S03/R3/B",
+            "caseId": "S03",
+            "group": "stale-or-conflicting",
+            "round": 3,
+            "variant": "B",
+            "sourceLine": 61,
+            "visibleFaithful": true,
+            "fullContextComplete": true,
+            "wrongCertain": false,
+            "wrongAssociation": false,
+            "evidence": {
+              "action": "仅有当前要求的一项动作；无新增独立历史任务。",
+              "audience": "美术组家长，无舞蹈组混入。",
+              "materials": "作品清单，无舞蹈服尺码表混入。",
+              "negationCorrection": "无把否定或过期信息转成生效要求。",
+              "time": "deadlineDate=null且明确具体截止时间待定；deadlineText未保留这几天，记录粗时间遗漏但按gold日期待定通过。",
+              "provenance": "引用均为可见messageId和精确子串；覆盖确定字段。",
+              "uncertainties": "未发现无依据确定化。"
+            },
+            "notes": [
+              "未将另一活动10月15日套入本次；未凭今日推导日期。"
+            ],
+            "provenanceSubstringValid": true,
+            "output": [
+              {
+                "title": "提交作品清单",
+                "audience": "美术组家长",
+                "deadlineText": "具体截止时间待定",
+                "deadlineDate": null,
+                "materials": [
+                  "作品清单"
+                ],
+                "uncertainties": [
+                  "具体截止时间待定，未给出明确日期"
+                ],
+                "provenance": [
+                  {
+                    "messageId": "S03-current",
+                    "quote": "请美术组家长这几天提交作品清单，具体截止时间待定"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "reviewed": [
+    {
+      "key": "H01/R1/A",
+      "caseId": "H01",
+      "group": "needs-history",
+      "round": 1,
+      "variant": "A",
+      "sourceLine": 2,
+      "visibleFaithful": true,
+      "fullContextComplete": false,
+      "wrongCertain": false,
+      "wrongAssociation": false,
+      "evidence": {
+        "action": "仅有当前要求的一项动作；无新增独立历史任务。",
+        "audience": "对象与可见通知相符。",
+        "materials": "保留两份报名材料；明确未知材料明细。",
+        "negationCorrection": "无把否定或过期信息转成生效要求。",
+        "time": "保留2026年10月13日17:00前及2026-10-13，没有丢17:00。",
+        "provenance": "引用均为可见messageId和精确子串；覆盖确定字段。",
+        "uncertainties": "明细未知合理，不据此记幻觉。"
+      },
+      "notes": [
+        "相对完整历史缺报名表与缴费凭证；当前可见内容忠实。"
+      ],
+      "provenanceSubstringValid": true,
+      "output": [
+        {
+          "title": "交两份报名材料",
+          "audience": "二年级家长",
+          "deadlineText": "2026年10月13日17:00前",
+          "deadlineDate": "2026-10-13",
+          "materials": [
+            "两份报名材料"
+          ],
+          "uncertainties": [
+            "报名材料的具体名称和内容未说明"
+          ],
+          "provenance": [
+            {
+              "messageId": "H01-current",
+              "quote": "两份报名材料，请二年级家长2026年10月13日17:00前交"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "H01/R1/B",
+      "caseId": "H01",
+      "group": "needs-history",
+      "round": 1,
+      "variant": "B",
+      "sourceLine": 3,
+      "visibleFaithful": true,
+      "fullContextComplete": true,
+      "wrongCertain": false,
+      "wrongAssociation": false,
+      "evidence": {
+        "action": "仅有当前要求的一项动作；无新增独立历史任务。",
+        "audience": "对象与可见通知相符。",
+        "materials": "材料明确为报名表、缴费凭证；title保留两份。",
+        "negationCorrection": "无把否定或过期信息转成生效要求。",
+        "time": "保留2026年10月13日17:00前及2026-10-13，没有丢17:00。",
+        "provenance": "引用均为可见messageId和精确子串；覆盖确定字段。",
+        "uncertainties": "说明材料明细来自历史是来源说明，不否定已获得的信息。"
+      },
+      "notes": [
+        "历史成功补全两项材料；未额外生成填写/缴费动作。班主任只在部分出处出现，未提取为接收方，gold无接收方字段，作为完整性边界提示。"
+      ],
+      "provenanceSubstringValid": true,
+      "output": [
+        {
+          "title": "交两份报名材料",
+          "audience": "二年级家长",
+          "deadlineText": "2026年10月13日17:00前",
+          "deadlineDate": "2026-10-13",
+          "materials": [
+            "报名表",
+            "缴费凭证"
+          ],
+          "uncertainties": [
+            "两份报名材料的具体明细未在current中明确，依据selectedHistory理解为报名表和缴费凭证"
+          ],
+          "provenance": [
+            {
+              "messageId": "H01-current",
+              "quote": "两份报名材料，请二年级家长2026年10月13日17:00前交"
+            },
+            {
+              "messageId": "H01-old",
+              "quote": "秋游报名需填写报名表并附缴费凭证"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "H02/R1/A",
+      "caseId": "H02",
+      "group": "needs-history",
+      "round": 1,
+      "variant": "A",
+      "sourceLine": 4,
+      "visibleFaithful": true,
+      "fullContextComplete": false,
+      "wrongCertain": false,
+      "wrongAssociation": false,
+      "evidence": {
+        "action": "仅有当前要求的一项动作；无新增独立历史任务。",
+        "audience": "audience=上述成员，uncertainties明确具体指哪些人不明确；不构成虚构具体对象。",
+        "materials": "materials仅该表；一份信息在uncertainties中承认，但名称/形式/签字不可从A确定。",
+        "negationCorrection": "无把否定或过期信息转成生效要求。",
+        "time": "deadlineText为可见原文，完整日期正确归一化；未使用今日补日期。",
+        "provenance": "引用均为可见messageId和精确子串；覆盖确定字段。",
+        "uncertainties": "未发现无依据确定化。"
+      },
+      "notes": [
+        "提示要求未知对象留空，本输出是可见指代占位，存在字段规范偏差；不将其算幻觉。"
+      ],
+      "provenanceSubstringValid": true,
+      "output": [
+        {
+          "title": "交该表",
+          "audience": "上述成员",
+          "deadlineText": "2026年10月18日前",
+          "deadlineDate": "2026-10-18",
+          "materials": [
+            "该表"
+          ],
+          "uncertainties": [
+            "“上述成员”具体指哪些人不明确",
+            "“该表”具体名称或内容不明确",
+            "“一份即可”指提交份数，但材料形式未说明"
+          ],
+          "provenance": [
+            {
+              "messageId": "H02-current",
+              "quote": "请上述成员于2026年10月18日前交该表，一份即可。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "H02/R1/B",
+      "caseId": "H02",
+      "group": "needs-history",
+      "round": 1,
+      "variant": "B",
+      "sourceLine": 5,
+      "visibleFaithful": true,
+      "fullContextComplete": false,
+      "wrongCertain": false,
+      "wrongAssociation": false,
+      "evidence": {
+        "action": "仅有当前要求的一项动作；无新增独立历史任务。",
+        "audience": "科研小组成员由H02-old支持。",
+        "materials": "导师签字、纸质、立项表均正确，但title/materials均漏一份；一份只在出处。",
+        "negationCorrection": "无把否定或过期信息转成生效要求。",
+        "time": "deadlineText为可见原文，完整日期正确归一化；未使用今日补日期。",
+        "provenance": "引用均为可见messageId和精确子串；覆盖确定字段。",
+        "uncertainties": "未发现无依据确定化。"
+      },
+      "notes": [
+        "上下文补全对象与表格性质，但三轮均遗漏数量，不能判完整。"
+      ],
+      "provenanceSubstringValid": true,
+      "output": [
+        {
+          "title": "提交导师签字的纸质立项表",
+          "audience": "科研小组成员",
+          "deadlineText": "2026年10月18日前",
+          "deadlineDate": "2026-10-18",
+          "materials": [
+            "导师签字的纸质立项表"
+          ],
+          "uncertainties": [],
+          "provenance": [
+            {
+              "messageId": "H02-current",
+              "quote": "请上述成员于2026年10月18日前交该表，一份即可。"
+            },
+            {
+              "messageId": "H02-old",
+              "quote": "科研小组成员要提交一份导师签字的纸质立项表。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "H03/R1/A",
+      "caseId": "H03",
+      "group": "needs-history",
+      "round": 1,
+      "variant": "A",
+      "sourceLine": 6,
+      "visibleFaithful": true,
+      "fullContextComplete": false,
+      "wrongCertain": false,
+      "wrongAssociation": false,
+      "evidence": {
+        "action": "仅有当前要求的一项动作；无新增独立历史任务。",
+        "audience": "对象与可见通知相符。",
+        "materials": "A只知承诺书，格式未知是合理保留。",
+        "negationCorrection": "无把否定或过期信息转成生效要求。",
+        "time": "deadlineText为可见原文，完整日期正确归一化；未使用今日补日期。",
+        "provenance": "当前已输出字段出处充分。",
+        "uncertainties": "格式与渠道未明确的疑点受当前可见输入支持。"
+      },
+      "notes": [
+        "fullContextComplete不通过不意味着A幻觉。"
+      ],
+      "provenanceSubstringValid": true,
+      "output": [
+        {
+          "title": "发送承诺书",
+          "audience": "志愿者",
+          "deadlineText": "2026年10月16日前",
+          "deadlineDate": "2026-10-16",
+          "materials": [
+            "承诺书"
+          ],
+          "uncertainties": [
+            "承诺书的具体格式未在current中明确，仅提及“按上述格式”",
+            "发送方式未明确"
+          ],
+          "provenance": [
+            {
+              "messageId": "H03-current",
+              "quote": "志愿者请在2026年10月16日前，把前面说的承诺书按上述格式发送。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "H03/R1/B",
+      "caseId": "H03",
+      "group": "needs-history",
+      "round": 1,
+      "variant": "B",
+      "sourceLine": 7,
+      "visibleFaithful": false,
+      "fullContextComplete": false,
+      "wrongCertain": false,
+      "wrongAssociation": false,
+      "evidence": {
+        "action": "仅有当前要求的一项动作；无新增独立历史任务。",
+        "audience": "对象与可见通知相符。",
+        "materials": "history明确健康承诺书、电子PDF，但只提承诺书；漏名称限定与格式。",
+        "negationCorrection": "无把否定或过期信息转成生效要求。",
+        "time": "deadlineText为可见原文，完整日期正确归一化；未使用今日补日期。",
+        "provenance": "只引current，未利用H03-old补全。",
+        "uncertainties": "声称格式/发送方式未明确，与H03-old明确电子PDF和活动邮箱矛盾。"
+      },
+      "notes": [
+        "三轮B均未得到该历史应有的补全；这是遗漏及虚假不确定，不是新增具体日期/材料的错误确定化。"
+      ],
+      "provenanceSubstringValid": true,
+      "output": [
+        {
+          "title": "发送承诺书",
+          "audience": "志愿者",
+          "deadlineText": "2026年10月16日前",
+          "deadlineDate": "2026-10-16",
+          "materials": [
+            "承诺书"
+          ],
+          "uncertainties": [
+            "承诺书的具体格式未明确",
+            "发送方式未明确"
+          ],
+          "provenance": [
+            {
+              "messageId": "H03-current",
+              "quote": "志愿者请在2026年10月16日前，把前面说的承诺书按上述格式发送。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "H04/R1/A",
+      "caseId": "H04",
+      "group": "needs-history",
+      "round": 1,
+      "variant": "A",
+      "sourceLine": 8,
+      "visibleFaithful": true,
+      "fullContextComplete": false,
+      "wrongCertain": false,
+      "wrongAssociation": false,
+      "evidence": {
+        "action": "仅有当前要求的一项动作；无新增独立历史任务。",
+        "audience": "对象与可见通知相符。",
+        "materials": "规格/数量/提交方式未知，合理留疑点。",
+        "negationCorrection": "无把否定或过期信息转成生效要求。",
+        "time": "deadlineText为可见原文，完整日期正确归一化；未使用今日补日期。",
+        "provenance": "引用均为可见messageId和精确子串；覆盖确定字段。",
+        "uncertainties": "未发现无依据确定化。"
+      },
+      "notes": [
+        "缺历史中规格与形式，完整性不通过。"
+      ],
+      "provenanceSubstringValid": true,
+      "output": [
+        {
+          "title": "交照片",
+          "audience": "参加讲座的同学",
+          "deadlineText": "2026年10月19日前",
+          "deadlineDate": "2026-10-19",
+          "materials": [
+            "照片"
+          ],
+          "uncertainties": [
+            "照片的具体规格、数量及提交方式未说明",
+            "“上述照片”所指内容因无历史记录而无法确定"
+          ],
+          "provenance": [
+            {
+              "messageId": "H04-current",
+              "quote": "参加讲座的同学请2026年10月19日前交上述照片。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "H04/R1/B",
+      "caseId": "H04",
+      "group": "needs-history",
+      "round": 1,
+      "variant": "B",
+      "sourceLine": 9,
+      "visibleFaithful": true,
+      "fullContextComplete": true,
+      "wrongCertain": false,
+      "wrongAssociation": false,
+      "evidence": {
+        "action": "仅有当前要求的一项动作；无新增独立历史任务。",
+        "audience": "对象与可见通知相符。",
+        "materials": "一张/一寸/蓝底/电子JPG齐全。",
+        "negationCorrection": "无把否定或过期信息转成生效要求。",
+        "time": "deadlineText为可见原文，完整日期正确归一化；未使用今日补日期。",
+        "provenance": "引用均为可见messageId和精确子串；覆盖确定字段。",
+        "uncertainties": "未发现无依据确定化。"
+      },
+      "notes": [
+        "提交讲座照片按参与讲座者照片的简写解读；一寸/蓝底说明是证件照，没有断言拍摄讲座现场。"
+      ],
+      "provenanceSubstringValid": true,
+      "output": [
+        {
+          "title": "提交讲座照片",
+          "audience": "参加讲座的同学",
+          "deadlineText": "2026年10月19日前",
+          "deadlineDate": "2026-10-19",
+          "materials": [
+            "一张一寸照片",
+            "蓝底",
+            "电子JPG"
+          ],
+          "uncertainties": [],
+          "provenance": [
+            {
+              "messageId": "H04-current",
+              "quote": "参加讲座的同学请2026年10月19日前交上述照片。"
+            },
+            {
+              "messageId": "H04-old1",
+              "quote": "参与讲座的同学提交一张一寸照片。"
+            },
+            {
+              "messageId": "H04-old2",
+              "quote": "照片需蓝底，电子JPG即可。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "N01/R1/A",
+      "caseId": "N01",
+      "group": "no-history-needed",
+      "round": 1,
+      "variant": "A",
+      "sourceLine": 10,
+      "visibleFaithful": true,
+      "fullContextComplete": true,
+      "wrongCertain": false,
+      "wrongAssociation": false,
+      "evidence": {
+        "action": "仅有当前要求的一项动作；无新增独立历史任务。",
+        "audience": "对象与可见通知相符。",
+        "materials": "电子签到表正确，原文无数量。",
+        "negationCorrection": "无把否定或过期信息转成生效要求。",
+        "time": "deadlineText为可见原文，完整日期正确归一化；未使用今日补日期。",
+        "provenance": "引用均为可见messageId和精确子串；覆盖确定字段。",
+        "uncertainties": "未发现无依据确定化。"
+      },
+      "notes": [
+        "无关天气历史没有影响输出。"
+      ],
+      "provenanceSubstringValid": true,
+      "output": [
+        {
+          "title": "提交电子签到表",
+          "audience": "所有志愿者",
+          "deadlineText": "2026年10月15日前",
+          "deadlineDate": "2026-10-15",
+          "materials": [
+            "电子签到表"
+          ],
+          "uncertainties": [],
+          "provenance": [
+            {
+              "messageId": "N01-current",
+              "quote": "请所有志愿者2026年10月15日前提交电子签到表。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "N01/R1/B",
+      "caseId": "N01",
+      "group": "no-history-needed",
+      "round": 1,
+      "variant": "B",
+      "sourceLine": 11,
+      "visibleFaithful": true,
+      "fullContextComplete": true,
+      "wrongCertain": false,
+      "wrongAssociation": false,
+      "evidence": {
+        "action": "仅有当前要求的一项动作；无新增独立历史任务。",
+        "audience": "对象与可见通知相符。",
+        "materials": "电子签到表正确，原文无数量。",
+        "negationCorrection": "无把否定或过期信息转成生效要求。",
+        "time": "deadlineText为可见原文，完整日期正确归一化；未使用今日补日期。",
+        "provenance": "引用均为可见messageId和精确子串；覆盖确定字段。",
+        "uncertainties": "未发现无依据确定化。"
+      },
+      "notes": [
+        "无关天气历史没有影响输出。"
+      ],
+      "provenanceSubstringValid": true,
+      "output": [
+        {
+          "title": "提交电子签到表",
+          "audience": "所有志愿者",
+          "deadlineText": "2026年10月15日前",
+          "deadlineDate": "2026-10-15",
+          "materials": [
+            "电子签到表"
+          ],
+          "uncertainties": [],
+          "provenance": [
+            {
+              "messageId": "N01-current",
+              "quote": "请所有志愿者2026年10月15日前提交电子签到表。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "N02/R1/A",
+      "caseId": "N02",
+      "group": "no-history-needed",
+      "round": 1,
+      "variant": "A",
+      "sourceLine": 12,
+      "visibleFaithful": true,
+      "fullContextComplete": false,
+      "wrongCertain": false,
+      "wrongAssociation": false,
+      "evidence": {
+        "action": "仅有当前要求的一项动作；无新增独立历史任务。",
+        "audience": "对象与可见通知相符。",
+        "materials": "本人签字/纸质/接送授权书正确，但任务字段漏一份；出处的数量不替代提取。",
+        "negationCorrection": "无把否定或过期信息转成生效要求。",
+        "time": "deadlineText为可见原文，完整日期正确归一化；未使用今日补日期。",
+        "provenance": "引用均为可见messageId和精确子串；覆盖确定字段。",
+        "uncertainties": "未发现无依据确定化。"
+      },
+      "notes": [
+        "无需历史；同一case存在数量保留的轮次波动，不应解释为B稳定提升。"
+      ],
+      "provenanceSubstringValid": true,
+      "output": [
+        {
+          "title": "交纸质接送授权书",
+          "audience": "三年级家长",
+          "deadlineText": "2026年10月17日前",
+          "deadlineDate": "2026-10-17",
+          "materials": [
+            "本人签字的纸质接送授权书"
+          ],
+          "uncertainties": [],
+          "provenance": [
+            {
+              "messageId": "N02-current",
+              "quote": "三年级家长请2026年10月17日前交一份本人签字的纸质接送授权书。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "N02/R1/B",
+      "caseId": "N02",
+      "group": "no-history-needed",
+      "round": 1,
+      "variant": "B",
+      "sourceLine": 13,
+      "visibleFaithful": true,
+      "fullContextComplete": false,
+      "wrongCertain": false,
+      "wrongAssociation": false,
+      "evidence": {
+        "action": "仅有当前要求的一项动作；无新增独立历史任务。",
+        "audience": "对象与可见通知相符。",
+        "materials": "本人签字/纸质/接送授权书正确，但任务字段漏一份；出处的数量不替代提取。",
+        "negationCorrection": "无把否定或过期信息转成生效要求。",
+        "time": "deadlineText为可见原文，完整日期正确归一化；未使用今日补日期。",
+        "provenance": "引用均为可见messageId和精确子串；覆盖确定字段。",
+        "uncertainties": "未发现无依据确定化。"
+      },
+      "notes": [
+        "无需历史；同一case存在数量保留的轮次波动，不应解释为B稳定提升。"
+      ],
+      "provenanceSubstringValid": true,
+      "output": [
+        {
+          "title": "交纸质接送授权书",
+          "audience": "三年级家长",
+          "deadlineText": "2026年10月17日前",
+          "deadlineDate": "2026-10-17",
+          "materials": [
+            "本人签字的纸质接送授权书"
+          ],
+          "uncertainties": [],
+          "provenance": [
+            {
+              "messageId": "N02-current",
+              "quote": "三年级家长请2026年10月17日前交一份本人签字的纸质接送授权书。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "N03/R1/A",
+      "caseId": "N03",
+      "group": "no-history-needed",
+      "round": 1,
+      "variant": "A",
+      "sourceLine": 14,
+      "visibleFaithful": true,
+      "fullContextComplete": true,
+      "wrongCertain": false,
+      "wrongAssociation": false,
+      "evidence": {
+        "action": "tasks=[]，闲聊未生成任务。",
+        "audience": "不适用，无任务。",
+        "materials": "不适用，无任务。",
+        "negationCorrection": "无把否定或过期信息转成生效要求。",
+        "time": "不适用，无任务；今晚未误成待办截止时间。",
+        "provenance": "空任务无需出处。",
+        "uncertainties": "未发现无依据确定化。"
+      },
+      "notes": [
+        "A/B三轮均正确返回空任务。"
+      ],
+      "provenanceSubstringValid": true,
+      "output": []
+    },
+    {
+      "key": "N03/R1/B",
+      "caseId": "N03",
+      "group": "no-history-needed",
+      "round": 1,
+      "variant": "B",
+      "sourceLine": 15,
+      "visibleFaithful": true,
+      "fullContextComplete": true,
+      "wrongCertain": false,
+      "wrongAssociation": false,
+      "evidence": {
+        "action": "tasks=[]，闲聊未生成任务。",
+        "audience": "不适用，无任务。",
+        "materials": "不适用，无任务。",
+        "negationCorrection": "无把否定或过期信息转成生效要求。",
+        "time": "不适用，无任务；今晚未误成待办截止时间。",
+        "provenance": "空任务无需出处。",
+        "uncertainties": "未发现无依据确定化。"
+      },
+      "notes": [
+        "A/B三轮均正确返回空任务。"
+      ],
+      "provenanceSubstringValid": true,
+      "output": []
+    },
+    {
+      "key": "S01/R1/A",
+      "caseId": "S01",
+      "group": "stale-or-conflicting",
+      "round": 1,
+      "variant": "A",
+      "sourceLine": 16,
+      "visibleFaithful": false,
+      "fullContextComplete": false,
+      "wrongCertain": true,
+      "wrongAssociation": false,
+      "evidence": {
+        "action": "仅有当前要求的一项动作；无新增独立历史任务。",
+        "audience": "audience=二年级，把活动范围填成确定执行对象；缺家长依据且uncertainties为空。",
+        "materials": "材料名称/形式/数量与可见输入核对。",
+        "negationCorrection": "采用10月14日、在线电子表；未要求旧10月12日或纸质表。",
+        "time": "deadlineText为可见原文，完整日期正确归一化；未使用今日补日期。",
+        "provenance": "current支持活动范围、动作、日期、电子表，但不支持确定执行人。",
+        "uncertainties": "未发现无依据确定化。"
+      },
+      "notes": [
+        "应保留执行人不确定；与已确认goldA空audience不一致。"
+      ],
+      "provenanceSubstringValid": true,
+      "output": [
+        {
+          "title": "二年级秋游报名（在线填写电子报名表）",
+          "audience": "二年级",
+          "deadlineText": "2026年10月14日前",
+          "deadlineDate": "2026-10-14",
+          "materials": [
+            "电子报名表"
+          ],
+          "uncertainties": [],
+          "provenance": [
+            {
+              "messageId": "S01-current",
+              "quote": "二年级秋游报名改为2026年10月14日前在线填写电子报名表；不再收纸质表。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "S01/R1/B",
+      "caseId": "S01",
+      "group": "stale-or-conflicting",
+      "round": 1,
+      "variant": "B",
+      "sourceLine": 17,
+      "visibleFaithful": false,
+      "fullContextComplete": true,
+      "wrongCertain": false,
+      "wrongAssociation": false,
+      "evidence": {
+        "action": "仅有当前要求的一项动作；无新增独立历史任务。",
+        "audience": "二年级家长受可见HISTORY支持，内容正确。",
+        "materials": "材料名称/形式/数量与可见输入核对。",
+        "negationCorrection": "采用10月14日、在线电子表；未要求旧10月12日或纸质表。",
+        "time": "deadlineText为可见原文，完整日期正确归一化；未使用今日补日期。",
+        "provenance": "仅引S01-current，不含支持家长的S01-old；精确子串检查通过不能证明覆盖所有字段。",
+        "uncertainties": "未发现无依据确定化。"
+      },
+      "notes": [
+        "历史补全对象成功，但未引用对象出处，不能判visibleFaithful通过。"
+      ],
+      "provenanceSubstringValid": true,
+      "output": [
+        {
+          "title": "二年级秋游报名（在线填写电子报名表）",
+          "audience": "二年级家长",
+          "deadlineText": "2026年10月14日前",
+          "deadlineDate": "2026-10-14",
+          "materials": [
+            "电子报名表"
+          ],
+          "uncertainties": [],
+          "provenance": [
+            {
+              "messageId": "S01-current",
+              "quote": "二年级秋游报名改为2026年10月14日前在线填写电子报名表；不再收纸质表。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "S02/R1/A",
+      "caseId": "S02",
+      "group": "stale-or-conflicting",
+      "round": 1,
+      "variant": "A",
+      "sourceLine": 18,
+      "visibleFaithful": true,
+      "fullContextComplete": true,
+      "wrongCertain": false,
+      "wrongAssociation": false,
+      "evidence": {
+        "action": "交/提交电子照片视为发送的近义表述；原quote含发送。",
+        "audience": "对象与可见通知相符。",
+        "materials": "一张电子照片；没有三张或纸质的生效断言。",
+        "negationCorrection": "新日期10月20日、电子一张覆盖旧10月18日纸质三张。",
+        "time": "deadlineText为可见原文，完整日期正确归一化；未使用今日补日期。",
+        "provenance": "引用均为可见messageId和精确子串；覆盖确定字段。",
+        "uncertainties": "未发现无依据确定化。"
+      },
+      "notes": [
+        "按语义判断通过，词项发匹配失败不能直接推导动作错误；建议后续提取保留发送原词。"
+      ],
+      "provenanceSubstringValid": true,
+      "output": [
+        {
+          "title": "摄影社成员照片改交一张电子照片",
+          "audience": "摄影社成员",
+          "deadlineText": "2026年10月20日前",
+          "deadlineDate": "2026-10-20",
+          "materials": [
+            "一张电子照片"
+          ],
+          "uncertainties": [],
+          "provenance": [
+            {
+              "messageId": "S02-current",
+              "quote": "摄影社成员照片改交一张电子照片，2026年10月20日前发送；不再收纸质版。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "S02/R1/B",
+      "caseId": "S02",
+      "group": "stale-or-conflicting",
+      "round": 1,
+      "variant": "B",
+      "sourceLine": 19,
+      "visibleFaithful": true,
+      "fullContextComplete": true,
+      "wrongCertain": false,
+      "wrongAssociation": false,
+      "evidence": {
+        "action": "交/提交电子照片视为发送的近义表述；原quote含发送。",
+        "audience": "对象与可见通知相符。",
+        "materials": "一张电子照片；没有三张或纸质的生效断言。",
+        "negationCorrection": "新日期10月20日、电子一张覆盖旧10月18日纸质三张。",
+        "time": "deadlineText为可见原文，完整日期正确归一化；未使用今日补日期。",
+        "provenance": "引用均为可见messageId和精确子串；覆盖确定字段。",
+        "uncertainties": "未发现无依据确定化。"
+      },
+      "notes": [
+        "按语义判断通过，词项发匹配失败不能直接推导动作错误；建议后续提取保留发送原词。"
+      ],
+      "provenanceSubstringValid": true,
+      "output": [
+        {
+          "title": "摄影社成员照片改交一张电子照片",
+          "audience": "摄影社成员",
+          "deadlineText": "2026年10月20日前",
+          "deadlineDate": "2026-10-20",
+          "materials": [
+            "一张电子照片"
+          ],
+          "uncertainties": [],
+          "provenance": [
+            {
+              "messageId": "S02-current",
+              "quote": "摄影社成员照片改交一张电子照片，2026年10月20日前发送；不再收纸质版。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "S03/R1/A",
+      "caseId": "S03",
+      "group": "stale-or-conflicting",
+      "round": 1,
+      "variant": "A",
+      "sourceLine": 20,
+      "visibleFaithful": true,
+      "fullContextComplete": true,
+      "wrongCertain": false,
+      "wrongAssociation": false,
+      "evidence": {
+        "action": "仅有当前要求的一项动作；无新增独立历史任务。",
+        "audience": "美术组家长，无舞蹈组混入。",
+        "materials": "作品清单，无舞蹈服尺码表混入。",
+        "negationCorrection": "无把否定或过期信息转成生效要求。",
+        "time": "deadlineDate=null且明确具体截止时间待定；deadlineText未保留这几天，记录粗时间遗漏但按gold日期待定通过。",
+        "provenance": "引用均为可见messageId和精确子串；覆盖确定字段。",
+        "uncertainties": "未发现无依据确定化。"
+      },
+      "notes": [
+        "未将另一活动10月15日套入本次；未凭今日推导日期。"
+      ],
+      "provenanceSubstringValid": true,
+      "output": [
+        {
+          "title": "提交作品清单",
+          "audience": "美术组家长",
+          "deadlineText": "具体截止时间待定",
+          "deadlineDate": null,
+          "materials": [
+            "作品清单"
+          ],
+          "uncertainties": [
+            "具体截止时间待定",
+            "提交方式未知"
+          ],
+          "provenance": [
+            {
+              "messageId": "S03-current",
+              "quote": "请美术组家长这几天提交作品清单，具体截止时间待定"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "S03/R1/B",
+      "caseId": "S03",
+      "group": "stale-or-conflicting",
+      "round": 1,
+      "variant": "B",
+      "sourceLine": 21,
+      "visibleFaithful": true,
+      "fullContextComplete": true,
+      "wrongCertain": false,
+      "wrongAssociation": false,
+      "evidence": {
+        "action": "仅有当前要求的一项动作；无新增独立历史任务。",
+        "audience": "美术组家长，无舞蹈组混入。",
+        "materials": "作品清单，无舞蹈服尺码表混入。",
+        "negationCorrection": "无把否定或过期信息转成生效要求。",
+        "time": "deadlineDate=null且明确具体截止时间待定；deadlineText未保留这几天，记录粗时间遗漏但按gold日期待定通过。",
+        "provenance": "引用均为可见messageId和精确子串；覆盖确定字段。",
+        "uncertainties": "未发现无依据确定化。"
+      },
+      "notes": [
+        "未将另一活动10月15日套入本次；未凭今日推导日期。"
+      ],
+      "provenanceSubstringValid": true,
+      "output": [
+        {
+          "title": "提交作品清单",
+          "audience": "美术组家长",
+          "deadlineText": "具体截止时间待定",
+          "deadlineDate": null,
+          "materials": [
+            "作品清单"
+          ],
+          "uncertainties": [
+            "具体截止时间待定，未给出明确日期"
+          ],
+          "provenance": [
+            {
+              "messageId": "S03-current",
+              "quote": "请美术组家长这几天提交作品清单"
+            },
+            {
+              "messageId": "S03-current",
+              "quote": "具体截止时间待定"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "H01/R2/B",
+      "caseId": "H01",
+      "group": "needs-history",
+      "round": 2,
+      "variant": "B",
+      "sourceLine": 22,
+      "visibleFaithful": true,
+      "fullContextComplete": true,
+      "wrongCertain": false,
+      "wrongAssociation": false,
+      "evidence": {
+        "action": "仅有当前要求的一项动作；无新增独立历史任务。",
+        "audience": "对象与可见通知相符。",
+        "materials": "材料明确为报名表、缴费凭证；title保留两份。",
+        "negationCorrection": "无把否定或过期信息转成生效要求。",
+        "time": "保留2026年10月13日17:00前及2026-10-13，没有丢17:00。",
+        "provenance": "引用均为可见messageId和精确子串；覆盖确定字段。",
+        "uncertainties": "说明材料明细来自历史是来源说明，不否定已获得的信息。"
+      },
+      "notes": [
+        "历史成功补全两项材料；未额外生成填写/缴费动作。班主任只在部分出处出现，未提取为接收方，gold无接收方字段，作为完整性边界提示。"
+      ],
+      "provenanceSubstringValid": true,
+      "output": [
+        {
+          "title": "交两份报名材料",
+          "audience": "二年级家长",
+          "deadlineText": "2026年10月13日17:00前",
+          "deadlineDate": "2026-10-13",
+          "materials": [
+            "报名表",
+            "缴费凭证"
+          ],
+          "uncertainties": [
+            "“两份报名材料”具体指报名表和缴费凭证，依据历史理解；当前消息未逐项列明"
+          ],
+          "provenance": [
+            {
+              "messageId": "H01-current",
+              "quote": "两份报名材料，请二年级家长2026年10月13日17:00前交"
+            },
+            {
+              "messageId": "H01-old",
+              "quote": "秋游报名需填写报名表并附缴费凭证，交给班主任"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "H01/R2/A",
+      "caseId": "H01",
+      "group": "needs-history",
+      "round": 2,
+      "variant": "A",
+      "sourceLine": 23,
+      "visibleFaithful": true,
+      "fullContextComplete": false,
+      "wrongCertain": false,
+      "wrongAssociation": false,
+      "evidence": {
+        "action": "仅有当前要求的一项动作；无新增独立历史任务。",
+        "audience": "对象与可见通知相符。",
+        "materials": "保留两份报名材料；明确未知材料明细。",
+        "negationCorrection": "无把否定或过期信息转成生效要求。",
+        "time": "保留2026年10月13日17:00前及2026-10-13，没有丢17:00。",
+        "provenance": "引用均为可见messageId和精确子串；覆盖确定字段。",
+        "uncertainties": "明细未知合理，不据此记幻觉。"
+      },
+      "notes": [
+        "相对完整历史缺报名表与缴费凭证；当前可见内容忠实。"
+      ],
+      "provenanceSubstringValid": true,
+      "output": [
+        {
+          "title": "交两份报名材料",
+          "audience": "二年级家长",
+          "deadlineText": "2026年10月13日17:00前",
+          "deadlineDate": "2026-10-13",
+          "materials": [
+            "两份报名材料"
+          ],
+          "uncertainties": [
+            "报名材料的具体名称和内容未说明"
+          ],
+          "provenance": [
+            {
+              "messageId": "H01-current",
+              "quote": "两份报名材料，请二年级家长2026年10月13日17:00前交"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "H02/R2/B",
+      "caseId": "H02",
+      "group": "needs-history",
+      "round": 2,
+      "variant": "B",
+      "sourceLine": 24,
+      "visibleFaithful": true,
+      "fullContextComplete": false,
+      "wrongCertain": false,
+      "wrongAssociation": false,
+      "evidence": {
+        "action": "仅有当前要求的一项动作；无新增独立历史任务。",
+        "audience": "科研小组成员由H02-old支持。",
+        "materials": "导师签字、纸质、立项表均正确，但title/materials均漏一份；一份只在出处。",
+        "negationCorrection": "无把否定或过期信息转成生效要求。",
+        "time": "deadlineText为可见原文，完整日期正确归一化；未使用今日补日期。",
+        "provenance": "引用均为可见messageId和精确子串；覆盖确定字段。",
+        "uncertainties": "未发现无依据确定化。"
+      },
+      "notes": [
+        "上下文补全对象与表格性质，但三轮均遗漏数量，不能判完整。"
+      ],
+      "provenanceSubstringValid": true,
+      "output": [
+        {
+          "title": "提交导师签字的纸质立项表",
+          "audience": "科研小组成员",
+          "deadlineText": "2026年10月18日前",
+          "deadlineDate": "2026-10-18",
+          "materials": [
+            "导师签字的纸质立项表"
+          ],
+          "uncertainties": [],
+          "provenance": [
+            {
+              "messageId": "H02-current",
+              "quote": "请上述成员于2026年10月18日前交该表，一份即可。"
+            },
+            {
+              "messageId": "H02-old",
+              "quote": "科研小组成员要提交一份导师签字的纸质立项表。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "H02/R2/A",
+      "caseId": "H02",
+      "group": "needs-history",
+      "round": 2,
+      "variant": "A",
+      "sourceLine": 25,
+      "visibleFaithful": true,
+      "fullContextComplete": false,
+      "wrongCertain": false,
+      "wrongAssociation": false,
+      "evidence": {
+        "action": "仅有当前要求的一项动作；无新增独立历史任务。",
+        "audience": "audience=上述成员，uncertainties明确具体指哪些人不明确；不构成虚构具体对象。",
+        "materials": "materials仅该表；一份信息在uncertainties中承认，但名称/形式/签字不可从A确定。",
+        "negationCorrection": "无把否定或过期信息转成生效要求。",
+        "time": "deadlineText为可见原文，完整日期正确归一化；未使用今日补日期。",
+        "provenance": "引用均为可见messageId和精确子串；覆盖确定字段。",
+        "uncertainties": "未发现无依据确定化。"
+      },
+      "notes": [
+        "提示要求未知对象留空，本输出是可见指代占位，存在字段规范偏差；不将其算幻觉。"
+      ],
+      "provenanceSubstringValid": true,
+      "output": [
+        {
+          "title": "交该表",
+          "audience": "上述成员",
+          "deadlineText": "2026年10月18日前",
+          "deadlineDate": "2026-10-18",
+          "materials": [
+            "该表"
+          ],
+          "uncertainties": [
+            "“上述成员”具体指哪些人不明确",
+            "“该表”具体指什么表不明确",
+            "“一份即可”指该表提交一份，但表的名称和形式不明确"
+          ],
+          "provenance": [
+            {
+              "messageId": "H02-current",
+              "quote": "请上述成员于2026年10月18日前交该表，一份即可。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "H03/R2/B",
+      "caseId": "H03",
+      "group": "needs-history",
+      "round": 2,
+      "variant": "B",
+      "sourceLine": 26,
+      "visibleFaithful": false,
+      "fullContextComplete": false,
+      "wrongCertain": false,
+      "wrongAssociation": false,
+      "evidence": {
+        "action": "仅有当前要求的一项动作；无新增独立历史任务。",
+        "audience": "对象与可见通知相符。",
+        "materials": "history明确健康承诺书、电子PDF，但只提承诺书；漏名称限定与格式。",
+        "negationCorrection": "无把否定或过期信息转成生效要求。",
+        "time": "deadlineText为可见原文，完整日期正确归一化；未使用今日补日期。",
+        "provenance": "只引current，未利用H03-old补全。",
+        "uncertainties": "声称格式/发送方式未明确，与H03-old明确电子PDF和活动邮箱矛盾。"
+      },
+      "notes": [
+        "三轮B均未得到该历史应有的补全；这是遗漏及虚假不确定，不是新增具体日期/材料的错误确定化。"
+      ],
+      "provenanceSubstringValid": true,
+      "output": [
+        {
+          "title": "发送承诺书",
+          "audience": "志愿者",
+          "deadlineText": "2026年10月16日前",
+          "deadlineDate": "2026-10-16",
+          "materials": [
+            "承诺书"
+          ],
+          "uncertainties": [
+            "承诺书的具体格式未明确",
+            "发送方式未明确"
+          ],
+          "provenance": [
+            {
+              "messageId": "H03-current",
+              "quote": "志愿者请在2026年10月16日前，把前面说的承诺书按上述格式发送。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "H03/R2/A",
+      "caseId": "H03",
+      "group": "needs-history",
+      "round": 2,
+      "variant": "A",
+      "sourceLine": 27,
+      "visibleFaithful": true,
+      "fullContextComplete": false,
+      "wrongCertain": false,
+      "wrongAssociation": false,
+      "evidence": {
+        "action": "仅有当前要求的一项动作；无新增独立历史任务。",
+        "audience": "对象与可见通知相符。",
+        "materials": "A只知承诺书，格式未知是合理保留。",
+        "negationCorrection": "无把否定或过期信息转成生效要求。",
+        "time": "deadlineText为可见原文，完整日期正确归一化；未使用今日补日期。",
+        "provenance": "当前已输出字段出处充分。",
+        "uncertainties": "格式与渠道未明确的疑点受当前可见输入支持。"
+      },
+      "notes": [
+        "fullContextComplete不通过不意味着A幻觉。"
+      ],
+      "provenanceSubstringValid": true,
+      "output": [
+        {
+          "title": "发送承诺书",
+          "audience": "志愿者",
+          "deadlineText": "2026年10月16日前",
+          "deadlineDate": "2026-10-16",
+          "materials": [
+            "承诺书"
+          ],
+          "uncertainties": [
+            "承诺书的具体格式未在消息中给出，仅称“按上述格式”",
+            "发送方式/渠道未明确"
+          ],
+          "provenance": [
+            {
+              "messageId": "H03-current",
+              "quote": "志愿者请在2026年10月16日前，把前面说的承诺书按上述格式发送。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "H04/R2/B",
+      "caseId": "H04",
+      "group": "needs-history",
+      "round": 2,
+      "variant": "B",
+      "sourceLine": 28,
+      "visibleFaithful": true,
+      "fullContextComplete": true,
+      "wrongCertain": false,
+      "wrongAssociation": false,
+      "evidence": {
+        "action": "仅有当前要求的一项动作；无新增独立历史任务。",
+        "audience": "对象与可见通知相符。",
+        "materials": "一张/一寸/蓝底/电子JPG齐全。",
+        "negationCorrection": "无把否定或过期信息转成生效要求。",
+        "time": "deadlineText为可见原文，完整日期正确归一化；未使用今日补日期。",
+        "provenance": "引用均为可见messageId和精确子串；覆盖确定字段。",
+        "uncertainties": "未发现无依据确定化。"
+      },
+      "notes": [
+        "提交讲座照片按参与讲座者照片的简写解读；一寸/蓝底说明是证件照，没有断言拍摄讲座现场。"
+      ],
+      "provenanceSubstringValid": true,
+      "output": [
+        {
+          "title": "提交讲座照片",
+          "audience": "参加讲座的同学",
+          "deadlineText": "2026年10月19日前",
+          "deadlineDate": "2026-10-19",
+          "materials": [
+            "一张一寸照片",
+            "蓝底",
+            "电子JPG"
+          ],
+          "uncertainties": [],
+          "provenance": [
+            {
+              "messageId": "H04-current",
+              "quote": "参加讲座的同学请2026年10月19日前交上述照片。"
+            },
+            {
+              "messageId": "H04-old1",
+              "quote": "参与讲座的同学提交一张一寸照片。"
+            },
+            {
+              "messageId": "H04-old2",
+              "quote": "照片需蓝底，电子JPG即可。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "H04/R2/A",
+      "caseId": "H04",
+      "group": "needs-history",
+      "round": 2,
+      "variant": "A",
+      "sourceLine": 29,
+      "visibleFaithful": true,
+      "fullContextComplete": false,
+      "wrongCertain": false,
+      "wrongAssociation": false,
+      "evidence": {
+        "action": "仅有当前要求的一项动作；无新增独立历史任务。",
+        "audience": "对象与可见通知相符。",
+        "materials": "规格/数量/提交方式未知，合理留疑点。",
+        "negationCorrection": "无把否定或过期信息转成生效要求。",
+        "time": "deadlineText为可见原文，完整日期正确归一化；未使用今日补日期。",
+        "provenance": "引用均为可见messageId和精确子串；覆盖确定字段。",
+        "uncertainties": "未发现无依据确定化。"
+      },
+      "notes": [
+        "缺历史中规格与形式，完整性不通过。"
+      ],
+      "provenanceSubstringValid": true,
+      "output": [
+        {
+          "title": "交照片",
+          "audience": "参加讲座的同学",
+          "deadlineText": "2026年10月19日前",
+          "deadlineDate": "2026-10-19",
+          "materials": [
+            "照片"
+          ],
+          "uncertainties": [
+            "照片的具体规格、数量及提交方式未说明",
+            "“上述照片”所指内容因无历史记录而无法确定"
+          ],
+          "provenance": [
+            {
+              "messageId": "H04-current",
+              "quote": "参加讲座的同学请2026年10月19日前交上述照片。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "N01/R2/B",
+      "caseId": "N01",
+      "group": "no-history-needed",
+      "round": 2,
+      "variant": "B",
+      "sourceLine": 30,
+      "visibleFaithful": true,
+      "fullContextComplete": true,
+      "wrongCertain": false,
+      "wrongAssociation": false,
+      "evidence": {
+        "action": "仅有当前要求的一项动作；无新增独立历史任务。",
+        "audience": "对象与可见通知相符。",
+        "materials": "电子签到表正确，原文无数量。",
+        "negationCorrection": "无把否定或过期信息转成生效要求。",
+        "time": "deadlineText为可见原文，完整日期正确归一化；未使用今日补日期。",
+        "provenance": "引用均为可见messageId和精确子串；覆盖确定字段。",
+        "uncertainties": "未发现无依据确定化。"
+      },
+      "notes": [
+        "无关天气历史没有影响输出。"
+      ],
+      "provenanceSubstringValid": true,
+      "output": [
+        {
+          "title": "提交电子签到表",
+          "audience": "所有志愿者",
+          "deadlineText": "2026年10月15日前",
+          "deadlineDate": "2026-10-15",
+          "materials": [
+            "电子签到表"
+          ],
+          "uncertainties": [],
+          "provenance": [
+            {
+              "messageId": "N01-current",
+              "quote": "请所有志愿者2026年10月15日前提交电子签到表。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "N01/R2/A",
+      "caseId": "N01",
+      "group": "no-history-needed",
+      "round": 2,
+      "variant": "A",
+      "sourceLine": 31,
+      "visibleFaithful": true,
+      "fullContextComplete": true,
+      "wrongCertain": false,
+      "wrongAssociation": false,
+      "evidence": {
+        "action": "仅有当前要求的一项动作；无新增独立历史任务。",
+        "audience": "对象与可见通知相符。",
+        "materials": "电子签到表正确，原文无数量。",
+        "negationCorrection": "无把否定或过期信息转成生效要求。",
+        "time": "deadlineText为可见原文，完整日期正确归一化；未使用今日补日期。",
+        "provenance": "引用均为可见messageId和精确子串；覆盖确定字段。",
+        "uncertainties": "未发现无依据确定化。"
+      },
+      "notes": [
+        "无关天气历史没有影响输出。"
+      ],
+      "provenanceSubstringValid": true,
+      "output": [
+        {
+          "title": "提交电子签到表",
+          "audience": "所有志愿者",
+          "deadlineText": "2026年10月15日前",
+          "deadlineDate": "2026-10-15",
+          "materials": [
+            "电子签到表"
+          ],
+          "uncertainties": [],
+          "provenance": [
+            {
+              "messageId": "N01-current",
+              "quote": "请所有志愿者2026年10月15日前提交电子签到表。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "N02/R2/B",
+      "caseId": "N02",
+      "group": "no-history-needed",
+      "round": 2,
+      "variant": "B",
+      "sourceLine": 32,
+      "visibleFaithful": true,
+      "fullContextComplete": false,
+      "wrongCertain": false,
+      "wrongAssociation": false,
+      "evidence": {
+        "action": "仅有当前要求的一项动作；无新增独立历史任务。",
+        "audience": "对象与可见通知相符。",
+        "materials": "本人签字/纸质/接送授权书正确，但任务字段漏一份；出处的数量不替代提取。",
+        "negationCorrection": "无把否定或过期信息转成生效要求。",
+        "time": "deadlineText为可见原文，完整日期正确归一化；未使用今日补日期。",
+        "provenance": "引用均为可见messageId和精确子串；覆盖确定字段。",
+        "uncertainties": "未发现无依据确定化。"
+      },
+      "notes": [
+        "无需历史；同一case存在数量保留的轮次波动，不应解释为B稳定提升。"
+      ],
+      "provenanceSubstringValid": true,
+      "output": [
+        {
+          "title": "交纸质接送授权书",
+          "audience": "三年级家长",
+          "deadlineText": "2026年10月17日前",
+          "deadlineDate": "2026-10-17",
+          "materials": [
+            "本人签字的纸质接送授权书"
+          ],
+          "uncertainties": [],
+          "provenance": [
+            {
+              "messageId": "N02-current",
+              "quote": "三年级家长请2026年10月17日前交一份本人签字的纸质接送授权书。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "N02/R2/A",
+      "caseId": "N02",
+      "group": "no-history-needed",
+      "round": 2,
+      "variant": "A",
+      "sourceLine": 33,
+      "visibleFaithful": true,
+      "fullContextComplete": true,
+      "wrongCertain": false,
+      "wrongAssociation": false,
+      "evidence": {
+        "action": "仅有当前要求的一项动作；无新增独立历史任务。",
+        "audience": "对象与可见通知相符。",
+        "materials": "title保留一份，materials保留本人签字、纸质接送授权书。",
+        "negationCorrection": "无把否定或过期信息转成生效要求。",
+        "time": "deadlineText为可见原文，完整日期正确归一化；未使用今日补日期。",
+        "provenance": "引用均为可见messageId和精确子串；覆盖确定字段。",
+        "uncertainties": "未发现无依据确定化。"
+      },
+      "notes": [
+        "无需历史；同一case存在数量保留的轮次波动，不应解释为B稳定提升。"
+      ],
+      "provenanceSubstringValid": true,
+      "output": [
+        {
+          "title": "交一份本人签字的纸质接送授权书",
+          "audience": "三年级家长",
+          "deadlineText": "2026年10月17日前",
+          "deadlineDate": "2026-10-17",
+          "materials": [
+            "本人签字的纸质接送授权书"
+          ],
+          "uncertainties": [],
+          "provenance": [
+            {
+              "messageId": "N02-current",
+              "quote": "三年级家长请2026年10月17日前交一份本人签字的纸质接送授权书。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "N03/R2/B",
+      "caseId": "N03",
+      "group": "no-history-needed",
+      "round": 2,
+      "variant": "B",
+      "sourceLine": 34,
+      "visibleFaithful": true,
+      "fullContextComplete": true,
+      "wrongCertain": false,
+      "wrongAssociation": false,
+      "evidence": {
+        "action": "tasks=[]，闲聊未生成任务。",
+        "audience": "不适用，无任务。",
+        "materials": "不适用，无任务。",
+        "negationCorrection": "无把否定或过期信息转成生效要求。",
+        "time": "不适用，无任务；今晚未误成待办截止时间。",
+        "provenance": "空任务无需出处。",
+        "uncertainties": "未发现无依据确定化。"
+      },
+      "notes": [
+        "A/B三轮均正确返回空任务。"
+      ],
+      "provenanceSubstringValid": true,
+      "output": []
+    },
+    {
+      "key": "N03/R2/A",
+      "caseId": "N03",
+      "group": "no-history-needed",
+      "round": 2,
+      "variant": "A",
+      "sourceLine": 35,
+      "visibleFaithful": true,
+      "fullContextComplete": true,
+      "wrongCertain": false,
+      "wrongAssociation": false,
+      "evidence": {
+        "action": "tasks=[]，闲聊未生成任务。",
+        "audience": "不适用，无任务。",
+        "materials": "不适用，无任务。",
+        "negationCorrection": "无把否定或过期信息转成生效要求。",
+        "time": "不适用，无任务；今晚未误成待办截止时间。",
+        "provenance": "空任务无需出处。",
+        "uncertainties": "未发现无依据确定化。"
+      },
+      "notes": [
+        "A/B三轮均正确返回空任务。"
+      ],
+      "provenanceSubstringValid": true,
+      "output": []
+    },
+    {
+      "key": "S01/R2/B",
+      "caseId": "S01",
+      "group": "stale-or-conflicting",
+      "round": 2,
+      "variant": "B",
+      "sourceLine": 36,
+      "visibleFaithful": false,
+      "fullContextComplete": true,
+      "wrongCertain": false,
+      "wrongAssociation": false,
+      "evidence": {
+        "action": "仅有当前要求的一项动作；无新增独立历史任务。",
+        "audience": "二年级家长受可见HISTORY支持，内容正确。",
+        "materials": "材料名称/形式/数量与可见输入核对。",
+        "negationCorrection": "采用10月14日、在线电子表；未要求旧10月12日或纸质表。",
+        "time": "deadlineText为可见原文，完整日期正确归一化；未使用今日补日期。",
+        "provenance": "仅引S01-current，不含支持家长的S01-old；精确子串检查通过不能证明覆盖所有字段。",
+        "uncertainties": "未发现无依据确定化。"
+      },
+      "notes": [
+        "历史补全对象成功，但未引用对象出处，不能判visibleFaithful通过。"
+      ],
+      "provenanceSubstringValid": true,
+      "output": [
+        {
+          "title": "二年级秋游报名（在线填写电子报名表）",
+          "audience": "二年级家长",
+          "deadlineText": "2026年10月14日前",
+          "deadlineDate": "2026-10-14",
+          "materials": [
+            "电子报名表"
+          ],
+          "uncertainties": [],
+          "provenance": [
+            {
+              "messageId": "S01-current",
+              "quote": "二年级秋游报名改为2026年10月14日前在线填写电子报名表"
+            },
+            {
+              "messageId": "S01-current",
+              "quote": "不再收纸质表"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "S01/R2/A",
+      "caseId": "S01",
+      "group": "stale-or-conflicting",
+      "round": 2,
+      "variant": "A",
+      "sourceLine": 37,
+      "visibleFaithful": false,
+      "fullContextComplete": false,
+      "wrongCertain": true,
+      "wrongAssociation": false,
+      "evidence": {
+        "action": "仅有当前要求的一项动作；无新增独立历史任务。",
+        "audience": "audience=二年级，把活动范围填成确定执行对象；缺家长依据且uncertainties为空。",
+        "materials": "材料名称/形式/数量与可见输入核对。",
+        "negationCorrection": "采用10月14日、在线电子表；未要求旧10月12日或纸质表。",
+        "time": "deadlineText为可见原文，完整日期正确归一化；未使用今日补日期。",
+        "provenance": "current支持活动范围、动作、日期、电子表，但不支持确定执行人。",
+        "uncertainties": "未发现无依据确定化。"
+      },
+      "notes": [
+        "应保留执行人不确定；与已确认goldA空audience不一致。"
+      ],
+      "provenanceSubstringValid": true,
+      "output": [
+        {
+          "title": "二年级秋游报名（在线填写电子报名表）",
+          "audience": "二年级",
+          "deadlineText": "2026年10月14日前",
+          "deadlineDate": "2026-10-14",
+          "materials": [
+            "电子报名表"
+          ],
+          "uncertainties": [],
+          "provenance": [
+            {
+              "messageId": "S01-current",
+              "quote": "二年级秋游报名改为2026年10月14日前在线填写电子报名表；不再收纸质表。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "S02/R2/B",
+      "caseId": "S02",
+      "group": "stale-or-conflicting",
+      "round": 2,
+      "variant": "B",
+      "sourceLine": 38,
+      "visibleFaithful": true,
+      "fullContextComplete": true,
+      "wrongCertain": false,
+      "wrongAssociation": false,
+      "evidence": {
+        "action": "交/提交电子照片视为发送的近义表述；原quote含发送。",
+        "audience": "对象与可见通知相符。",
+        "materials": "一张电子照片；没有三张或纸质的生效断言。",
+        "negationCorrection": "新日期10月20日、电子一张覆盖旧10月18日纸质三张。",
+        "time": "deadlineText为可见原文，完整日期正确归一化；未使用今日补日期。",
+        "provenance": "引用均为可见messageId和精确子串；覆盖确定字段。",
+        "uncertainties": "未发现无依据确定化。"
+      },
+      "notes": [
+        "按语义判断通过，词项发匹配失败不能直接推导动作错误；建议后续提取保留发送原词。"
+      ],
+      "provenanceSubstringValid": true,
+      "output": [
+        {
+          "title": "摄影社成员照片改交一张电子照片",
+          "audience": "摄影社成员",
+          "deadlineText": "2026年10月20日前",
+          "deadlineDate": "2026-10-20",
+          "materials": [
+            "一张电子照片"
+          ],
+          "uncertainties": [],
+          "provenance": [
+            {
+              "messageId": "S02-current",
+              "quote": "摄影社成员照片改交一张电子照片，2026年10月20日前发送；不再收纸质版。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "S02/R2/A",
+      "caseId": "S02",
+      "group": "stale-or-conflicting",
+      "round": 2,
+      "variant": "A",
+      "sourceLine": 39,
+      "visibleFaithful": true,
+      "fullContextComplete": true,
+      "wrongCertain": false,
+      "wrongAssociation": false,
+      "evidence": {
+        "action": "交/提交电子照片视为发送的近义表述；原quote含发送。",
+        "audience": "对象与可见通知相符。",
+        "materials": "一张电子照片；没有三张或纸质的生效断言。",
+        "negationCorrection": "新日期10月20日、电子一张覆盖旧10月18日纸质三张。",
+        "time": "deadlineText为可见原文，完整日期正确归一化；未使用今日补日期。",
+        "provenance": "引用均为可见messageId和精确子串；覆盖确定字段。",
+        "uncertainties": "未发现无依据确定化。"
+      },
+      "notes": [
+        "按语义判断通过，词项发匹配失败不能直接推导动作错误；建议后续提取保留发送原词。"
+      ],
+      "provenanceSubstringValid": true,
+      "output": [
+        {
+          "title": "提交摄影社成员电子照片",
+          "audience": "摄影社成员",
+          "deadlineText": "2026年10月20日前",
+          "deadlineDate": "2026-10-20",
+          "materials": [
+            "一张电子照片"
+          ],
+          "uncertainties": [],
+          "provenance": [
+            {
+              "messageId": "S02-current",
+              "quote": "摄影社成员照片改交一张电子照片，2026年10月20日前发送；不再收纸质版。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "S03/R2/B",
+      "caseId": "S03",
+      "group": "stale-or-conflicting",
+      "round": 2,
+      "variant": "B",
+      "sourceLine": 40,
+      "visibleFaithful": true,
+      "fullContextComplete": true,
+      "wrongCertain": false,
+      "wrongAssociation": false,
+      "evidence": {
+        "action": "仅有当前要求的一项动作；无新增独立历史任务。",
+        "audience": "美术组家长，无舞蹈组混入。",
+        "materials": "作品清单，无舞蹈服尺码表混入。",
+        "negationCorrection": "无把否定或过期信息转成生效要求。",
+        "time": "deadlineDate=null且明确具体截止时间待定；deadlineText未保留这几天，记录粗时间遗漏但按gold日期待定通过。",
+        "provenance": "引用均为可见messageId和精确子串；覆盖确定字段。",
+        "uncertainties": "未发现无依据确定化。"
+      },
+      "notes": [
+        "未将另一活动10月15日套入本次；未凭今日推导日期。"
+      ],
+      "provenanceSubstringValid": true,
+      "output": [
+        {
+          "title": "提交作品清单",
+          "audience": "美术组家长",
+          "deadlineText": "具体截止时间待定",
+          "deadlineDate": null,
+          "materials": [
+            "作品清单"
+          ],
+          "uncertainties": [
+            "具体截止时间待定，未给出明确日期"
+          ],
+          "provenance": [
+            {
+              "messageId": "S03-current",
+              "quote": "请美术组家长这几天提交作品清单，具体截止时间待定"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "S03/R2/A",
+      "caseId": "S03",
+      "group": "stale-or-conflicting",
+      "round": 2,
+      "variant": "A",
+      "sourceLine": 41,
+      "visibleFaithful": true,
+      "fullContextComplete": true,
+      "wrongCertain": false,
+      "wrongAssociation": false,
+      "evidence": {
+        "action": "仅有当前要求的一项动作；无新增独立历史任务。",
+        "audience": "美术组家长，无舞蹈组混入。",
+        "materials": "作品清单，无舞蹈服尺码表混入。",
+        "negationCorrection": "无把否定或过期信息转成生效要求。",
+        "time": "deadlineDate=null且明确具体截止时间待定；deadlineText未保留这几天，记录粗时间遗漏但按gold日期待定通过。",
+        "provenance": "引用均为可见messageId和精确子串；覆盖确定字段。",
+        "uncertainties": "未发现无依据确定化。"
+      },
+      "notes": [
+        "未将另一活动10月15日套入本次；未凭今日推导日期。"
+      ],
+      "provenanceSubstringValid": true,
+      "output": [
+        {
+          "title": "提交作品清单",
+          "audience": "美术组家长",
+          "deadlineText": "具体截止时间待定",
+          "deadlineDate": null,
+          "materials": [
+            "作品清单"
+          ],
+          "uncertainties": [
+            "具体截止时间待定，未给出明确日期"
+          ],
+          "provenance": [
+            {
+              "messageId": "S03-current",
+              "quote": "请美术组家长这几天提交作品清单，具体截止时间待定"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "H01/R3/A",
+      "caseId": "H01",
+      "group": "needs-history",
+      "round": 3,
+      "variant": "A",
+      "sourceLine": 42,
+      "visibleFaithful": true,
+      "fullContextComplete": false,
+      "wrongCertain": false,
+      "wrongAssociation": false,
+      "evidence": {
+        "action": "仅有当前要求的一项动作；无新增独立历史任务。",
+        "audience": "对象与可见通知相符。",
+        "materials": "保留两份报名材料；明确未知材料明细。",
+        "negationCorrection": "无把否定或过期信息转成生效要求。",
+        "time": "保留2026年10月13日17:00前及2026-10-13，没有丢17:00。",
+        "provenance": "引用均为可见messageId和精确子串；覆盖确定字段。",
+        "uncertainties": "明细未知合理，不据此记幻觉。"
+      },
+      "notes": [
+        "相对完整历史缺报名表与缴费凭证；当前可见内容忠实。"
+      ],
+      "provenanceSubstringValid": true,
+      "output": [
+        {
+          "title": "交两份报名材料",
+          "audience": "二年级家长",
+          "deadlineText": "2026年10月13日17:00前",
+          "deadlineDate": "2026-10-13",
+          "materials": [
+            "两份报名材料"
+          ],
+          "uncertainties": [
+            "报名材料的具体名称和内容未说明"
+          ],
+          "provenance": [
+            {
+              "messageId": "H01-current",
+              "quote": "上面说的两份报名材料，请二年级家长2026年10月13日17:00前交。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "H01/R3/B",
+      "caseId": "H01",
+      "group": "needs-history",
+      "round": 3,
+      "variant": "B",
+      "sourceLine": 43,
+      "visibleFaithful": true,
+      "fullContextComplete": true,
+      "wrongCertain": false,
+      "wrongAssociation": false,
+      "evidence": {
+        "action": "仅有当前要求的一项动作；无新增独立历史任务。",
+        "audience": "对象与可见通知相符。",
+        "materials": "材料明确为报名表、缴费凭证；title保留两份。",
+        "negationCorrection": "无把否定或过期信息转成生效要求。",
+        "time": "保留2026年10月13日17:00前及2026-10-13，没有丢17:00。",
+        "provenance": "引用均为可见messageId和精确子串；覆盖确定字段。",
+        "uncertainties": "说明材料明细来自历史是来源说明，不否定已获得的信息。"
+      },
+      "notes": [
+        "历史成功补全两项材料；未额外生成填写/缴费动作。班主任只在部分出处出现，未提取为接收方，gold无接收方字段，作为完整性边界提示。"
+      ],
+      "provenanceSubstringValid": true,
+      "output": [
+        {
+          "title": "交两份报名材料",
+          "audience": "二年级家长",
+          "deadlineText": "2026年10月13日17:00前",
+          "deadlineDate": "2026-10-13",
+          "materials": [
+            "报名表",
+            "缴费凭证"
+          ],
+          "uncertainties": [
+            "“两份报名材料”具体指报名表和缴费凭证，依据历史理解；当前消息未逐项列明"
+          ],
+          "provenance": [
+            {
+              "messageId": "H01-current",
+              "quote": "上面说的两份报名材料，请二年级家长2026年10月13日17:00前交。"
+            },
+            {
+              "messageId": "H01-old",
+              "quote": "秋游报名需填写报名表并附缴费凭证，交给班主任。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "H02/R3/A",
+      "caseId": "H02",
+      "group": "needs-history",
+      "round": 3,
+      "variant": "A",
+      "sourceLine": 44,
+      "visibleFaithful": true,
+      "fullContextComplete": false,
+      "wrongCertain": false,
+      "wrongAssociation": false,
+      "evidence": {
+        "action": "仅有当前要求的一项动作；无新增独立历史任务。",
+        "audience": "audience=上述成员，uncertainties明确具体指哪些人不明确；不构成虚构具体对象。",
+        "materials": "materials仅该表；一份信息在uncertainties中承认，但名称/形式/签字不可从A确定。",
+        "negationCorrection": "无把否定或过期信息转成生效要求。",
+        "time": "deadlineText为可见原文，完整日期正确归一化；未使用今日补日期。",
+        "provenance": "引用均为可见messageId和精确子串；覆盖确定字段。",
+        "uncertainties": "未发现无依据确定化。"
+      },
+      "notes": [
+        "提示要求未知对象留空，本输出是可见指代占位，存在字段规范偏差；不将其算幻觉。"
+      ],
+      "provenanceSubstringValid": true,
+      "output": [
+        {
+          "title": "交该表",
+          "audience": "上述成员",
+          "deadlineText": "2026年10月18日前",
+          "deadlineDate": "2026-10-18",
+          "materials": [
+            "该表"
+          ],
+          "uncertainties": [
+            "“上述成员”具体指哪些人不明确",
+            "“该表”具体名称或内容不明确",
+            "“一份即可”指提交份数，但材料形式未说明"
+          ],
+          "provenance": [
+            {
+              "messageId": "H02-current",
+              "quote": "请上述成员于2026年10月18日前交该表，一份即可。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "H02/R3/B",
+      "caseId": "H02",
+      "group": "needs-history",
+      "round": 3,
+      "variant": "B",
+      "sourceLine": 45,
+      "visibleFaithful": true,
+      "fullContextComplete": false,
+      "wrongCertain": false,
+      "wrongAssociation": false,
+      "evidence": {
+        "action": "仅有当前要求的一项动作；无新增独立历史任务。",
+        "audience": "科研小组成员由H02-old支持。",
+        "materials": "导师签字、纸质、立项表均正确，但title/materials均漏一份；一份只在出处。",
+        "negationCorrection": "无把否定或过期信息转成生效要求。",
+        "time": "deadlineText为可见原文，完整日期正确归一化；未使用今日补日期。",
+        "provenance": "引用均为可见messageId和精确子串；覆盖确定字段。",
+        "uncertainties": "未发现无依据确定化。"
+      },
+      "notes": [
+        "上下文补全对象与表格性质，但三轮均遗漏数量，不能判完整。"
+      ],
+      "provenanceSubstringValid": true,
+      "output": [
+        {
+          "title": "提交导师签字的纸质立项表",
+          "audience": "科研小组成员",
+          "deadlineText": "2026年10月18日前",
+          "deadlineDate": "2026-10-18",
+          "materials": [
+            "导师签字的纸质立项表"
+          ],
+          "uncertainties": [],
+          "provenance": [
+            {
+              "messageId": "H02-current",
+              "quote": "请上述成员于2026年10月18日前交该表，一份即可。"
+            },
+            {
+              "messageId": "H02-old",
+              "quote": "科研小组成员要提交一份导师签字的纸质立项表。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "H03/R3/A",
+      "caseId": "H03",
+      "group": "needs-history",
+      "round": 3,
+      "variant": "A",
+      "sourceLine": 46,
+      "visibleFaithful": true,
+      "fullContextComplete": false,
+      "wrongCertain": false,
+      "wrongAssociation": false,
+      "evidence": {
+        "action": "仅有当前要求的一项动作；无新增独立历史任务。",
+        "audience": "对象与可见通知相符。",
+        "materials": "A只知承诺书，格式未知是合理保留。",
+        "negationCorrection": "无把否定或过期信息转成生效要求。",
+        "time": "deadlineText为可见原文，完整日期正确归一化；未使用今日补日期。",
+        "provenance": "当前已输出字段出处充分。",
+        "uncertainties": "格式与渠道未明确的疑点受当前可见输入支持。"
+      },
+      "notes": [
+        "fullContextComplete不通过不意味着A幻觉。"
+      ],
+      "provenanceSubstringValid": true,
+      "output": [
+        {
+          "title": "发送承诺书",
+          "audience": "志愿者",
+          "deadlineText": "2026年10月16日前",
+          "deadlineDate": "2026-10-16",
+          "materials": [
+            "承诺书"
+          ],
+          "uncertainties": [
+            "承诺书的具体格式未在消息中说明",
+            "发送方式/渠道未明确"
+          ],
+          "provenance": [
+            {
+              "messageId": "H03-current",
+              "quote": "志愿者请在2026年10月16日前，把前面说的承诺书按上述格式发送。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "H03/R3/B",
+      "caseId": "H03",
+      "group": "needs-history",
+      "round": 3,
+      "variant": "B",
+      "sourceLine": 47,
+      "visibleFaithful": false,
+      "fullContextComplete": false,
+      "wrongCertain": false,
+      "wrongAssociation": false,
+      "evidence": {
+        "action": "仅有当前要求的一项动作；无新增独立历史任务。",
+        "audience": "对象与可见通知相符。",
+        "materials": "history明确健康承诺书、电子PDF，但只提承诺书；漏名称限定与格式。",
+        "negationCorrection": "无把否定或过期信息转成生效要求。",
+        "time": "deadlineText为可见原文，完整日期正确归一化；未使用今日补日期。",
+        "provenance": "只引current，未利用H03-old补全。",
+        "uncertainties": "声称格式/发送方式未明确，与H03-old明确电子PDF和活动邮箱矛盾。"
+      },
+      "notes": [
+        "三轮B均未得到该历史应有的补全；这是遗漏及虚假不确定，不是新增具体日期/材料的错误确定化。"
+      ],
+      "provenanceSubstringValid": true,
+      "output": [
+        {
+          "title": "发送承诺书",
+          "audience": "志愿者",
+          "deadlineText": "2026年10月16日前",
+          "deadlineDate": "2026-10-16",
+          "materials": [
+            "承诺书"
+          ],
+          "uncertainties": [
+            "承诺书的具体格式未明确",
+            "发送方式/接收方未明确"
+          ],
+          "provenance": [
+            {
+              "messageId": "H03-current",
+              "quote": "志愿者请在2026年10月16日前，把前面说的承诺书按上述格式发送。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "H04/R3/A",
+      "caseId": "H04",
+      "group": "needs-history",
+      "round": 3,
+      "variant": "A",
+      "sourceLine": 48,
+      "visibleFaithful": true,
+      "fullContextComplete": false,
+      "wrongCertain": false,
+      "wrongAssociation": false,
+      "evidence": {
+        "action": "仅有当前要求的一项动作；无新增独立历史任务。",
+        "audience": "对象与可见通知相符。",
+        "materials": "规格/数量/提交方式未知，合理留疑点。",
+        "negationCorrection": "无把否定或过期信息转成生效要求。",
+        "time": "deadlineText为可见原文，完整日期正确归一化；未使用今日补日期。",
+        "provenance": "引用均为可见messageId和精确子串；覆盖确定字段。",
+        "uncertainties": "未发现无依据确定化。"
+      },
+      "notes": [
+        "缺历史中规格与形式，完整性不通过。"
+      ],
+      "provenanceSubstringValid": true,
+      "output": [
+        {
+          "title": "交照片",
+          "audience": "参加讲座的同学",
+          "deadlineText": "2026年10月19日前",
+          "deadlineDate": "2026-10-19",
+          "materials": [
+            "照片"
+          ],
+          "uncertainties": [
+            "照片的具体规格、数量、提交方式未说明",
+            "“上述照片”所指内容因无历史消息而无法确定"
+          ],
+          "provenance": [
+            {
+              "messageId": "H04-current",
+              "quote": "参加讲座的同学请2026年10月19日前交上述照片。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "H04/R3/B",
+      "caseId": "H04",
+      "group": "needs-history",
+      "round": 3,
+      "variant": "B",
+      "sourceLine": 49,
+      "visibleFaithful": true,
+      "fullContextComplete": false,
+      "wrongCertain": false,
+      "wrongAssociation": false,
+      "evidence": {
+        "action": "仅有当前要求的一项动作；无新增独立历史任务。",
+        "audience": "对象与可见通知相符。",
+        "materials": "一寸/蓝底/电子JPG正确；漏一张，仅出处保留数量。",
+        "negationCorrection": "无把否定或过期信息转成生效要求。",
+        "time": "deadlineText为可见原文，完整日期正确归一化；未使用今日补日期。",
+        "provenance": "引用均为可见messageId和精确子串；覆盖确定字段。",
+        "uncertainties": "未发现无依据确定化。"
+      },
+      "notes": [
+        "提交讲座照片按参与讲座者照片的简写解读；一寸/蓝底说明是证件照，没有断言拍摄讲座现场。"
+      ],
+      "provenanceSubstringValid": true,
+      "output": [
+        {
+          "title": "提交讲座照片",
+          "audience": "参加讲座的同学",
+          "deadlineText": "2026年10月19日前",
+          "deadlineDate": "2026-10-19",
+          "materials": [
+            "一寸照片",
+            "蓝底",
+            "电子JPG"
+          ],
+          "uncertainties": [],
+          "provenance": [
+            {
+              "messageId": "H04-current",
+              "quote": "参加讲座的同学请2026年10月19日前交上述照片。"
+            },
+            {
+              "messageId": "H04-old1",
+              "quote": "参与讲座的同学提交一张一寸照片。"
+            },
+            {
+              "messageId": "H04-old2",
+              "quote": "照片需蓝底，电子JPG即可。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "N01/R3/A",
+      "caseId": "N01",
+      "group": "no-history-needed",
+      "round": 3,
+      "variant": "A",
+      "sourceLine": 50,
+      "visibleFaithful": true,
+      "fullContextComplete": true,
+      "wrongCertain": false,
+      "wrongAssociation": false,
+      "evidence": {
+        "action": "仅有当前要求的一项动作；无新增独立历史任务。",
+        "audience": "对象与可见通知相符。",
+        "materials": "电子签到表正确，原文无数量。",
+        "negationCorrection": "无把否定或过期信息转成生效要求。",
+        "time": "deadlineText为可见原文，完整日期正确归一化；未使用今日补日期。",
+        "provenance": "引用均为可见messageId和精确子串；覆盖确定字段。",
+        "uncertainties": "未发现无依据确定化。"
+      },
+      "notes": [
+        "无关天气历史没有影响输出。"
+      ],
+      "provenanceSubstringValid": true,
+      "output": [
+        {
+          "title": "提交电子签到表",
+          "audience": "所有志愿者",
+          "deadlineText": "2026年10月15日前",
+          "deadlineDate": "2026-10-15",
+          "materials": [
+            "电子签到表"
+          ],
+          "uncertainties": [],
+          "provenance": [
+            {
+              "messageId": "N01-current",
+              "quote": "请所有志愿者2026年10月15日前提交电子签到表。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "N01/R3/B",
+      "caseId": "N01",
+      "group": "no-history-needed",
+      "round": 3,
+      "variant": "B",
+      "sourceLine": 51,
+      "visibleFaithful": true,
+      "fullContextComplete": true,
+      "wrongCertain": false,
+      "wrongAssociation": false,
+      "evidence": {
+        "action": "仅有当前要求的一项动作；无新增独立历史任务。",
+        "audience": "对象与可见通知相符。",
+        "materials": "电子签到表正确，原文无数量。",
+        "negationCorrection": "无把否定或过期信息转成生效要求。",
+        "time": "deadlineText为可见原文，完整日期正确归一化；未使用今日补日期。",
+        "provenance": "引用均为可见messageId和精确子串；覆盖确定字段。",
+        "uncertainties": "未发现无依据确定化。"
+      },
+      "notes": [
+        "无关天气历史没有影响输出。"
+      ],
+      "provenanceSubstringValid": true,
+      "output": [
+        {
+          "title": "提交电子签到表",
+          "audience": "所有志愿者",
+          "deadlineText": "2026年10月15日前",
+          "deadlineDate": "2026-10-15",
+          "materials": [
+            "电子签到表"
+          ],
+          "uncertainties": [],
+          "provenance": [
+            {
+              "messageId": "N01-current",
+              "quote": "请所有志愿者2026年10月15日前提交电子签到表。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "N02/R3/A",
+      "caseId": "N02",
+      "group": "no-history-needed",
+      "round": 3,
+      "variant": "A",
+      "sourceLine": 52,
+      "visibleFaithful": true,
+      "fullContextComplete": false,
+      "wrongCertain": false,
+      "wrongAssociation": false,
+      "evidence": {
+        "action": "仅有当前要求的一项动作；无新增独立历史任务。",
+        "audience": "对象与可见通知相符。",
+        "materials": "本人签字/纸质/接送授权书正确，但任务字段漏一份；出处的数量不替代提取。",
+        "negationCorrection": "无把否定或过期信息转成生效要求。",
+        "time": "deadlineText为可见原文，完整日期正确归一化；未使用今日补日期。",
+        "provenance": "引用均为可见messageId和精确子串；覆盖确定字段。",
+        "uncertainties": "未发现无依据确定化。"
+      },
+      "notes": [
+        "无需历史；同一case存在数量保留的轮次波动，不应解释为B稳定提升。"
+      ],
+      "provenanceSubstringValid": true,
+      "output": [
+        {
+          "title": "交纸质接送授权书",
+          "audience": "三年级家长",
+          "deadlineText": "2026年10月17日前",
+          "deadlineDate": "2026-10-17",
+          "materials": [
+            "本人签字的纸质接送授权书"
+          ],
+          "uncertainties": [],
+          "provenance": [
+            {
+              "messageId": "N02-current",
+              "quote": "三年级家长请2026年10月17日前交一份本人签字的纸质接送授权书。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "N02/R3/B",
+      "caseId": "N02",
+      "group": "no-history-needed",
+      "round": 3,
+      "variant": "B",
+      "sourceLine": 53,
+      "visibleFaithful": true,
+      "fullContextComplete": true,
+      "wrongCertain": false,
+      "wrongAssociation": false,
+      "evidence": {
+        "action": "仅有当前要求的一项动作；无新增独立历史任务。",
+        "audience": "对象与可见通知相符。",
+        "materials": "title保留一份，materials保留本人签字、纸质接送授权书。",
+        "negationCorrection": "无把否定或过期信息转成生效要求。",
+        "time": "deadlineText为可见原文，完整日期正确归一化；未使用今日补日期。",
+        "provenance": "引用均为可见messageId和精确子串；覆盖确定字段。",
+        "uncertainties": "未发现无依据确定化。"
+      },
+      "notes": [
+        "无需历史；同一case存在数量保留的轮次波动，不应解释为B稳定提升。"
+      ],
+      "provenanceSubstringValid": true,
+      "output": [
+        {
+          "title": "交一份本人签字的纸质接送授权书",
+          "audience": "三年级家长",
+          "deadlineText": "2026年10月17日前",
+          "deadlineDate": "2026-10-17",
+          "materials": [
+            "本人签字的纸质接送授权书"
+          ],
+          "uncertainties": [],
+          "provenance": [
+            {
+              "messageId": "N02-current",
+              "quote": "三年级家长请2026年10月17日前交一份本人签字的纸质接送授权书。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "N03/R3/A",
+      "caseId": "N03",
+      "group": "no-history-needed",
+      "round": 3,
+      "variant": "A",
+      "sourceLine": 54,
+      "visibleFaithful": true,
+      "fullContextComplete": true,
+      "wrongCertain": false,
+      "wrongAssociation": false,
+      "evidence": {
+        "action": "tasks=[]，闲聊未生成任务。",
+        "audience": "不适用，无任务。",
+        "materials": "不适用，无任务。",
+        "negationCorrection": "无把否定或过期信息转成生效要求。",
+        "time": "不适用，无任务；今晚未误成待办截止时间。",
+        "provenance": "空任务无需出处。",
+        "uncertainties": "未发现无依据确定化。"
+      },
+      "notes": [
+        "A/B三轮均正确返回空任务。"
+      ],
+      "provenanceSubstringValid": true,
+      "output": []
+    },
+    {
+      "key": "N03/R3/B",
+      "caseId": "N03",
+      "group": "no-history-needed",
+      "round": 3,
+      "variant": "B",
+      "sourceLine": 55,
+      "visibleFaithful": true,
+      "fullContextComplete": true,
+      "wrongCertain": false,
+      "wrongAssociation": false,
+      "evidence": {
+        "action": "tasks=[]，闲聊未生成任务。",
+        "audience": "不适用，无任务。",
+        "materials": "不适用，无任务。",
+        "negationCorrection": "无把否定或过期信息转成生效要求。",
+        "time": "不适用，无任务；今晚未误成待办截止时间。",
+        "provenance": "空任务无需出处。",
+        "uncertainties": "未发现无依据确定化。"
+      },
+      "notes": [
+        "A/B三轮均正确返回空任务。"
+      ],
+      "provenanceSubstringValid": true,
+      "output": []
+    },
+    {
+      "key": "S01/R3/A",
+      "caseId": "S01",
+      "group": "stale-or-conflicting",
+      "round": 3,
+      "variant": "A",
+      "sourceLine": 56,
+      "visibleFaithful": false,
+      "fullContextComplete": false,
+      "wrongCertain": true,
+      "wrongAssociation": false,
+      "evidence": {
+        "action": "仅有当前要求的一项动作；无新增独立历史任务。",
+        "audience": "audience=二年级，把活动范围填成确定执行对象；缺家长依据且uncertainties为空。",
+        "materials": "材料名称/形式/数量与可见输入核对。",
+        "negationCorrection": "采用10月14日、在线电子表；未要求旧10月12日或纸质表。",
+        "time": "deadlineText为可见原文，完整日期正确归一化；未使用今日补日期。",
+        "provenance": "current支持活动范围、动作、日期、电子表，但不支持确定执行人。",
+        "uncertainties": "未发现无依据确定化。"
+      },
+      "notes": [
+        "应保留执行人不确定；与已确认goldA空audience不一致。"
+      ],
+      "provenanceSubstringValid": true,
+      "output": [
+        {
+          "title": "二年级秋游报名（在线填写电子报名表）",
+          "audience": "二年级",
+          "deadlineText": "2026年10月14日前",
+          "deadlineDate": "2026-10-14",
+          "materials": [
+            "电子报名表"
+          ],
+          "uncertainties": [],
+          "provenance": [
+            {
+              "messageId": "S01-current",
+              "quote": "二年级秋游报名改为2026年10月14日前在线填写电子报名表；不再收纸质表。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "S01/R3/B",
+      "caseId": "S01",
+      "group": "stale-or-conflicting",
+      "round": 3,
+      "variant": "B",
+      "sourceLine": 57,
+      "visibleFaithful": false,
+      "fullContextComplete": true,
+      "wrongCertain": false,
+      "wrongAssociation": false,
+      "evidence": {
+        "action": "仅有当前要求的一项动作；无新增独立历史任务。",
+        "audience": "二年级家长受可见HISTORY支持，内容正确。",
+        "materials": "材料名称/形式/数量与可见输入核对。",
+        "negationCorrection": "采用10月14日、在线电子表；未要求旧10月12日或纸质表。",
+        "time": "deadlineText为可见原文，完整日期正确归一化；未使用今日补日期。",
+        "provenance": "仅引S01-current，不含支持家长的S01-old；精确子串检查通过不能证明覆盖所有字段。",
+        "uncertainties": "未发现无依据确定化。"
+      },
+      "notes": [
+        "历史补全对象成功，但未引用对象出处，不能判visibleFaithful通过。"
+      ],
+      "provenanceSubstringValid": true,
+      "output": [
+        {
+          "title": "二年级秋游报名（在线填写电子报名表）",
+          "audience": "二年级家长",
+          "deadlineText": "2026年10月14日前",
+          "deadlineDate": "2026-10-14",
+          "materials": [
+            "电子报名表"
+          ],
+          "uncertainties": [],
+          "provenance": [
+            {
+              "messageId": "S01-current",
+              "quote": "二年级秋游报名改为2026年10月14日前在线填写电子报名表"
+            },
+            {
+              "messageId": "S01-current",
+              "quote": "不再收纸质表"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "S02/R3/A",
+      "caseId": "S02",
+      "group": "stale-or-conflicting",
+      "round": 3,
+      "variant": "A",
+      "sourceLine": 58,
+      "visibleFaithful": true,
+      "fullContextComplete": true,
+      "wrongCertain": false,
+      "wrongAssociation": false,
+      "evidence": {
+        "action": "交/提交电子照片视为发送的近义表述；原quote含发送。",
+        "audience": "对象与可见通知相符。",
+        "materials": "一张电子照片；没有三张或纸质的生效断言。",
+        "negationCorrection": "新日期10月20日、电子一张覆盖旧10月18日纸质三张。",
+        "time": "deadlineText为可见原文，完整日期正确归一化；未使用今日补日期。",
+        "provenance": "引用均为可见messageId和精确子串；覆盖确定字段。",
+        "uncertainties": "未发现无依据确定化。"
+      },
+      "notes": [
+        "按语义判断通过，词项发匹配失败不能直接推导动作错误；建议后续提取保留发送原词。"
+      ],
+      "provenanceSubstringValid": true,
+      "output": [
+        {
+          "title": "提交摄影社成员电子照片",
+          "audience": "摄影社成员",
+          "deadlineText": "2026年10月20日前",
+          "deadlineDate": "2026-10-20",
+          "materials": [
+            "一张电子照片"
+          ],
+          "uncertainties": [],
+          "provenance": [
+            {
+              "messageId": "S02-current",
+              "quote": "摄影社成员照片改交一张电子照片，2026年10月20日前发送；不再收纸质版。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "S02/R3/B",
+      "caseId": "S02",
+      "group": "stale-or-conflicting",
+      "round": 3,
+      "variant": "B",
+      "sourceLine": 59,
+      "visibleFaithful": true,
+      "fullContextComplete": true,
+      "wrongCertain": false,
+      "wrongAssociation": false,
+      "evidence": {
+        "action": "交/提交电子照片视为发送的近义表述；原quote含发送。",
+        "audience": "对象与可见通知相符。",
+        "materials": "一张电子照片；没有三张或纸质的生效断言。",
+        "negationCorrection": "新日期10月20日、电子一张覆盖旧10月18日纸质三张。",
+        "time": "deadlineText为可见原文，完整日期正确归一化；未使用今日补日期。",
+        "provenance": "引用均为可见messageId和精确子串；覆盖确定字段。",
+        "uncertainties": "未发现无依据确定化。"
+      },
+      "notes": [
+        "按语义判断通过，词项发匹配失败不能直接推导动作错误；建议后续提取保留发送原词。"
+      ],
+      "provenanceSubstringValid": true,
+      "output": [
+        {
+          "title": "摄影社成员照片改交一张电子照片",
+          "audience": "摄影社成员",
+          "deadlineText": "2026年10月20日前",
+          "deadlineDate": "2026-10-20",
+          "materials": [
+            "一张电子照片"
+          ],
+          "uncertainties": [],
+          "provenance": [
+            {
+              "messageId": "S02-current",
+              "quote": "摄影社成员照片改交一张电子照片，2026年10月20日前发送；不再收纸质版。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "S03/R3/A",
+      "caseId": "S03",
+      "group": "stale-or-conflicting",
+      "round": 3,
+      "variant": "A",
+      "sourceLine": 60,
+      "visibleFaithful": true,
+      "fullContextComplete": true,
+      "wrongCertain": false,
+      "wrongAssociation": false,
+      "evidence": {
+        "action": "仅有当前要求的一项动作；无新增独立历史任务。",
+        "audience": "美术组家长，无舞蹈组混入。",
+        "materials": "作品清单，无舞蹈服尺码表混入。",
+        "negationCorrection": "无把否定或过期信息转成生效要求。",
+        "time": "deadlineDate=null且明确具体截止时间待定；deadlineText未保留这几天，记录粗时间遗漏但按gold日期待定通过。",
+        "provenance": "引用均为可见messageId和精确子串；覆盖确定字段。",
+        "uncertainties": "未发现无依据确定化。"
+      },
+      "notes": [
+        "未将另一活动10月15日套入本次；未凭今日推导日期。"
+      ],
+      "provenanceSubstringValid": true,
+      "output": [
+        {
+          "title": "提交作品清单",
+          "audience": "美术组家长",
+          "deadlineText": "具体截止时间待定",
+          "deadlineDate": null,
+          "materials": [
+            "作品清单"
+          ],
+          "uncertainties": [
+            "具体截止时间待定，未给出明确日期"
+          ],
+          "provenance": [
+            {
+              "messageId": "S03-current",
+              "quote": "请美术组家长这几天提交作品清单，具体截止时间待定。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "S03/R3/B",
+      "caseId": "S03",
+      "group": "stale-or-conflicting",
+      "round": 3,
+      "variant": "B",
+      "sourceLine": 61,
+      "visibleFaithful": true,
+      "fullContextComplete": true,
+      "wrongCertain": false,
+      "wrongAssociation": false,
+      "evidence": {
+        "action": "仅有当前要求的一项动作；无新增独立历史任务。",
+        "audience": "美术组家长，无舞蹈组混入。",
+        "materials": "作品清单，无舞蹈服尺码表混入。",
+        "negationCorrection": "无把否定或过期信息转成生效要求。",
+        "time": "deadlineDate=null且明确具体截止时间待定；deadlineText未保留这几天，记录粗时间遗漏但按gold日期待定通过。",
+        "provenance": "引用均为可见messageId和精确子串；覆盖确定字段。",
+        "uncertainties": "未发现无依据确定化。"
+      },
+      "notes": [
+        "未将另一活动10月15日套入本次；未凭今日推导日期。"
+      ],
+      "provenanceSubstringValid": true,
+      "output": [
+        {
+          "title": "提交作品清单",
+          "audience": "美术组家长",
+          "deadlineText": "具体截止时间待定",
+          "deadlineDate": null,
+          "materials": [
+            "作品清单"
+          ],
+          "uncertainties": [
+            "具体截止时间待定，未给出明确日期"
+          ],
+          "provenance": [
+            {
+              "messageId": "S03-current",
+              "quote": "请美术组家长这几天提交作品清单，具体截止时间待定"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "operational": {
+    "modelRequested": 60,
+    "budgetReserved": 60,
+    "succeeded": 60,
+    "failed": 0,
+    "requestedAliases": [
+      "deepseek-flash"
+    ],
+    "returnedAliases": [
+      "deepseek-flash"
+    ],
+    "knownTokenEstimateYuan": 0.083764,
+    "budgetReservedFen": 1200,
+    "priceInterpretation": "Frozen config peak cache-miss estimate, not invoice, no refund/reset; current website pricing verification delegated to parent. Alias does not prove immutable underlying model version. Latency all attempts differs from case-level semantic denominators."
+  },
+  "originalHashes": {
+    "experiments/context/runs/4f1c648c-6ec5-4f19-a0ff-d3c1408906c1.jsonl": "be7204d923f6968523ae551f61eaac540f505a99beece89b8f88356264feec6f",
+    "experiments/context/runs/4f1c648c-6ec5-4f19-a0ff-d3c1408906c1-report.json": "f547e1f0b3d1f131c22fcfedcc6e068eac4e84864147bc4aa11bae5ccf47a0eb",
+    "experiments/context/frozen.json": "ae54b7c947fed44824e22ad98b6065adcc5917366daab445e4484e3c5c4cb739",
+    "experiments/context/cases.json": "eb95e3e2ddc51c3277fee6d11f44e61ffaea3674c988925ebfcc62742bfa9269",
+    "experiments/context/config.json": "57f4f3bac4d0540789281b2a1bd548f1a143a13415be3a3d9877e5295a8a211c",
+    "experiments/context/user-labels.json": "b13bc66e4063056db5c05844301c2d8f947f649cd9443400ae7360c9e29aeecc",
+    "experiments/context/core.ts": "785de06e9f5d4a3b5621f1bc5af73a224d4381f900da8d8836b510e248adcca9",
+    "experiments/context/runner.ts": "0f9d34d92d3ebbe191e58440d79fe1808f00075e871c38712b27a66058242080",
+    "server/provider.ts": "fd9dc783696630ba53b628984849f81a6bc09c315c9806a5f5c02c621d200f23",
+    "server/budget.ts": "4dade335a195805cf7615027a543d7879b4dcc76eb2047db322cd149c36392f7"
+  },
+  "sensitivity": {
+    "caseIds": [
+      "S01"
+    ],
+    "keys": [
+      "S01/R1/A",
+      "S01/R2/A",
+      "S01/R3/A"
+    ],
+    "status": "borderline-not-unique",
+    "strictInterpretation": "audience作为执行人字段：已确认goldA为空，提示不足确定须留空并说明；输出二年级且无疑点，主表记wrongCertain=true。",
+    "alternativeInterpretation": "audience也可理解为年级范围标签：二年级确在当前原文，未虚构家长或学生身份。此解释wrongCertain=false、visibleFaithful=true；完整性仍false。",
+    "evidence": "cases.json及user-labels.json的S01 goldA audience为空；core.ts scoreContext会对非空且不等于goldA的audience加词项预警，但明确不是最终语义判分。",
+    "ranges": [
+      {
+        "variant": "A",
+        "group": "all",
+        "visibleFaithfulMin": 27,
+        "visibleFaithfulMax": 30,
+        "wrongCertainMin": 0,
+        "wrongCertainMax": 3,
+        "denominator": 30
+      },
+      {
+        "variant": "A",
+        "group": "stale-or-conflicting",
+        "visibleFaithfulMin": 6,
+        "visibleFaithfulMax": 9,
+        "wrongCertainMin": 0,
+        "wrongCertainMax": 3,
+        "denominator": 9
+      }
+    ],
+    "limitation": "范围只反映S01字段含义歧义，不是统计置信区间；3份是同一case重复，不是3个独立错误案例。正式最终指标仍pending。"
+  }
+}

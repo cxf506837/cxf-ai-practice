@@ -1,57 +1,24 @@
-# cxf 求职展示扩展：恢复台账
+# cxf求职展示扩展：当前台账
 
-本轮开始：2026-10-11 23:26，北京时间。初估主动1–3小时，低置信度；账户登录、真实Redis、用户核对和高级审查等待另计。本台账属于新一轮，不修改docs/STATUS.md中的历史S0–S4分母或100%记录。
+2026-10-12公开材料更新。本轮开始于2026-10-11 23:26（北京时间）；历史S0–S4与2026-10-10本地100%分母保留在app/docs/STATUS.md，不代表本轮或现实准确率。
 
-## 当前范围和事实
+## 已完成的事实与证据
 
-- 产品执行：GPT-6.1 Sol / high，上一代理/root/recruitment_executor，恢复收尾/root/recruitment_finish；各时段仅一个产品写入者。高级只读预审与验收由父聊天实际派发GPT-6 Astra / medium，不能用此文档冒充调用证据。
-- 源码基线：chat-task-assistant独立codex/bootstrap，任务开始干净、无远程；website已有未提交工作按任务起始diff保留。没有暂存、提交、推送或发布。
-- 起始路径hash/diff、私人参与回复只在本次系统临时目录cxf-recruitment-20261011，不进入公开导出。原.env、data、private和tmp历史结果不读取、不修改、不复制。
-- 生产server/extract.ts和旧S3评测入口保持原字节；新Demo和context入口通过外围有界fetch与Upstash预留控制，旧local及账户其他应用不受本轮账本约束。
-- 工程：2026-10-12最终新增失败证据回归后原工程39/39零API测试通过；干净导出原锁文件安装、38/38应用测试、typecheck和build通过（工作区专用export测试不随应用包）。空key隔离启动、合成来源与503拒绝也通过；测试不是公开上线、真实模型效果或费用实测。
-- 父聊天独立MOCK浏览器检查已完成：登录、三样例、候选编辑确认、done更正保留初始出处、reload、缓存提示、实际JSON下载；390宽度无页面横溢出、浏览器error/warn为空。MOCK输出零模型调用，不能当实时演示。
-- 两组合成通知金标已由cxf亲自核对助手整理的修订答案。其余8例与评分器已通过Astra有限预审及修复复核，源码可条件冻结；真实Redis验收、60次真实实验、全部语义复核和5份用户输出核对均未执行。
+- 自有公开源码[cxf506837/cxf-ai-practice](https://github.com/cxf506837/cxf-ai-practice)，分支codex/recruitment-display；静态作品站[cxf-portfolio.onrender.com](https://cxf-portfolio.onrender.com/)。站点视觉沿用Kage参考复刻，代码主要由Codex辅助完成，不宣称原创设计或独立完成全部工程。
+- 原干净导出与公开新clone已检查文件SHA-256、原锁文件安装、应用测试、类型及构建；这些属于工程证据，不当作模型语义成绩。本次仅材料更新和静态构建，不重跑付费实验。
+- 共同Redis预算检查与实际云HTTPS验收已完成：37项断言通过，2次真实模型调用，包含live/cached、确认、更正、隔离及导出；这两次保守token估价0.00471元，不是账单。
+- 上下文实验冻结SHA-256为ae54b7c947fed44824e22ad98b6065adcc5917366daab445e4484e3c5c4cb739，7份依赖保持原字节。60次按计划真实请求，60次结构成功、0次请求失败，全部原输出和原报告公开；没有改gold或补跑。
+- 实际GPT-6 Astra / medium逐份复核60份；它是reviewer-operationalization-not-preregistered-final-score，不是唯一预注册正式成绩。cxf已看固定五份并均暂不修改，独立审查的PDF/数量/出处遗漏仍保留。见[实验结果](../experiments/context/RESULTS.md)。
+- 真实三次流程已录制；记录时账本65次/1300分预留（实验60、验收2、录制3、公众0），public endAt=0。1300分（13元）是软件保守预留，非实付账单，不能返还或重置；也不覆盖账户其他应用。后来已一次激活七天窗口，结束2026-10-19T07:30:03.858Z（北京时间10月19日15:30），public阶段部署已上线，未因此新增请求。
 
-## 本轮检查清单
+## 仍待完成
 
-| 阶段 | 检查项 | 当前证据 / 状态 |
-| --- | --- | --- |
-| Demo与预算 | 固定来源、鉴权与独立SQLite会话 | 工程和MOCK链路通过，待高级闭环 |
-| Demo与预算 | 确认、状态、更正、导出与过期恢复 | 工程和MOCK链路通过，过期边界工程测试；最终界面复核待完成 |
-| Demo与预算 | 持久原子预留、限次、租约和到期 | 实现及集成脚本已备；真实Redis尚未执行 |
-| Demo与预算 | 高级预审和修复复查 | 父聊天协调，待完成 |
-| 上下文实验 | 两例本人核对与其余8例金标 | 两例已核对，其余8例经Astra有限语义预审；不称独立盲测 |
-| 上下文实验 | 同prompt/schema及provenance评分 | 工程准备完成；固定词项评分需语义人工复核 |
-| 上下文实验 | 配置/gold/评分器冻结 | Astra增量4/4及独立6/6通过；2026-10-12 --freeze已创建，0模型请求；真实Redis验收仍是付费前置 |
-| 上下文实验 | 三轮60次及本人核对5输出 | 尚未执行；没有实验结论 |
-| 交付材料 | Docker与Render免费配置 | 文件已备；本机Docker daemon未启动，未构建镜像 |
-| 交付材料 | 白名单源码包与敏感排除 | 显式114文件，新目录防覆盖导出；SHA-256/文本模式与本地引用核验，最终高级材料审查另计 |
-| 交付材料 | 求职身份/三入口/实验页 | 静态站与公开源码入口已上线；后端试用与新实时录像地址为空 |
-| 交付材料 | 测试/类型/构建/OCR和高级复核 | 原39/39、干净包38/38、类型/构建/空key通过；应用OCR preview exit0，网站所在大型父仓preview20秒超时，直接补审；最终高级材料复核待完成 |
-| 实际上线 | 自有GitHub、Render、Upstash登录 | 父聊天与账户持有者处理 |
-| 实际上线 | 真实公网固定HTTPS、模型验收 | 静态站HTTPS已上线；后端模型验收尚未执行 |
-| 实际上线 | 新实时录像 | 尚未录制，约70秒旧片仍是回放 |
-| 实际上线 | 第二台手机另一网络 | 尚未执行，不以390桌面viewport替代 |
+采样MP4与公开说明已接入，liveVideoUrl已接入；七天公众窗口已一次激活，public配置与部署已确认。健康、登录、Secure Cookie与demo配置检查已通过，tryUrl已启用；该检查无模型请求，不能作为新公开阶段付费业务验收。访问码仅经安全渠道分享。第二台手机另一网络业务验收尚未完成，390宽度桌面viewport不能替代。免费云服务休眠/重启会使临时会话清空，JSON不支持导入恢复。
 
-没有将工程准备数折算为用户业务验收百分比。完成时间仍受外部步骤影响；恢复先看本台账及RECRUITMENT-DELIVERY.md，不运行旧评测入口代替新实验，不重置预算、不调gold。
+## 交付与保护范围
 
-恢复核查：生产extract/store/validation、旧S3脚本及历史STATUS hash与起始记录一致。实验增量修复保留有界合成失败响应、用量、请求/返回模型与阶段；实际模型请求和确认预留分别计数，预算全拒绝记零请求。Astra当前仅给conditional source-ready，部署/导出材料最终高级审查与真实账户验收另计。冻结文件SHA-256：ae54b7c947fed44824e22ad98b6065adcc5917366daab445e4484e3c5c4cb739。
+cxf提出需求、选参考、试用、核对两例修订答案及五份实测输出；Codex承担主要代码与工程实现。私人回复、原.env、数据库、简历、访问凭证和工具临时日志均不公开。SOURCE-MANIFEST逐文件覆盖授权源码、合成实测及独立审查；原日志/报告/审查快照以原字节保留，后续事实独立说明。旧生产extract/store/validation、旧S3入口、历史STATUS与冻结文件不改。
 
-已确认预留数不等于实际Redis增量：reserve超时可能已经写入，未知预留要查账本。零模型请求也不能据此断言整个账户零费用；报告金额仅覆盖已确认部分，完整计划保守预留上界为1200分。原工作区依赖junction不可访问，保留原目录；干净导出验证使用同锁文件hoisted安装，独立记录验证结果。
+初次导出114文件，换行属性修正后115文件；这两个数是历史快照，当前清单以SOURCE-MANIFEST为准。根与app的.gitattributes关闭换行转换，保留LF/CRLF及混合字节。本材料执行者不暂存、提交、推送或发布，云配置与发布由父聊天单独处理。
 
-
-## 独立源码公开与字节保真（2026-10-12）
-
-- 公开仓库：[cxf506837/cxf-ai-practice](https://github.com/cxf506837/cxf-ai-practice)，默认分支codex/recruitment-display；站点sourceUrl已接入。以上原工作区起始无远程及未发布记录属于当时状态。
-- 此轮仅修正独立快照的Git换行属性与发布说明；root及app规则关闭换行转换，保留原始字节。原114文件中未变更的源码、cases/config/gold、user-labels及frozen.json保持原SHA-256；SOURCE-MANIFEST更新本轮合法变更并新增根属性文件，共115文件。
-- 不重新freeze，不更换冻结hash或金标以掩盖clone转换；三个文件已按原快照字节重新写入Git blob；父聊天独立新GitHub clone核验115项SHA-256全部匹配。
-- 公开Demo、真实Redis验收、60次真实模型实验、新实时录像和第二台手机另一网络验证仍未完成；源码公开不代表业务验收完成。
-
-
-## 静态站上线与源码验证（2026-10-12）
-
-- 静态作品网站已上线：[cxf-portfolio.onrender.com](https://cxf-portfolio.onrender.com/)。Render发布源码commit为0b0e77c6dcde50c10507b7ad54d8845f9fd43b4c，Live构建6.4秒；Root Directory为site、Build Command为node build.mjs、Publish Directory为dist，AutoDeploy关闭。
-- 静态云构建使用平台默认Node24.21.0；后端Docker固定Node24.19.0，尚未部署，不能把静态站上线算作后端Demo上线。
-- 父聊天从公开GitHub独立新clone核验115项源码SHA-256全部匹配；Astra增量11/11审查无发现。冻结样例、配置、金标和frozen.json保持原字节。
-- 干净GitHub clone以原锁文件、Node24.19.0、pnpm11.25.0安装；每个pnpm进程设置pnpm_config_node_linker=hoisted并串行执行，38项应用测试、typecheck和build通过。这些检查不包含真实Redis或模型效果验收。
-- 后端公开Demo、真实Redis验收、60次真实模型实验、新实时录像和第二台手机另一网络验证仍未完成；历史视频保持回放标注。
+本轮真实调用视频：[采样MP4](../../site/public/landing-pages/portfolio-assets/cxf-recruitment-demo-20261012.mp4)与[说明](../../site/public/landing-pages/portfolio-assets/cxf-recruitment-demo-20261012/video-notes.md)。录制源版本66a39f3；Codex自动化操作，低帧率截图采样剪辑，非连续录屏。三次真实调用、两次预算拦截；界面分析显示1.9/1.7/1.4秒，不是视频等待时长或独立供应商响应计时。当前账本65次、1300分（13元）软件预留：experiment60、acceptance2、recording3、public0；实际费用仅保守token估算，未新增请求。公开窗口结束于2026-10-19T07:30:03.858Z（北京时间10月19日15:30），不重复激活、不重置预算；手机异网业务验收仍待本人完成。

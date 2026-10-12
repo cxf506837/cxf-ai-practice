@@ -1,0 +1,16 @@
+{
+  "version": 1,
+  "runId": "4f1c648c-6ec5-4f19-a0ff-d3c1408906c1",
+  "checkedOutputs": [
+    "H01/R1/A",
+    "H01/R1/B",
+    "S01/R1/A",
+    "S01/R1/B",
+    "N02/R1/B"
+  ],
+  "status": "user-reviewed-five-temporarily-no-changes",
+  "summary": "cxf已看过预先指定的五份输出，判断均暂不修改。",
+  "hypothesisReflection": "cxf认为加入历史有助于据查，也会增加上下文，可能增加耗时或额度。",
+  "interpretation": "暂不修改是使用者当时的判断，不等于每个字段语义正确，不替代独立复核。实测B中位耗时略低，因此不声称本轮证明历史导致变慢。",
+  "privacy": "只公开参与事实的转述；不包含私人聊天原文或原私人回复文件。"
+}
