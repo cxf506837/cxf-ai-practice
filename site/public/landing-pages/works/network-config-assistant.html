@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>网络配置自动化助手 · cxf 的实践作品</title>
+  <meta name="description" content="将自然语言配置需求转成设备命令，在 eNSP 实验环境执行并检查终端反馈。附用户提供的操作录像与失败说明。">
+  <link rel="stylesheet" href="../secret-pathways-assets/fonts.css">
+  <link rel="stylesheet" href="../portfolio.css">
+  <script src="../portfolio.js" defer></script>
+</head>
+<body class="case-page">
+  <a class="skip-link" href="#case-content">跳到案例正文</a>
+  <header class="case-header"><a class="case-brand" href="/">cxf</a><a href="/#lessons">← 返回作品集</a></header>
+  <main class="case-main" id="case-content">
+    <div class="case-intro">
+      <div class="case-kicker">补充实践 / PYTHON · eNSP 实验环境</div>
+      <h1>网络配置自动化助手</h1>
+      <p class="case-lead">从配置需求，到设备命令。<br>观察执行反馈，再判断哪些配置需要修正。</p>
+      <div class="case-summary"><span>Python 自动化</span><span>Coze SDK 录像</span><span>eNSP 设备实验</span></div>
+      <div class="contact-actions"><a href="#demo-video">观看操作录像 ↓</a><a href="../portfolio-assets/network-config-demo.mp4" download>下载视频 MP4</a></div>
+      <p class="case-caption">用户提供的历史操作录像，约 1 分 32 秒，2026年10月15日补充到作品集。本页提供视频展示，未开放远程设备控制或在线模型试用。</p>
+    </div>
+    <section class="case-section" id="demo-video">
+      <h2>操作录像</h2>
+      <video controls playsinline preload="metadata" poster="../portfolio-assets/network-config-poster.jpg" width="1280" height="800" style="aspect-ratio:8/5;height:auto" aria-label="网络配置自动化助手在 eNSP 实验设备上生成和执行配置命令的历史录像">
+        <source src="../portfolio-assets/network-config-demo.mp4" type="video/mp4">
+        你的浏览器不支持此视频。<a href="../portfolio-assets/network-config-demo.mp4">打开 MP4 文件</a>
+      </video>
+      <p class="case-caption">视频由 cxf 提供，保留原顺序、时长和录屏水印；公开副本遮挡了开头的设备登录信息，移除无可听内容的音轨，并转换为便于网页播放的 MP4。原始文件保留在本地。</p>
+      <div class="case-note">这段录像也保留了失败：后半段可见命令参数或语法报错，保存配置时出现连接中断提示。程序结束和退出码为 0，不能证明所有设备配置均成功；仍需核对设备状态、路由和连通性。</div>
+    </section>
+    <section class="case-section case-split">
+      <div><h2>这段录像展示了什么</h2><p>选择实验设备，输入接口地址和路由等配置需求，画面显示通过 Coze SDK 生成配置命令，再连接设备逐组执行。终端输出帮助识别已执行步骤与报错位置。</p><p>模型请求属于原录制过程，本次上传没有重新请求模型，也没有重新连接设备。录像不能单独确认底层模型版本，也不能用于测量模型响应速度或配置成功率。</p></div>
+      <ol class="flow-list"><li><strong>选择设备</strong>选定 eNSP 实验设备及连接信息。</li><li><strong>描述配置需求</strong>输入接口、地址或路由相关要求。</li><li><strong>生成并执行命令</strong>观察生成内容和各组命令的终端反馈。</li><li><strong>核对错误与状态</strong>遇到报错或连接中断时，返回设备检查并修正。</li></ol>
+    </section>
+    <section class="case-section"><h2>项目记录中的数据</h2><p>原简历记录：命令准确率约 95%；配置耗时从约 15 分钟缩短至 2 分钟以内；用户交互步骤减少约 60%。这些是原项目测试观察，并非本次视频测得；本页未提供足以复核这些比例的样本分母和对照计时，不将它们解释为通用网络场景的保证。</p></section>
+    <section class="case-section"><h2>我的参与与实现方式</h2><div class="case-tech"><span>Python</span><span>Coze SDK 录像</span><span>终端自动化</span><span>eNSP</span></div><p>我围绕网络配置需求尝试制作自动化工具，整理需求并观察生成命令与执行结果。原简历记录包含 DeepSeek API、pywinauto 终端输入辅助、设备文件分析和检测函数调用；本段录像具体展示通过 Coze SDK 生成命令及终端执行反馈，未据此推断底层模型或全部自动化方式。代码和技术实现通过 AI 辅助完成。</p></section>
+    <section class="case-section"><h2>继续看其他作品</h2><div class="contact-actions"><a href="chat-task-assistant.html">群聊待办助手 →</a><a href="ribbon-inbox.html">拾光收集箱 →</a><a href="/#lessons">返回作品集 →</a></div></section>
+  </main>
+  <footer class="case-footer"><a href="/#lessons">← 返回关于我</a><span>© 2026 cxf · AI 辅助实践</span></footer>
+</body>
+</html>

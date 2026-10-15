@@ -293,7 +293,7 @@
     },
     {
       "path": "site/README.md",
-      "sha256": "47e7abd054a324d63efadae54aa9927e4757ab779a6420e310f42625d681bcaf"
+      "sha256": "9c07034531124190f4a8f1d36a4a934aefc11a79f0f300623c4df19f37a98eef"
     },
     {
       "path": "site/build.mjs",
@@ -313,7 +313,7 @@
     },
     {
       "path": "site/public/landing-pages/works/chat-task-assistant.html",
-      "sha256": "94f1f74c32e8975da46ee8b70043ceda59f37ee28620c7515f235d4a8a32e35f"
+      "sha256": "18c340dc1541899cef2db1d56a6b4121c60477335fec91a89a40aa7f2ea70850"
     },
     {
       "path": "site/public/landing-pages/secret-pathways-assets/three.min.js",
@@ -337,7 +337,7 @@
     },
     {
       "path": "site/public/landing-pages/kage.html",
-      "sha256": "a2f165148ff7aec0b50d1a40447aac705e1b1759f5fd31bef5094f89ad672830"
+      "sha256": "777be68cec0c3c8f7709d02822e6a76c9b94f63efc113ef517493e4a196a6508"
     },
     {
       "path": "site/public/landing-pages/portfolio.js",
@@ -502,6 +502,18 @@
     {
       "path": "site/public/landing-pages/portfolio-assets/cxf-recruitment-demo-20261012/qa-report.json",
       "sha256": "6f0f28dcf28e735cff7ac5ef8f201e9837c85eb8a15c0fa0425389167b3885c0"
+    },
+    {
+      "path": "site/public/landing-pages/works/network-config-assistant.html",
+      "sha256": "c5451e4a9bb4bc8007a58b61785b46811c4254af4753224370936e744e344e84"
+    },
+    {
+      "path": "site/public/landing-pages/portfolio-assets/network-config-demo.mp4",
+      "sha256": "b47e28b312c16ef30bd4219198d7c1bd0b1e55236bcd2e5af0f4ebe9fb437738"
+    },
+    {
+      "path": "site/public/landing-pages/portfolio-assets/network-config-poster.jpg",
+      "sha256": "1a23dbc3969a583a54efd7af7153f4aad9a3432fbaae4eb71175db5450b19358"
     }
   ],
   "excluded": [
