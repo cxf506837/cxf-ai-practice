@@ -21,7 +21,7 @@ async function connectPublicEntries() {
     const links = await response.json();
     entries.forEach(entry => {
       const value = links[entry.dataset.publicLink];
-      if (typeof value !== 'string') return;
+      if (typeof value !== 'string' || !value.trim()) return;
       const url = new URL(value);
       if (url.protocol !== 'https:' || url.username || url.password) return;
       const anchor = document.createElement('a'); anchor.href = url.href; anchor.target = '_blank'; anchor.rel = 'noopener noreferrer'; anchor.className = entry.className; anchor.textContent = entry.dataset.readyLabel; entry.replaceWith(anchor);
