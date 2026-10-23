@@ -1,5 +1,9 @@
 # 选中历史是否帮助理解通知？
 
+**[先看结果与失败](RESULTS.md) · [网站图文说明](https://cxf-portfolio.onrender.com/works/context-experiment.html) · [应用源码](../../README.md)**
+
+> 实验已结束。阅读公开日志和审阅材料即可复核；不要直接重跑付费运行器，也不要覆盖 `frozen.json` 或历史成绩。本次 README 整理没有新增模型调用。
+
 这是独立实验，不修改生产提取提示。10个合成case：4个需要历史、3个当前信息完整、3个过时或冲突。A只看current，B另外看用户显式选中的1–2条同来源消息。同一prompt/schema/model，三轮顺序固定为AB、BA、AB，共60个计划请求，没有重试或失败补跑。
 
 2026-10-12：冻结后完成60次真实调用，60次结构成功、0次请求失败；GPT-6 Astra / medium已按10个case三轮配对核对全部60份，cxf已看预先指定的五份并判断均暂不修改。语义遗漏保留，结构成功不等于语义全正确。完整结果、原日志、原报告、独立复核及参与事实见[RESULTS.md](RESULTS.md)。

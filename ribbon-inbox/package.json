@@ -1,0 +1,16 @@
+{
+  "name": "cxf-ribbon-inbox-core",
+  "version": "1.1.0",
+  "private": true,
+  "description": "拾光收集箱核心源码与离线测试快照，不含第三方视觉素材",
+  "scripts": {
+    "test": "node --test tests/collection-domain.test.cjs tests/cloud-ai.test.cjs tests/personal-ai.test.cjs"
+  },
+  "engines": {
+    "node": ">=24.19.0 <25"
+  },
+  "devDependencies": {
+    "typescript": "5.9.3"
+  },
+  "packageManager": "pnpm@11.25.0"
+}

@@ -1,10 +1,32 @@
 # 群聊待办助手
 
+**[项目案例](https://cxf-portfolio.onrender.com/works/chat-task-assistant.html) · [观看演示](https://cxf-portfolio.onrender.com/works/chat-task-assistant.html#live-demo-video) · [上下文实验](experiments/context/RESULTS.md)**
+
+> 2026-10-23：公开付费试用窗口已于 2026-10-19 15:30（北京时间）结束。本地运行、视频与源码仍可查看；本次不延长窗口或新增调用。下文云端验收是 2026-10-12 的历史证据。
+
+## 解决的问题与实现
+
+群通知经常混有闲聊、模糊截止时间和后续更正。此应用把“粘贴 → 预览发送内容 → 真实模型提取 → 原文核对 → 人工修改确认 → 保存/完成/更正”串成闭环；模型不自动执行任务。
+
+React + TypeScript 展示候选与任务，Node HTTP 服务校验请求/模型输出，SQLite 保存原文、出处和待办；DeepSeek `deepseek-flash` 负责候选提取。模型凭证留在服务端。`APP_MODE=demo` 是独立的固定合成样例、临时会话和持久预算路径，不能把 local 模式直接暴露公网。
+
+### 证据与取舍
+
+- 37 项云 HTTPS 断言及 2 次真实调用：包含确认、更正、访客隔离与导出，详见[本轮交付](docs/RECRUITMENT-DELIVERY.md)。
+- 10 个合成案例、两组、三轮的 60 次实验：记录输入输出、耗时和 tokens；结构成功不等于语义正确。[结果与失败](experiments/context/RESULTS.md)。
+- 保留人工确认和同来源更正；历史只在独立实验中显式选入，没有包装成自动长期记忆或 RAG。
+- cxf 负责需求、参考选择、试用和指定答案/输出核对；代码与工程实现主要由 Codex 完成。
+
+### 阅读源码
+
+入口和模块位于 `server/`、`web/`、`shared/`；[测试](tests/)覆盖业务/校验/预算/会话等路径，[实验](experiments/context/)独立于正式待办。`.env.example` 仅含占位配置。安装和使用步骤如下。
+
+
 本地文字版：主动粘贴群通知，预览将发送给模型的消息，核对有原文出处的候选，编辑确认后保存待办。支持完成、重新打开、保存后编辑删除、手动关联同来源更正、原文追溯与 JSON 导出；刷新后保留数据。
 
-2026-10-11新增求职展示准备：`APP_MODE=demo`只接受三组固定合成通知，HTTPS访问码、独立临时会话和持久预算；缺省仍是local。新阶段状态见[求职展示台账](docs/RECRUITMENT-STATUS.md)，部署见[自有账户免费部署](docs/DEPLOYMENT.md)，材料见[本轮交付](docs/RECRUITMENT-DELIVERY.md)。后端已完成37项HTTPS断言与2次真实调用验收，公众窗口已一次激活，试用入口已接入；60次真实实验及独立复核见[实验结果](experiments/context/RESULTS.md)。新流程的低帧率截图采样剪辑已接入，非连续录屏。
+2026-10-11新增求职展示准备：`APP_MODE=demo`只接受三组固定合成通知，HTTPS访问码、独立临时会话和持久预算；缺省仍是local。新阶段状态见[求职展示台账](docs/RECRUITMENT-STATUS.md)，部署见[自有账户免费部署](docs/DEPLOYMENT.md)，材料见[本轮交付](docs/RECRUITMENT-DELIVERY.md)。后端已完成37项HTTPS断言与2次真实调用验收，公众窗口曾一次激活，现已结束；60次真实实验及独立复核见[实验结果](experiments/context/RESULTS.md)。新流程的低帧率截图采样剪辑已接入，非连续录屏。
 
-原S0–S4本地首版已完成，其冻结范围与历史证据以[原阶段台账](docs/STATUS.md)为准；其中100%仅指2026-10-10本地交付，不能代表本轮或准确率。云HTTPS验收已完成，公开试用入口已接入。
+原S0–S4本地首版已完成，其冻结范围与历史证据以[原阶段台账](docs/STATUS.md)为准；其中100%仅指2026-10-10本地交付，不能代表本轮或准确率。云HTTPS验收已完成，公开试用窗口现已结束。
 
 - [交付说明与三组用户验收](docs/DELIVERY.md)
 - [合成界面演示](docs/DEMO.md)：约1分10秒，历史真实模型输出回放，录像时不调用模型。
@@ -51,7 +73,7 @@ SQLite位于被忽略的`data/tasks.sqlite`；密钥位于被忽略的`.env`。�
 
 出处校验仅保证引用可在原文定位，不能证明模型语义正确。模糊日期会保留原文和待确认状态，最终由人核对。更正关联只在本地操作，不额外调用模型或发送旧历史。不会自动监听群聊、接管手机、发消息或执行任务。
 
-本机删除与供应商端数据保留不是同一回事；开发和演示仅用合成消息。私人内容发送前需用户核对供应商数据条件。新增Demo的真实Redis与云HTTPS验收已通过，公众窗口已一次激活，试用入口已接入；不得将local模式直接暴露到公网。
+本机删除与供应商端数据保留不是同一回事；开发和演示仅用合成消息。私人内容发送前需用户核对供应商数据条件。新增Demo的真实Redis与云HTTPS验收已通过，公众窗口曾一次激活，现已结束；不得将local模式直接暴露到公网。
 
 ## 验证
 
@@ -66,5 +88,3 @@ pnpm build
 - [已批准产品与技术方案](docs/PROPOSAL.md)
 - [实施计划](docs/IMPLEMENTATION.md)
 - [阶段与进度](docs/STATUS.md)
-
-本轮真实调用视频：[采样MP4](../site/public/landing-pages/portfolio-assets/cxf-recruitment-demo-20261012.mp4)与[说明](../site/public/landing-pages/portfolio-assets/cxf-recruitment-demo-20261012/video-notes.md)。录制源版本66a39f3；Codex自动化操作，低帧率截图采样剪辑，非连续录屏。三次真实调用、两次预算拦截；界面分析显示1.9/1.7/1.4秒，不是视频等待时长或独立供应商响应计时。当前账本65次、1300分（13元）软件预留：experiment60、acceptance2、recording3、public0；实际费用仅保守token估算，未新增请求。公开窗口结束于2026-10-19T07:30:03.858Z（北京时间10月19日15:30），不重复激活、不重置预算；手机异网业务验收仍待本人完成。

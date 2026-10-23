@@ -17,7 +17,7 @@
     },
     {
       "path": "app/README.md",
-      "sha256": "b7627beb8e5f8b8cadbd69696ad7c91697b34bf5818d1eba36f8b376a9904835"
+      "sha256": "fa5680e5f13da8a315d58c114d00f0248fa30200ab7d673236d3bed7a20ea610"
     },
     {
       "path": "app/docs/DELIVERY.md",
@@ -273,7 +273,7 @@
     },
     {
       "path": "app/experiments/context/README.md",
-      "sha256": "7400d849d6dc489f1828cce0342dd83b451d0e60ba07db6527da75c93319ce1a"
+      "sha256": "6a3edbb2e80295ea7a1f3f524b64e6acd8ad01217cd2def81373c201b3231b60"
     },
     {
       "path": "app/experiments/context/LABELING.md",
@@ -293,7 +293,7 @@
     },
     {
       "path": "site/README.md",
-      "sha256": "9c07034531124190f4a8f1d36a4a934aefc11a79f0f300623c4df19f37a98eef"
+      "sha256": "2d514f86b7ddca6b422122d3da7e123c2e4518de36d411c660a57123d8ccebf5"
     },
     {
       "path": "site/build.mjs",
@@ -305,7 +305,7 @@
     },
     {
       "path": "site/public/landing-pages/works/ribbon-inbox.html",
-      "sha256": "28e618e26dd504c0a8147b74085b4485fa3827b32811cb6599c2bab6d0c391e1"
+      "sha256": "f1357e00336ab5d70bf92937b39e034a9104a0a9cbf1a704b67fa9038af7577e"
     },
     {
       "path": "site/public/landing-pages/works/context-experiment.html",
@@ -313,7 +313,7 @@
     },
     {
       "path": "site/public/landing-pages/works/chat-task-assistant.html",
-      "sha256": "18c340dc1541899cef2db1d56a6b4121c60477335fec91a89a40aa7f2ea70850"
+      "sha256": "f45f648583a70e9ffd2695030d80bcd00d02b600d2bd503cfe0007237a090ba9"
     },
     {
       "path": "site/public/landing-pages/secret-pathways-assets/three.min.js",
@@ -337,7 +337,7 @@
     },
     {
       "path": "site/public/landing-pages/kage.html",
-      "sha256": "777be68cec0c3c8f7709d02822e6a76c9b94f63efc113ef517493e4a196a6508"
+      "sha256": "2eef8ad7fd9953e56ee62adcd8d4aa124d772074f84f78d89f60e978b4486eb2"
     },
     {
       "path": "site/public/landing-pages/portfolio.js",
@@ -349,7 +349,7 @@
     },
     {
       "path": "site/public/landing-pages/public-links.json",
-      "sha256": "ae68b03bc95b0ddddc1629218bd2bbe1f7644a1a349f4a0aec7c9ac16fe1f288"
+      "sha256": "b7047b677c198322bed66d5b54ee88f37fd509ebc7f3c4f99e3dd75dd56d66e7"
     },
     {
       "path": "site/public/landing-pages/secret-pathways-assets/fonts.css",
@@ -437,7 +437,7 @@
     },
     {
       "path": "README.md",
-      "sha256": "9d201098641f9b4181852331a242da5a4199b1f1c0d4d95c62d092b0c98443de"
+      "sha256": "75d2a3433f3637365ae96fec691830c8c30ab797fa27e225dc7cfa840dfcab92"
     },
     {
       "path": "docs/DEPLOYMENT.md",
@@ -514,6 +514,126 @@
     {
       "path": "site/public/landing-pages/portfolio-assets/network-config-poster.jpg",
       "sha256": "1a23dbc3969a583a54efd7af7153f4aad9a3432fbaae4eb71175db5450b19358"
+    },
+    {
+      "path": "docs/README-UPDATE-20261023.md",
+      "sha256": "694142a90b5985df77c6d31c91539b49a519efcdfbbc73d080eb8317bd0e1820"
+    },
+    {
+      "path": "ribbon-inbox/NOTICE.md",
+      "sha256": "83dc30eac601c1b27402c83b6b5386e8ba838e3ad408fe7d3f2629c7b3d08661"
+    },
+    {
+      "path": "ribbon-inbox/README.md",
+      "sha256": "d4dd36bfcf7c001745fdd3a27ddb8cf4166429a17fdf40cdab2f50e3cffefdee"
+    },
+    {
+      "path": "ribbon-inbox/android/app/src/main/java/com/ribboninbox/app/AiPolicy.kt",
+      "sha256": "de0e236ae86c17a7b8f12190f43e9739ae5b7ea5f70f23139a73061f856b1333"
+    },
+    {
+      "path": "ribbon-inbox/android/app/src/main/java/com/ribboninbox/app/AssetRoutes.kt",
+      "sha256": "de25d84922208a21fa4abb517e18e7373582fe79abe86ed6b37e9787283dcaa8"
+    },
+    {
+      "path": "ribbon-inbox/android/app/src/main/java/com/ribboninbox/app/BackupDocuments.kt",
+      "sha256": "d73214b0dc9a280cc1c7171984e1eb3771f2b1ad69d21a51cb2c37688a5d9a1a"
+    },
+    {
+      "path": "ribbon-inbox/android/app/src/main/java/com/ribboninbox/app/CloudAi.kt",
+      "sha256": "99f1f36a301bec99371c19ed5ccfacb957563d896d8a8c20c6117b24ce656dae"
+    },
+    {
+      "path": "ribbon-inbox/android/app/src/main/java/com/ribboninbox/app/ImageDocuments.kt",
+      "sha256": "f538423151515c85c7fe5f403a6f28f3324bdf531666d6efc93e24bd10a55fc3"
+    },
+    {
+      "path": "ribbon-inbox/android/app/src/main/java/com/ribboninbox/app/MainActivity.kt",
+      "sha256": "aee72c0c90aec87e3d951ffb246185eb8d2ff62fba46690fb45495af8e5b09c1"
+    },
+    {
+      "path": "ribbon-inbox/android/app/src/main/java/com/ribboninbox/app/NativeBridge.kt",
+      "sha256": "99910de36fb264400bfd42ada7b62623a0d918f6dadcf0b20d7d330179a6f42f"
+    },
+    {
+      "path": "ribbon-inbox/android/app/src/main/java/com/ribboninbox/app/PendingCaptureStore.kt",
+      "sha256": "d0700acb7d49cf757e2ffabd518e2eadf043176ecd4c281f6c05bc9221258e12"
+    },
+    {
+      "path": "ribbon-inbox/android/app/src/main/java/com/ribboninbox/app/SecretCipher.kt",
+      "sha256": "3d4bfcac4adf66a71b2afc8de8b467508dca8cd54155882ec57ca73ed0118704"
+    },
+    {
+      "path": "ribbon-inbox/android/app/src/main/java/com/ribboninbox/app/SecretStore.kt",
+      "sha256": "a1def3a0a2780b887211d01ae7030be30c213a023d35955a8c5f9dae1ca0bdc0"
+    },
+    {
+      "path": "ribbon-inbox/android/app/src/main/java/com/ribboninbox/app/ShareCapture.kt",
+      "sha256": "06a91d1c937b5b57010d921624bbc3a1868820d6f89003944ba97f5eb8d8109a"
+    },
+    {
+      "path": "ribbon-inbox/package.json",
+      "sha256": "631a82c09c0f338906b4f876cd2a8e2625ded861e143efc6988ba16e717e5b61"
+    },
+    {
+      "path": "ribbon-inbox/pnpm-lock.yaml",
+      "sha256": "9747995ee6c20d5990a84006b6353d66070f7a2bb23b92133c1c81e02a1e5693"
+    },
+    {
+      "path": "ribbon-inbox/server/ai-gateway.cjs",
+      "sha256": "26912f7f3dccef2a19ab9e9cfd4f4910da088e457b63886a7e5a4cadf30c4fea"
+    },
+    {
+      "path": "ribbon-inbox/tests/cloud-ai.test.cjs",
+      "sha256": "4e20b6555c55f8a3cd843a1cc707e3ee4ba0e050a3ae268b611282fa7a6b870b"
+    },
+    {
+      "path": "ribbon-inbox/tests/collection-domain.test.cjs",
+      "sha256": "3590338ac25609007b589b3e37f4a4a0485bd148296ad44da78be3c7735db69a"
+    },
+    {
+      "path": "ribbon-inbox/tests/modules.cjs",
+      "sha256": "eb9eaa8a970b88fe045fa0b1b44a4471cd2cc12dbd8a1e69d3efcac704e51cd7"
+    },
+    {
+      "path": "ribbon-inbox/tests/personal-ai.test.cjs",
+      "sha256": "cd88d9181b1ef6f9c2099fff3732db98754fda39252b94ed1e5d430a739c10d8"
+    },
+    {
+      "path": "ribbon-inbox/web/src/features/collection/backup.ts",
+      "sha256": "f392cf8ebdf6e4085d16465a8ca5bc04d2a18b68c483845b1741e0d82f89962e"
+    },
+    {
+      "path": "ribbon-inbox/web/src/features/collection/cloud.ts",
+      "sha256": "f1d6e25e597e05a27f91987f9c366c4346054bd6e643e1092358c5304699e021"
+    },
+    {
+      "path": "ribbon-inbox/web/src/features/collection/images.ts",
+      "sha256": "a0be232dbc734056901177067a862009758da705c7d9d1429a7f008967ae45ef"
+    },
+    {
+      "path": "ribbon-inbox/web/src/features/collection/platform.ts",
+      "sha256": "aec0e2301228c0f5ea9daaab02d2d058811b1ae97de229d45802046fc143c322"
+    },
+    {
+      "path": "ribbon-inbox/web/src/features/collection/repository.ts",
+      "sha256": "9ec84accc4cfc97f7b01cbad4e9d99b344e56542380baf4afabf9b6631ae8f17"
+    },
+    {
+      "path": "ribbon-inbox/web/src/features/collection/samples.ts",
+      "sha256": "6f3084125400281842c5958bb88122596c3bb1f9e1edd595638ae642989f7d48"
+    },
+    {
+      "path": "ribbon-inbox/web/src/features/collection/search.ts",
+      "sha256": "c0af9eda2ed30b6678bbbafd7fa97702fb3e4a2760730ee118e15b751e25ebc7"
+    },
+    {
+      "path": "ribbon-inbox/web/src/features/collection/types.ts",
+      "sha256": "74274282c79d2f1b7480298cc499e7c7be90d0d776025a96c392a7fe5b6d5702"
+    },
+    {
+      "path": "ribbon-inbox/web/src/features/collection/validation.ts",
+      "sha256": "b0ba14495dc488799d3c80b4cbf2e17c436ab56f6e610d34f17cf9d91361900d"
     }
   ],
   "excluded": [

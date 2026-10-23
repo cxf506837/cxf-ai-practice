@@ -1,0 +1,15 @@
+export type ErrorCode = 'VALIDATION'|'NOT_FOUND'|'CONFLICT'|'STORAGE_FULL'|'STORAGE_UNAVAILABLE'|'INVALID_BACKUP'|'UNSUPPORTED_VERSION'|'TOO_LARGE'|'CANCELLED'|'UNSUPPORTED_PLATFORM'|'EXTERNAL_OPEN_FAILED';
+export type Result<T> = {ok:true;value:T}|{ok:false;code:ErrorCode;message:string;field?:string};
+export const ok = <T>(value:T):Result<T> => ({ok:true,value});
+export const fail = (code:ErrorCode,message:string,field?:string):Result<never> => ({ok:false,code,message,field});
+export type ItemInput = {kind:'text'|'link';title:string;body:string;note:string;url:string|null;tagIds:string[];imageDataUrl?:string};
+export type CollectionItem = ItemInput & {id:string;sourceDomain:string|null;starred:boolean;archived:boolean;deletedAt:number|null;createdAt:number;updatedAt:number;revision:number;captureId:string|null;importKey:string|null};
+export type Tag = {id:string;name:string;createdAt:number;updatedAt:number};
+export type Draft = {id:string;itemId:string|null;input:ItemInput;updatedAt:number;captureId:string|null;revision:number|null};
+export type Preferences = {schemaVersion:1;motionEnabled:boolean;onboardingSeen:boolean;lastBackupAt:number|null};
+export type Query = {text:string;scope:'all'|'inbox'|'archive'|'trash';kind:'all'|'text'|'link';tagIds:string[];starredOnly:boolean;offset:number;limit:number};
+export const defaultQuery:Query = {text:'',scope:'all',kind:'all',tagIds:[],starredOnly:false,offset:0,limit:50};
+export type Page = {items:CollectionItem[];total:number};
+export type Backup = {format:'ribbon-inbox';schemaVersion:1|2;exportedAt:number;items:CollectionItem[];tags:Tag[]};
+export type ImportPreview = {token:string;added:number;identical:number;conflicts:number;warnings:string[]};
+export type PendingCapture = {captureId:string;text:string;subject:string;receivedAt:number};
